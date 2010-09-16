@@ -1,0 +1,15 @@
+#
+# Demo1.ypj
+# 
+# js-YYParser input grammar example.
+#
+# This file is PUBLIC DOMAIN 
+#
+#
+
+#Grammar rules A -> (A)|a
+%%
+A:  '(' A ')'	
+    |   'a' 
+;
+%%

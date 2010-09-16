@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head></head>
+<script src="../../YYParser.js"></script>
+<script src="XPath.ypj.pm.js"></script>
+<body>
+	<textarea id="_code" style="width:600px;height:100px;">
+/body/div/*[id()='abc' or position()>$pos] | /body/div/*[position()=2]
+	</textarea>
+	<br/>
+	<button onclick="_parse(code);">Run</button><button onclick="output.value='Êä³ö½á¹û£º'">Clear</button>
+	<br/>
+	<textarea id="_output" style="width:600px;height:130px;">
+Result:</textarea>
+	<script>
+		var code = document.getElementById("_code");
+		var output = document.getElementById("_output");
+		var myParser = new XPath();
+		myParser.assign('pos',2);
+		function _output(value){
+			output.value += "\n" + value;
+		}
+		XPath.prototype.Accept = function(){
+			//output.value += "\n" + 'Accepted.';
+		}
+		function _parse(obj){
+			output.value='Result:';
+			try{
+				var res = myParser.Parse(obj.value);
+				for(var i = 0; i < res.length; i++){
+					output.value += "\n" + [res[i].nodeType,res[i].nodeName]; //for IE
+				}
+				alert(myParser.domain.domain.length);
+				//alert(res.length);
+			}catch(ex){
+				output.value += "\n" + ex.message;
+			}
+		}
+	</script>
+	<div id="test" style="display:none">
+		<div id="abc"></div>
+		bbb<div sid="abc"><div></div></div>
+		<div id="def" sid="abc" class="def"></div>
+	</div>
+	<br/>
+	<textarea style="width:600px;height:330px;" readonly='readonly'>
+Tested DOM structure:
+<div id="test">
+	<div id="abc"></div>
+	bbb<div sid="abc"><div></div></div>
+	<div id="def" sid="abc"></div>
+</div>
+Supported:
+Path:
+/ Absolute Path
+  Relative Path
+. Current Path
+..Parent Path
+
+Predicates:
+Axis:child descendant self attribute parent ancestor descendant-or-self ancestor-or-self
+Functions: <nodetype>()
+
+Filters:
+Axis: self attribute
+Functions: id() position() <nodetype>()
+	</textarea>
+</body>
+</html>

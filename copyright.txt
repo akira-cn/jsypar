@@ -1,0 +1,15 @@
+COPYRIGHT (1)
+
+The Parse::Yapp module and its related modules and shell scripts are copyright (c) 1998-2001 Francois Desarmenien, France. All rights reserved.
+
+You may use and distribute them under the terms of either the GNU General Public License or the Artistic License, as specified in the Perl README file.
+
+If you use the "standalone parser" option so people don't need to install Parse::Yapp on their systems in order to run you software, this copyright noticed should be included in your software copyright too, and the copyright notice in the embedded driver should be left untouched.
+===============================================================================================================================================================================
+
+YYParser-for-JavaScript
+License LGPL
+
+This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.

@@ -1,0 +1,31 @@
+<script src="../../YYParser.js"></script>
+<script src="Calc.ypj.pm.js"></script>
+
+<textarea id="_code" style="width:600px;height:400px;">
+12 - 34;
+1 + 2 + 3;
+(3+4)*5;
+"d"+"b";
+xxyy
+</textarea>
+<br/>
+<button onclick="_parse(code);">Run</button><button onclick="output.value='Result:'">Clear</button>
+<br/>
+<textarea id="_output" style="width:600px;height:150px;">
+Result:</textarea>
+<script>
+var code = document.getElementById("_code");
+var output = document.getElementById("_output");
+function _output(value){
+	output.value += "\n" + value;
+}
+var myParser = new Calc();
+function _parse(obj){
+	output.value='Result:';
+	try{
+		myParser.Parse(obj.value);
+	}catch(ex){
+		output.value += "\n" + ex.message;
+	}
+}
+</script>

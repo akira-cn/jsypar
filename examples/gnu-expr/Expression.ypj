@@ -1,0 +1,83 @@
+#
+# Expression.ypj
+# 
+# js-YYParser input grammar example.
+#
+# This file is PUBLIC DOMAIN 
+#
+#
+
+%right  '='
+%left   ','
+%left   '-' '+'
+%left   '*' '/'
+%right   NEG POS ADDP MINP 
+
+#Grammar rules
+%%
+Program	: /*Empty*/
+		|	Program ExprStatement
+;
+ExprStatement :  ';'			 
+		|   Expr ';'            { _output($_[1].value); }
+;
+
+Expr:       NUM					{ return $_[1].value;  }	
+		|   String				{ return $_[1].value.slice(1,-1);  }	
+		|	BOOL				{ return $_[1].value; }
+		|   REG					{ return $_[1].value  }
+		|	IDENTITY			{ return _getval($_[1].value); }
+		|	IDENTITY ADDP		{ return _scope[$_[1].value]++; }
+		|	IDENTITY MINP		{ return _scope[$_[1].value]--; }
+		|	ADDP IDENTITY		{ return ++_scope[$_[2].value]; }
+		|	MINP IDENTITY		{ return --_scope[$_[2].value]; }
+		|	AssignmentExpr		{ return $_[1].value; }
+        |   Expr '+' Expr       { return $_[1].value + $_[3].value; }
+        |   Expr '-' Expr       { return $_[1].value - $_[3].value; }
+        |   Expr '*' Expr       { return $_[1].value * $_[3].value; }
+        |   Expr '/' Expr       {
+                                  return $_[1].value / $_[3].value;
+                                }
+        |   '-' Expr %prec NEG  { return -$_[2].value; }
+		|   '+' Expr %prec POS	{ return $_[2].value; }
+		|   Expr ',' Expr       { return $_[3].value; }
+        |   '(' Expr ')'        { return $_[2].value; }
+;
+
+AssignmentExpr:	IDENTITY '=' Expr	{return _assign($_[1].value, $_[3].value);}  		
+;
+String:		LITERAL0
+		|	LITERAL1
+;
+
+
+%%
+
+#Lexical definitions 
+#NUN数值、BOOL布尔值、LITERAL字符串
+#REG:	%expect%	/^\/([^\/\\]|(\\.))*\//g REG正则表达式（用来测试与除法的兼容）
+{%
+NUM:				/^([0-9]+(?:\.[0-9]+)?)/g	{parseFloat}
+BOOL:				/^\true|\false(?!\w)/g		
+LITERAL0:			/^\"([^\"\\]|(\\.))*\"/g
+LITERAL1:			/^\'([^\'\\]|(\\.))*\'/g
+ADDP:				/^\+\+/g
+MINP:				/^\-\-/g
+IDENTITY:			/^[a-zA-Z\_\$][\w$]*/g
+%}
+
+__script__
+var _scope = {};
+
+function _assign(id,val){
+	return (_scope[id] = val);
+}
+
+function _getval(id){
+	return _scope[id];
+}
+
+function _output(value){
+	output.value += "\n" + value;
+}
+__endscript__

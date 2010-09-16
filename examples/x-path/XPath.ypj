@@ -1,0 +1,837 @@
+#
+# XPath.ypj
+# 
+# js-YYParser input grammar rules for x-path.
+#
+# This file is PUBLIC DOMAIN 
+#
+#
+
+%left	and or
+%left   '=' ne
+%left	'>' '<' nl ng
+%left   '-' '+'
+%left   '*' div mod
+%left   RegOperator	#addin
+%left   NEG	'!'
+#'!' operator , not()的缩写
+
+#Grammar rules
+%%
+START:					UnionExpr							{$_[0].domains.length=0;return $_[1].value;}
+;
+UnionExpr:				PathExpr							{return $_[0].domains.slice(0);}
+						|	UnionExpr '|' PathExpr			{return $_[0].domains.slice(0);}
+;
+PathExpr:				LocationPath						{$_[0].init();return $_[0].domains = Array.union($_[0].domain.domain,$_[0].domains);}
+#						|	FilterExpr
+#						|	FilterExpr	'/'	RelativeLocationPath
+#						|	FilterExpr	GlobalPath	RelativeLocationPath
+;
+LocationPath:				RelativeLocationPath
+						|	AbsoluteLocationPath
+;
+AbsoluteLocationPath:		LocalPath						{
+																$_[0].domain = new XPathDomain([document.documentElement]);
+															}
+						|	LocalPath RelativeLocationPath	
+						|	AbbreviatedAbsoluteLocationPath
+;
+RelativeLocationPath:	Step								{$_[0].step++;}
+						|	RelativeLocationPath LocalPath Step		
+						|	AbbreviatedRelativeLocationPath
+;
+LocalPath:				'/'									{$_[0].domainType = "local";}
+;
+GlobalPath:				Global								{$_[0].domainType = "global";}
+;
+AbbreviatedAbsoluteLocationPath:	GlobalPath	RelativeLocationPath
+;
+AbbreviatedRelativeLocationPath:	RelativeLocationPath GlobalPath	Step
+;
+Step:					AbbreviatedStep
+						|	NormalStep						{}
+;
+NormalStep:				AxisSpecifierNodeTest				{	
+																var domainType = $_[0].domainType;
+
+																var rSet = [];
+																if(!$_[0].step && domainType != 'auto'){	//绝对路径
+																	$_[0].domain = new XPathDomain([document.documentElement]);
+																}
+																var domain = $_[0].domain;
+																
+																var selector = $_[1].value.split("::");
+																
+																var axis = selector[0];
+																var name = selector[1];
+																var filter = selector[2];
+																var arg = selector[3];	//作用于filter的参数
+
+																try{
+																	//alert([$_[1].value,axis,name, filter]);
+																	rSet = domain.axis(axis, name.toLowerCase(), filter, arg);
+																}
+																catch(ex){
+																	$_[0].Error(aixs+" not support yet");
+																}
+
+																$_[0].domain = new XPathDomain(rSet);
+
+															}    #预处理当前的Axis
+						|	NormalStep Predicate			{}				#归约，完成过滤Predicate
+;
+AbbreviatedStep:		'.'									{}	#当前上下文
+						|	ParentPath						{
+																var domain = $_[0].domain;
+
+																$_[0].domain = new XPathDomain(domain.axis("parent", '*', 'basical'));
+															}	#寻找当前上下文的父亲	
+;
+NameTest:				'*'									{return $_[1].value;}
+#not support yet		|	NCName	':'	'*'
+						|	NodeName						{return $_[1].value;}
+;
+NodeName:				QName								{return $_[1].value;}
+						|	QName	':'		QName			{return $_[1].value+$_[2].value+$_[3].value;}
+;
+AxisSpecifierNodeTest:  NodeTest							{
+																var domainType = $_[0].domainType;
+																var axis = domainType == 'global' ? 'descendant' : 'child';
+																return axis+"::"+$_[1].value;
+															}
+						|	'~'		QName					{return $_[2].value+"::*::basical";}
+						|	AxisSpecifier NodeTest			{return $_[1].value+$_[2].value;}
+;
+NodeTest:				NameTest							{return $_[1].value+"::"+"basical";}
+						|	NameTest	FilterTest			{return $_[1].value+"::"+$_[2].value;}
+						|	FilterTest						{return "*::"+$_[1].value}
+						|	NodeType	'('	')'				{return "*::"+$_[1].value;}
+#not support yet		|	processing_instruction	'('	Literal	')'	
+;
+FilterTest:				'#'			QName				{return "id"+"::"+$_[2].value;}
+						|	'#'		Literal				{return "id"+"::"+eval($_[2].value);}
+						|	'.'		QName				{return "class"+"::"+$_[2].value;}
+						|	'.'		Literal				{return "class"+"::"+eval($_[2].value);}
+;
+AxisSpecifier:			AxisName	AxisOperator			{return $_[1].value+$_[2].value;}
+						|	'@'								{return "attribute::";}
+#						|	'/'								{return "descendant::";}
+;
+#not support yet
+#FilterExpr:				'(' Expr ')'								
+#						|	FilterExpr	Predicate					
+#;
+FunctionCall:			FunctionName	'('	 ')'						{
+																			try{
+																				return $_[0].XPathFunc[$_[1].value].apply($_[0]);
+																			}catch(ex){
+																				$_[0].Error("'"+$_[1].value+"'未定义或不是合法的函数，使用[XPathObj].defun()定义或使用[Scope]标识。");
+																			}
+																		}	
+						|	FunctionName	'('	ArgumentList	')'		{
+																			try{
+																				return $_[0].XPathFunc[$_[1].value].apply($_[0], $_[3].value);
+																			}catch(ex){
+																				$_[0].Error("'"+$_[1].value+"'未定义或不是合法的函数，使用[XPathObj].defun()定义或使用[Scope]标识。");
+																			}
+																		}
+						|	Scope   FunctionName	'('	')'				{
+																			try{
+																				var scopes = $_[1].value.split('::');
+																				var scope = window;
+
+																				for(var i = 1; i < scopes.length - 1; i++){
+																					scope = scope[scopes[i]];
+																				}
+																				var func = scope[$_[2].value];
+																				
+																				return func();
+																			}catch(ex){
+																				$_[0].Error("'"+$_[1].value+$_[2].value+"'未定义或不是合法的函数。");
+																			}
+
+																		}
+						|	Scope	FunctionName	'('	ArgumentList	')'	{
+																				try{
+																					var scopes = $_[1].value.split('::');
+																					var scope = window;
+																					
+																					for(var i = 1; i < scopes.length - 1; i++){
+																						scope = scope[scopes[i]];
+																					}
+																					var func = scope[$_[2].value];
+
+																					if(func.apply)
+																						return func.apply(scope, $_[4].value);
+																					else 
+																						return func($_[4].value);
+																				}catch(ex){
+																					$_[0].Error("'"+$_[1].value+$_[2].value+"'未定义或不是合法的函数。");
+																				}
+																			}
+;
+FunctionName:			QName				#QName - NodeType 
+;
+Scope:					AxisOperator						{return $_[1].value;}
+						|	RootScope	AxisOperator		{return $_[1].value+$_[2].value;}
+						|	Scope	QName	AxisOperator	{return $_[1].value+$_[2].value+$_[3].value;}
+;
+ArgumentList:			Argument							{return [$_[1].value];}
+						|	ArgumentList ',' Argument		{return $_[1].value.concat($_[3].value);}
+;
+Argument:				Expr								{
+																var expr = $_[1].value;
+																if(expr instanceof XPathDomainFilterRule){
+																	expr = expr.filterDomain($_[0].domain);
+																}
+																return expr;
+															}
+;
+VariableReference:		'$' QName							{
+																var v = $_[0].variables[$_[2].value];
+
+																if(typeof v == 'undefined'){
+																	$_[0].Error("引用了未赋值的变量'$"+$_[2].value+"'");
+																}
+																return v;
+															}
+;
+Predicate:				'[' Expr ']'						{
+																var expr = $_[2].value;
+																if(expr instanceof XPathDomain){
+																	$_[0].domain = expr;
+																}
+																else if(expr instanceof XPathDomainFilterRule){
+																	$_[0].domain = expr.filterDomain($_[0].domain);
+																}
+																else if(typeof expr == 'number'){
+																	var filter = new XPathDomainFilterRule('position','*');
+																	$_[0].domain = filter.filterDomain($_[0].domain, 
+																		function(a){return a==expr});	
+																}
+																else{
+																	var filter = new XPathDomainFilterRule('self','*');
+																	$_[0].domain = filter.filterDomain($_[0].domain, 
+																		function(){return !!(expr)});
+																}
+																return !!(expr);
+															}
+;
+Expr:					Number								{return $_[1].value;}
+						|	Literal							{return $_[1].value.slice(1,-1);}
+						|   VariableReference				{return $_[1].value;} 
+						|   FunctionCall					{return $_[1].value;}
+						|   AxisSpecifierNodeTest			{
+																var selector = $_[1].value.split("::");
+																
+																var axis = selector[0];
+																var name = selector[1];
+
+																if(axis == 'child') axis = 'self';
+
+																return new XPathDomainFilterRule(axis, name);
+															}
+						|	RegExpr							{
+																var exp = $_[1].value.exp;
+																var rep = $_[1].value.rep;
+																var mod = $_[1].value.mod;
+																var domain = $_[0].domain;
+
+																var filter = new XPathDomainFilterRule('self','*');
+																var ret = filter.filterDomain($_[0].domain, 
+																		function(a){exp.lastIndex = 0;return mod=='m'?exp.test(a):a.toString().replace(exp, rep);});
+
+																return ret;
+															}
+						|	Expr RegOperator RegExpr		{
+																var expr1 = $_[1].value;
+																var expr2 = $_[3].value;
+
+																if(expr1 instanceof XPathDomainFilterRule){
+																	var ret = expr1.filterDomain($_[0].domain, function(a){expr2.lastIndex = 0;return expr2.mod=='m'?expr2.exp.test(a):a.toString().replace(expr2.exp, expr2.rep);});	
+																	return ret;
+																}
+
+																if(expr2.mod == 'm'){
+																	expr1.lastIndex = 0;
+																	return expr2.exp.test(expr1.toString());
+																}
+																if(expr2.mod == 's'){
+																	expr1.lastIndex = 0;
+																	return expr1.toString().replace(expr2.exp, expr2.rep);
+																}
+															}
+						|	Expr and Expr					{
+																var expr1 = $_[1].value;
+																var expr2 = $_[3].value;
+
+																if(expr1 instanceof XPathDomainFilterRule){
+																	expr1 = expr1.filterDomain($_[0].domain);
+																}
+																if(expr2 instanceof XPathDomainFilterRule){
+																	expr2 = expr2.filterDomain($_[0].domain);
+																}
+																if(expr1 instanceof XPathDomain && expr2 instanceof XPathDomain){
+																	return new XPathDomain(Array.intersect(expr2.domain,expr1.domain));
+																}
+																return expr1 && expr2;
+															}
+						|	Expr or	 Expr					{
+																var expr1 = $_[1].value;
+																var expr2 = $_[3].value;
+
+																if(expr1 instanceof XPathDomainFilterRule){
+																	expr1 = expr1.filterDomain($_[0].domain);
+																}
+																if(expr2 instanceof XPathDomainFilterRule){
+																	expr2 = expr2.filterDomain($_[0].domain);
+																}
+																if(expr1 instanceof XPathDomain && expr2 instanceof XPathDomain){
+																	return new XPathDomain(Array.union(expr2.domain,expr1.domain));
+																}
+																return expr1 || expr2;
+															}
+						|   Expr '=' Expr					{
+																var a = $_[1].value,b = $_[3].value;
+																
+																if(!(a instanceof XPathDomainFilterRule) && (b instanceof XPathDomainFilterRule))
+																	a = $_[3].value, b = $_[1].value;
+
+																if(a instanceof XPathDomainFilterRule){
+																	var ret = a.filterDomain($_[0].domain, function(a){return a==$_[3].value;});	
+																	return ret;
+																}
+																return $_[1].value == $_[3].value;
+															}
+						|	Expr ne  Expr					{
+																var a = $_[1].value,b = $_[3].value;
+																
+																if(!(a instanceof XPathDomainFilterRule) && (b instanceof XPathDomainFilterRule))
+																	a = $_[3].value, b = $_[1].value;
+
+																if(a instanceof XPathDomainFilterRule){
+																	var ret = a.filterDomain($_[0].domain, function(a){return a!=$_[3].value;});	
+																	return ret;
+																}
+																return $_[1].value != $_[3].value;	
+															}
+						|	Expr '>' Expr					{
+						
+																var a = $_[1].value,b = $_[3].value;
+																
+																if(!(a instanceof XPathDomainFilterRule) && (b instanceof XPathDomainFilterRule))
+																	a = $_[3].value, b = $_[1].value;
+
+																if(a instanceof XPathDomainFilterRule){
+																	var ret = a.filterDomain($_[0].domain, function(a){return a>$_[3].value;});	
+																	return ret;
+																}
+																return $_[1].value > $_[3].value;
+															}
+						|	Expr '<' Expr					{
+																var a = $_[1].value,b = $_[3].value;
+																
+																if(!(a instanceof XPathDomainFilterRule) && (b instanceof XPathDomainFilterRule))
+																	a = $_[3].value, b = $_[1].value;
+
+																if(a instanceof XPathDomainFilterRule){
+																	var ret = a.filterDomain($_[0].domain, function(a){return a<$_[3].value;});	
+																	return ret;
+																}																
+																
+																return $_[1].value < $_[3].value;
+															}
+						|	Expr nl  Expr					{
+																var a = $_[1].value,b = $_[3].value;
+																
+																if(!(a instanceof XPathDomainFilterRule) && (b instanceof XPathDomainFilterRule))
+																	a = $_[3].value, b = $_[1].value;
+
+																if(a instanceof XPathDomainFilterRule){
+																	var ret = a.filterDomain($_[0].domain, function(a){return a>=$_[3].value;});	
+																	return ret;
+																}
+																return $_[1].value >= $_[3].value;
+															}
+						|	Expr ng  Expr					{
+																var a = $_[1].value,b = $_[3].value;
+																
+																if(!(a instanceof XPathDomainFilterRule) && (b instanceof XPathDomainFilterRule))
+																	a = $_[3].value, b = $_[1].value;
+
+																if(a instanceof XPathDomainFilterRule){
+																	var ret = a.filterDomain($_[0].domain, function(a){return a<=$_[3].value;});	
+																	return ret;
+																}
+																return $_[1].value <= $_[3].value;
+															}
+						|	Expr '+' Expr					{return $_[1].value + $_[3].value;}
+						|	Expr '-' Expr					{return $_[1].value - $_[3].value;}
+						|	Expr '*' Expr					{return $_[1].value * $_[3].value;} 
+						|	Expr div Expr					{return $_[1].value / $_[3].value;}
+						|	Expr mod Expr					{return $_[1].value % $_[3].value;}
+						|   '-' Expr %prec NEG				{return -$_[2].value;}
+						|   '!' Expr						{return !$_[2].value;}
+						|	'(' Expr ')'					{
+																var expr = $_[2].value;
+																if(expr instanceof XPathDomainFilterRule){
+																	expr = expr.filterDomain($_[0].domain);
+																}
+																return expr;
+															}
+;
+Literal:				Literal0
+						|	Literal1
+;
+RegExpr:				Reg									{return new XPathRegExp($_[1].value)}
+						|	Regs	Regr					{return new XPathRegExp($_[1].value,$_[2].value)}
+;
+%%
+
+#Lexical definitions 
+{%
+AxisName:				%expect%	/^(ancestor-or-self|descendant-or-self|ancestor|attribute|child|descendant|following-sibling|following|namespace|parent|preceding-sibling|preceding|self)(?=\:\:)/g
+NodeType:				%expect%	/^(comment|text|processing-instruction|node)(?=\(\))/g
+Number:					/^([0-9]+(?:\.[0-9]+)?)/g	{parseFloat}
+Literal0:				/^\"([^\"\\]|(\\.))*\"/g
+Literal1:				/^\'([^\'\\]|(\\.))*\'/g
+Reg:					%expect%	/^m?\/([^\/\\]|(\\.))*\/[img]*/g
+Regs:					%expect%	/^s\/([^\/\\]|(\\.))*\//g
+Regr:					%expect%	/^([^\/\\]|(\\.))*\/[img]*/g
+RegOperator:			/^=~/g
+AxisOperator:			/^\:\:/g
+Global:					/^\/\//g
+ParentPath:				/^\.\./g
+RootScope				%expect% /^window(?=\:\:)/g
+nl:						/^\>\=/g
+ng:						/^\<\=/g
+ne:						/^\!\=/g
+and:					%expect%	/^and(?![\w])/g
+or:						%expect%	/^or(?![\w])/g
+div:					%expect%	/^div(?![\w])/g
+mod:					%expect%	/^mod(?![\w])/g
+QName:					/^[A-Za-z_][A-Za-z0-9_]*/g
+%}
+
+__script__
+if(!Array.union){
+	Array.union = function(a,b){
+		var ret = b.slice(0);
+		for(var i = 0; i < a.length; i++){
+			var conflit = false;
+			for(var j = 0; j < b.length; j++){
+				if(a[i] === b[j]){
+					conflit = true;
+					break;
+				}
+			}
+			if(!conflit){
+				ret.push(a[i]);
+			}
+		}
+		return ret;
+	}
+};
+if(!Array.intersect){
+	Array.intersect = function(a,b){
+		var ret = [];
+		for(var i = 0; i < a.length; i++){
+			for(var j = 0; j < b.length; j++){
+				if(a[i] === a[j]){
+					ret.push(a[i]);
+				}
+			}
+		}
+		return ret;
+	}	
+};
+//构造初始化函数
+XPath.prototype.initialize = function(){
+	this.domainType = 'auto';
+	this.step = 0;
+	XPath.prototype.variables = {};
+};
+
+XPath.prototype.XPathFunc = {		//FuncName定义，可扩展，在filter中被调用
+	id : function(id){
+		id = id || '*';
+		return new XPathDomainFilterRule('id',id,function(a){return a && new RegExp("(^|\\s)"+a+"(?=\\s|$)",'g').test(id) || id=='*';});
+	},
+	position : function(){
+		return new XPathDomainFilterRule('position','*');
+	},
+	last : function(){
+		return this.domain.domain.length;
+	},
+	count : function(node_set){	
+		node_set = node_set || this.domain;
+		if(node_set instanceof XPathDomainFilterRule){
+			node_set = node_set.filterDomain(this.domain);
+		}
+		if(node_set instanceof XPathDomain){
+			return node_set.domain.length;
+		}
+		this.Error('参数类型必须是XPathDomain!', false);
+	},
+	string : function(obj){
+		return obj.toString();	
+	},
+	concat : function(){
+		var ret = [];
+		for (var i = 0; i < arguments.length; i++){
+			ret.push(arguments[i]);
+		}
+		return ret.join('');
+	},
+	substring : function(str, start, len){
+		return str.substring(start-1, len);
+	},
+	strlen : function(str){  //modify string-length
+		return str.length;
+	},
+	"boolean" : function(obj){
+		return !!obj;
+	},
+	"not" : function(obj){
+		return !obj;
+	},
+	"true" : function(){
+		return true;
+	},
+	"false" : function(){
+		return false;
+	},
+	"number" : function(obj){
+		return Number(obj);
+	}
+	,
+	floor : function(num){
+		return Math.floor(num);
+	},
+	ceiling : function(num){
+		return Math.ceil(num);
+	},
+	round : function(num){
+		return Math.round(num);
+	},
+	/*add on*/
+	array : function(){
+		var ret = [];
+		
+		for(var i = 0; i < arguments.length; i++){
+			ret.push(arguments[i]);
+		}
+		
+		return ret;
+	}
+};
+
+XPath.prototype.init = function(){
+	this.domainType = 'auto';
+	this.step = 0;
+};
+
+XPath.prototype.assign = function(name, value){		//VariableReferences赋值
+	return this.variables[name] = value;
+};
+XPath.prototype.defun = function(name, func){		//Function定义，可扩展
+	return this.XPathFunc[name] = func;
+};
+
+XPath.prototype.domain = new XPathDomain([document.documentElement]);	//记录当前的domain
+XPath.prototype.domains = [];	//暂时记录UnionExpr返回的所有domain
+XPath.prototype.onError = function(){
+	this.init();
+}
+
+function XPathDomain(domain){
+	this.domain = domain;
+};
+
+//axis::name::filter
+//child::div::id(abc)
+//child::*::text()
+XPathDomain.prototype.filters = {
+	"id" : function(axis, node, id){
+		return node.id == id;
+	},
+	"class" : function(axis, node, name){
+		return node.className == name;
+	},
+	"basical": function(axis, node){
+		if(axis == 'self')
+			return this.node(axis, node);
+		else
+			return this.element(axis, node);
+	},
+	"element": function(axis, node){
+		return node.nodeType == 1;
+	},
+	"node" : function(axis, node){
+		return true;
+	},
+	"text" : function(axis, node){
+		return node.nodeType == 3;
+	},
+	"comment" : function(axis, node){
+		return node.nodeType == 8;
+	},
+	"processing-instruction" : function(axis, node){
+		return node.nodeType == 7;
+	}
+}
+
+XPathDomain.prototype.axis = function(axis, name, filter, arg){
+	return this.tests[axis].call(this, axis, name, filter, arg);
+};
+
+//基本的filter是element
+XPathDomain.prototype.tests = {
+	child : function(axis, nodeName, filter, arg){
+		var domain = this.domain;
+		var ret = [];
+
+		for(var i = 0; i < domain.length; i++){
+			var children = domain[i].childNodes;
+			
+			for(var j = 0; children && j < children.length; j++){	
+				var child = children[j];
+
+				if(child && (nodeName == '*' || child.nodeName && child.nodeName.toLowerCase() == nodeName)){
+					if(this.filters[filter](axis, child, arg)) 
+						ret.push(child);
+				}
+			}
+		}
+
+		return ret;
+	},
+	descendant :  function(axis, nodeName, filter, arg){
+		var domain = this.domain;
+		var ret = [];
+		var tmp = [];
+
+		for(var i = 0; i < domain.length; i++){
+			var _set = domain[i].getElementsByTagName(nodeName);	//基本节点类型element
+			if(filter != 'element' && filter != 'basical'){
+				for(var k = 0; k < _set.length; k++){
+					var childs = _set[k].childNodes;
+					for(var l = 0; l < childs.length; l++){
+						if(childs[l].nodeType != 1)
+								tmp.push(childs[l]);
+					}
+				}
+			}
+			for(var j = 0; j < _set.length; j++){
+				var node = _set[j];
+
+				if(nodeName == '*' || node.nodeName && node.nodeName.toLowerCase() == nodeName){
+					if(this.filters[filter](axis, node, arg))
+						ret.push(node);
+				}
+			}
+			for(var j = 0; j < tmp.length; j++){
+				var node = tmp[j];
+
+				if(nodeName == '*' || node.nodeName && node.nodeName.toLowerCase() == nodeName){
+					if(this.filters[filter](axis, node, arg))
+						ret.push(node);
+				}
+			}
+		}
+
+		return ret;
+	},
+	self : function(axis, nodeName, filter, arg){
+		var domain = this.domain;
+		var ret = [];
+
+		for(var i = 0; i < domain.length; i++){
+			var self = domain[i];
+
+			if(self &&  (self.nodeName && (self.nodeName.toLowerCase() == nodeName || nodeName == '*'))){
+				if(this.filters[filter](axis, self, arg))
+					ret.push(self);
+			}
+		}
+		return ret;
+	},
+	attribute : function(axis, name, filter, arg){	//注意：这里取元素节点而不是取属性
+		var domain = this.domain;
+		var ret = [];
+
+		for(var i = 0; i < domain.length; i++){
+			var self = domain[i];
+
+			if(self && self.getAttribute && (name == '*' || self.getAttribute(name) != null)){
+				if(this.filters[filter](axis, self, arg))
+					ret.push(self);
+			}
+		}
+
+		return ret;
+	},
+	parent : function(axis, nodeName, filter, arg){
+		var domain = this.domain;
+		var ret = [];
+		
+		for(var i = 0; i < domain.length; i++){
+			var parent = domain[i].parentNode;
+			
+			if(parent && (nodeName == '*' || parent.nodeName && (parent.nodeName.toLowerCase() == nodeName))){
+				var conflit = false;
+				if(this.filters[filter](axis, parent,arg)){
+					for(var j = 0; j < ret.length; j++){
+						if(ret[j] == parent) //already in
+						{
+							conflit = true;
+							break;
+						}
+					}
+					if(!conflit) ret.push(parent);
+				}
+			}
+		}
+
+		return ret;
+	},
+	ancestor : function(axis, nodeName, filter, arg){
+
+		var domain = this.domain;
+		var ret = [];
+
+		function getAncestor(node){
+			var ret = [];
+			while(node){
+				ret.push(node);
+				node = node.parentNode;
+			}
+
+			return ret;
+		}
+		
+		for(var i = 0; i < domain.length; i++){
+			var ancestor = getAncestor(domain[i]);
+			
+			for(var k = 0; k < ancestor.length; k++){
+				var parent = ancestor[k];
+				if(parent && (nodeName == '*' || parent.nodeName && (parent.nodeName.toLowerCase() == nodeName))){
+					var conflit = false;
+					if(this.filters[filter](axis, parent, arg)){
+						for(var j = 0; j < ret.length; j++){
+							if(ret[j] == parent) //already in
+							{
+								conflit = true;
+							}
+						}
+						if(!conflit) ret.push(parent);
+					}
+				}
+			}
+		}
+
+		return ret;
+
+	},
+	"descendant-or-self" : function(axis, nodeName, filter, arg){
+		return Array.union(this.axis("slef", nodeName, filter, arg), this.axis("descendant", nodeName, filter, arg));
+	},
+	"ancestor-or-self" : function(nodeName){
+		return Array.union(this.axis("slef", nodeName, filter, arg), this.axis("ancestor", nodeName, filter, arg));
+	}
+}
+
+function XPathDomainFilterRule(axis,name,cloak){
+	this.axis = axis;
+	this.name = name;
+	this.cloak = cloak;
+};
+
+XPathDomainFilterRule.prototype.filterDomain = function(domain, cloak){
+	try{
+		cloak = cloak || this.cloak || function(){return true};
+		return this.filters[this.axis].call(this, domain, cloak); 
+	}
+	catch(ex){
+		alert(ex.message);
+		throw new Error(this.axis+' not support yet!');
+	}
+};
+
+XPathDomainFilterRule.prototype.filters = {
+	self : function(domain, cloak){
+		var _domain = domain.domain;
+		var _ret = [];
+	
+		for(var i = 0; i < _domain.length; i++){
+			var self = _domain[i];
+			var nodeName = self.nodeName && self.nodeName.toLowerCase();
+			
+			if((this.name == '*' || nodeName == this.name) && cloak(nodeName || '')){
+				_ret.push(_domain[i]);
+			}
+		}
+		return new XPathDomain(_ret);
+	},
+	attribute :  function(domain, cloak){
+		var _domain = domain.domain;
+		var _ret = [];
+
+		for(var i = 0; i < _domain.length; i++){
+			var self = _domain[i];
+			var attr = self.getAttribute && self.getAttribute(this.name);
+			//attr = attr && attr.toLowerCase();
+
+			if(cloak(attr || '')){
+				_ret.push(_domain[i]);
+			}
+		}
+		return new XPathDomain(_ret);	
+	},
+	id : function(domain, cloak){
+		var _domain = domain.domain;
+		var _ret = [];
+
+		for(var i = 0; i < _domain.length; i++){
+			var self = _domain[i];
+			var id = self.id || '';
+
+			if(cloak(id)){
+				_ret.push(_domain[i]);
+			}
+		}
+		return new XPathDomain(_ret);		
+	},
+	position : function(domain, cloak){
+		var _domain = domain.domain;
+		var _ret = [];
+		
+		for(var i = 0; i < _domain.length; i++){
+			if(cloak(i+1)){
+				_ret.push(_domain[i]);
+			}
+		}
+
+		return new XPathDomain(_ret);
+	}
+};
+function XPathRegExp(exp, rep){
+	this.mod = 'm';
+	var tok;
+
+	if(/^[^\/]/.test(exp)){
+		this.mod = exp.charAt(0);
+		exp = exp.slice(1);
+	}
+	if(rep){
+		if(tok = /[^\/]$/.exec(rep)){
+			exp += rep.slice(-tok.length);
+			this.rep = rep.slice(0,-tok.length-1);
+		}
+		else
+			this.rep = rep.slice(0,-1);
+	}
+	this.exp = eval(exp);
+}
+__endscript__

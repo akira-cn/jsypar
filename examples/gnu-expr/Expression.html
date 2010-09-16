@@ -1,0 +1,25 @@
+<script src="../../YYParser.js"></script>
+<script src="Expression.ypj.pm.js"></script>
+
+<textarea id="_code" style="width:600px;height:400px;">
+12 - 34;
+</textarea>
+<br/>
+<button onclick="_parse(code);">Run</button><button onclick="output.value='Êä³ö½á¹û£º'">Clear</button>
+<br/>
+<textarea id="_output" style="width:600px;height:150px;">
+Result:</textarea>
+<script>
+var code = document.getElementById("_code");
+var output = document.getElementById("_output");
+var myExpression = new Expression();
+
+function _parse(obj){
+	output.value='Result:';
+	try{
+		myExpression.Parse(obj.value);
+	}catch(ex){
+		output.value += "\n" + ex.message;
+	}
+}
+</script>

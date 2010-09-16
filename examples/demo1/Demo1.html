@@ -1,0 +1,32 @@
+<script src="../../YYParser.js"></script>
+<script src="Demo1.ypj.pm.js"></script>
+
+<textarea id="_code" style="width:600px;height:400px;">
+((a))
+</textarea>
+<br/>
+<button onclick="_parse(code);">Run</button><button onclick="output.value='Result:'">Clear</button>
+<br/>
+<textarea id="_output" style="width:600px;height:150px;">
+Result:</textarea>
+<script>
+var code = document.getElementById("_code");
+var output = document.getElementById("_output");
+function _output(value){
+	output.value += "\n" + value;
+}
+Demo1.prototype.Accept = function(){
+	output.value += "\n" + 'Accepted.';
+}
+
+var myParser = new Demo1();
+
+function _parse(obj){
+	output.value='Result:';
+	try{
+		myParser.Parse(obj.value);
+	}catch(ex){
+		output.value += "\n" + ex.message;
+	}
+}
+</script>
