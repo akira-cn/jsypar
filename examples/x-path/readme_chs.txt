@@ -1,42 +1,42 @@
 XPath for JavaScript v1.0
 
-Ö§³ÖµÄÌØÐÔ£º
-Â·¾¶£º
-/ ¾ø¶ÔÂ·¾¶
-  Ïà¶ÔÂ·¾¶
-. µ±Ç°Â·¾¶
-..ÉÏ¼¶Â·¾¶
+æ”¯æŒçš„ç‰¹æ€§ï¼š
+è·¯å¾„ï¼š
+/ ç»å¯¹è·¯å¾„
+  ç›¸å¯¹è·¯å¾„
+. å½“å‰è·¯å¾„
+..ä¸Šçº§è·¯å¾„
 
-ÅÐ¶¨´Ê£º
-Öá£ºchild¡¢descendant¡¢self¡¢attribute¡¢parent¡¢ancestor¡¢descendant-or-self¡¢ancestor-or-self
-NodeType£ºcomment()|text()|processing-instruction()|node()
+åˆ¤å®šè¯ï¼š
+è½´ï¼šchildã€descendantã€selfã€attributeã€parentã€ancestorã€descendant-or-selfã€ancestor-or-self
+NodeTypeï¼šcomment()|text()|processing-instruction()|node()
 
-¹ýÂËÆ÷£º
-Öá: self¡¢attribute
-º¯Êý£ºid()¡¢position()¡¢NodeType¡¢last()¡¢count()¡¢string()¡¢concat()¡¢substring()¡¢strlen()¡¢
-boolean()¡¢not()¡¢true()¡¢false()¡¢number()¡¢floor()¡¢ceiling()¡¢round()¡¢array()
+è¿‡æ»¤å™¨ï¼š
+è½´: selfã€attribute
+å‡½æ•°ï¼šid()ã€position()ã€NodeTypeã€last()ã€count()ã€string()ã€concat()ã€substring()ã€strlen()ã€
+boolean()ã€not()ã€true()ã€false()ã€number()ã€floor()ã€ceiling()ã€round()ã€array()
 
-·Ç±ê×¼µÄ²¿·Ö(À©Õ¹)
-strlen()º¯Êý£¬Ïàµ±ÓÚstring-length()
-array()º¯Êý
-!Expr£¬Ïàµ±ÓÚnot(Expr)
-ÕýÔò±í´ïÊ½£º m?/expr/¡¢s/expr/replace/¡¢Expr =~ m?/expr/¡¢Expr =~ s/expr/replace/
-Íâ²¿º¯Êý£º window::alert »ò¼òÐ´ ::alert
+éžæ ‡å‡†çš„éƒ¨åˆ†(æ‰©å±•)
+strlen()å‡½æ•°ï¼Œç›¸å½“äºŽstring-length()
+array()å‡½æ•°
+!Exprï¼Œç›¸å½“äºŽnot(Expr)
+æ­£åˆ™è¡¨è¾¾å¼ï¼š m?/expr/ã€s/expr/replace/ã€Expr =~ m?/expr/ã€Expr =~ s/expr/replace/
+å¤–éƒ¨å‡½æ•°ï¼š window::alert æˆ–ç®€å†™ ::alert
 
-Àý×Ó£º
-/body/div/child::*	µÃµ½bodyÏÂµÄËùÓÐdivÔªËØµÄËùÓÐ¶ù×Ó
-/body/div[1]		µÃµ½bodyÏÂµÄµÚÒ»¸ödiv¶ù×Ó
-/body/div/*[id()='abc']	µÃµ½bodyÏÂµÄËùÓÐdivÔªËØµÄ¶ù×ÓÖÐid='abc'µÄÄÇ¸ö
-/body/div//text()	µÃµ½body/divÏÂ×ÓËïÖÐËùÓÐµÄTextNode½Úµã
+ä¾‹å­ï¼š
+/body/div/child::*	å¾—åˆ°bodyä¸‹çš„æ‰€æœ‰divå…ƒç´ çš„æ‰€æœ‰å„¿å­
+/body/div[1]		å¾—åˆ°bodyä¸‹çš„ç¬¬ä¸€ä¸ªdivå„¿å­
+/body/div/*[id()='abc']	å¾—åˆ°bodyä¸‹çš„æ‰€æœ‰divå…ƒç´ çš„å„¿å­ä¸­id='abc'çš„é‚£ä¸ª
+/body/div//text()	å¾—åˆ°body/divä¸‹å­å­™ä¸­æ‰€æœ‰çš„TextNodeèŠ‚ç‚¹
 /body/div/*[position()>$pos]	
-µÃµ½bodyÏÂµÄËùÓÐdivÔªËØÖÐposition´óÓÚ$posµÄÄÇ¸ö£¬ÆäÖÐ$posÊÇÍ¨¹ý[XPathObj].assign('pos',<num>)¸³ÖµµÄ±äÁ¿
-/body/div/*[::alert(count())]	alert³ö/body/divÏÂdiv¶ù×ÓµÄ¸öÊý
-/body/div/child::*[/^d/]	µÃµ½bodyÏÂµÄËùÓÐdivÔªËØµÄËùÓÐ¶ù×ÓÖÐtagNameÒÔ×ÖÄ¸'d'¿ªÍ·µÄÔªËØ
-/body/div/child::*[@name='abc']	µÃµ½bodyÏÂµÄËùÓÐdivÔªËØµÄËùÓÐ¶ù×ÓÖÐnameÊôÐÔµÈÓÚ'abc'µÄÔªËØ
-/body/div/child::*[@name=~/^abc/]	µÃµ½bodyÏÂµÄËùÓÐdivÔªËØµÄËùÓÐ¶ù×ÓÖÐnameÊôÐÔÒÔ'abc'¿ªÍ·µÄÔªËØ
-/body/div/child::*[@name=('abc'=~s/^a/x/)]	µÃµ½bodyÏÂµÄËùÓÐdivÔªËØµÄËùÓÐ¶ù×ÓÖÐnameÊôÐÔµÈÓÚ'xbc'µÄÔªËØ	
+å¾—åˆ°bodyä¸‹çš„æ‰€æœ‰divå…ƒç´ ä¸­positionå¤§äºŽ$posçš„é‚£ä¸ªï¼Œå…¶ä¸­$posæ˜¯é€šè¿‡[XPathObj].assign('pos',<num>)èµ‹å€¼çš„å˜é‡
+/body/div/*[::alert(count())]	alertå‡º/body/divä¸‹divå„¿å­çš„ä¸ªæ•°
+/body/div/child::*[/^d/]	å¾—åˆ°bodyä¸‹çš„æ‰€æœ‰divå…ƒç´ çš„æ‰€æœ‰å„¿å­ä¸­tagNameä»¥å­—æ¯'d'å¼€å¤´çš„å…ƒç´ 
+/body/div/child::*[@name='abc']	å¾—åˆ°bodyä¸‹çš„æ‰€æœ‰divå…ƒç´ çš„æ‰€æœ‰å„¿å­ä¸­nameå±žæ€§ç­‰äºŽ'abc'çš„å…ƒç´ 
+/body/div/child::*[@name=~/^abc/]	å¾—åˆ°bodyä¸‹çš„æ‰€æœ‰divå…ƒç´ çš„æ‰€æœ‰å„¿å­ä¸­nameå±žæ€§ä»¥'abc'å¼€å¤´çš„å…ƒç´ 
+/body/div/child::*[@name=('abc'=~s/^a/x/)]	å¾—åˆ°bodyä¸‹çš„æ‰€æœ‰divå…ƒç´ çš„æ‰€æœ‰å„¿å­ä¸­nameå±žæ€§ç­‰äºŽ'xbc'çš„å…ƒç´ 	
 
-ÐÂÔöËõÐ´ 
+æ–°å¢žç¼©å†™ 
 ~axis <=> axis::*
-#id -> ¿ìËÙ²éÕÒÔªËØid
-.class -> ¿ìËÙ²éÕÒÔªËØclass
+#id -> å¿«é€ŸæŸ¥æ‰¾å…ƒç´ id
+.class -> å¿«é€ŸæŸ¥æ‰¾å…ƒç´ class

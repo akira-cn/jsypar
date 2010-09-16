@@ -43,7 +43,7 @@ exp:        NUM					{ return $_[1].value  }
 %%
 
 #Lexical definitions 
-#Num ÊýÖµ¡¢STR×Ö·û´®¡¢REGÕýÔò±í´ïÊ½£¨ÓÃÀ´²âÊÔÓë³ý·¨µÄ¼æÈÝ£©
+#Num æ•°å€¼ã€STRå­—ç¬¦ä¸²ã€REGæ­£åˆ™è¡¨è¾¾å¼ï¼ˆç”¨æ¥æµ‹è¯•ä¸Žé™¤æ³•çš„å…¼å®¹ï¼‰
 {%
 NUM:	/^([0-9]+(?:\.[0-9]+)?)/g	{parseFloat}
 STR:	/^\"([^\"\\]|(\\.))*\"/g

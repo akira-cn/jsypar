@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
 <META http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>XML ·�����ԣ�XPath�� �汾 1.0</title><style type="text/css">
+<title>XML 路径语言（XPath） 版本 1.0</title><style type="text/css">
 code           { font-family: monospace; }
 
 div.constraint,
@@ -28,211 +28,211 @@ li p           { margin-top: 0.3em;
         body {
 	      background-image: url(http://www.opendl.com/images/w3-rec-gb.bmp);
 	    }      
-    </style></head><body><b>��ҳλ��: </b><a href="http://www.opendl.com">������ҳ</a> -&gt;
-    	    <a href="http://www.opendl.com">���� XML</a> -&gt;
-    	    <a href="http://www.opendl.com">��׼����</a> -&gt; XML ·������
-        <hr color="#006666"><table class="transinfo-table"><tr><td height="10"></td></tr><tr><th width="80" class="transinfo-th">����</th><th class="transinfo-th" colspan="2">XML ·�����ԣ�XPath��
-            (�汾&#160;
+    </style></head><body><b>本页位置: </b><a href="http://www.opendl.com">开放首页</a> -&gt;
+    	    <a href="http://www.opendl.com">开放 XML</a> -&gt;
+    	    <a href="http://www.opendl.com">标准中译</a> -&gt; XML 路径语言
+        <hr color="#006666"><table class="transinfo-table"><tr><td height="10"></td></tr><tr><th width="80" class="transinfo-th">译文</th><th class="transinfo-th" colspan="2">XML 路径语言（XPath）
+            (版本&#160;
             1.0)
             </th></tr><tr><td></td><td colspan="2" align="middle">
             (
             <a href="http://www.opendl.com/openxml/w3/TR/xpath/xpath-gb.html">http://www.opendl.com/openxml/w3/TR/xpath/xpath-gb.html</a>
     	    )
-    	</td></tr><tr><td height="10"></td></tr><tr><th class="transinfo-th">Ӣ��</th><th class="transinfo-th" colspan="2">XML Path Language</th></tr><tr><td></td><td colspan="2" align="middle">(<a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a>)</td></tr><tr><td height="10"></td></tr><tr><th class="transinfo-th">ע��</th><td colspan="2"><ul><li>Ӣ�İ���Ψһ����ʽ�棬 �� URL �������档</li><li>���ĵ�Ϊ���ķ���棬����������׼�������п������д���Ͳ���֮������ӭָ������ʤ�м���</li><li>����Ȩ����λ춣�<a href="http://www.w3.org/Consortium/Legal/copyright-documents.html">http://www.w3.org/Consortium/Legal/copyright-documents.html</a></li></ul></td></tr><tr><td height="10"></td></tr><tr><th class="transinfo-th">����</th><td colspan="2"><ul><li>�º꣨Hong CHEN����<a href="mailto:hong@hongchen.net">hong@hongchen.net</a>��</li></ul></td></tr><tr><td height="10"></td></tr><tr><th class="transinfo-th">ʱ��</th><td align="middle">���ζ��壺2003 �� 2 �� 20 �� (NZT)</td><td align="middle">����޸�:
-            2003 �� 8 �� 5 �� (UTC)</td></tr><tr><td height="10"></td></tr></table>
+    	</td></tr><tr><td height="10"></td></tr><tr><th class="transinfo-th">英文</th><th class="transinfo-th" colspan="2">XML Path Language</th></tr><tr><td></td><td colspan="2" align="middle">(<a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a>)</td></tr><tr><td height="10"></td></tr><tr><th class="transinfo-th">注意</th><td colspan="2"><ul><li>英文版是唯一的正式版， 其 URL 列在上面。</li><li>本文档为中文翻译版，译者虽力求精准，但其中可能仍有错误和不妥之处，欢迎指正，不胜感激！</li><li>著作权声明位於：<a href="http://www.w3.org/Consortium/Legal/copyright-documents.html">http://www.w3.org/Consortium/Legal/copyright-documents.html</a></li></ul></td></tr><tr><td height="10"></td></tr><tr><th class="transinfo-th">译者</th><td colspan="2"><ul><li>陈宏（Hong CHEN）【<a href="mailto:hong@hongchen.net">hong@hongchen.net</a>】</li></ul></td></tr><tr><td height="10"></td></tr><tr><th class="transinfo-th">时间</th><td align="middle">初次定稿：2003 年 2 月 20 日 (NZT)</td><td align="middle">最后修改:
+            2003 年 8 月 5 日 (UTC)</td></tr><tr><td height="10"></td></tr></table>
 <div class="head"><p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" height="48" width="72"></a></p>
-<h1>XML ·�����ԣ�XPath�� �汾 1.0</h1>
-<h2>��ά��Э�� (W3C) ���� 1999November16</h2><dl><dt>���汾��</dt><dd>
+<h1>XML 路径语言（XPath） 版本 1.0</h1>
+<h2>万维网协会 (W3C) 建议 1999November16</h2><dl><dt>本版本：</dt><dd>
 <a href="http://www.w3.org/TR/1999/REC-xpath-19991116">http://www.w3.org/TR/1999/REC-xpath-19991116</a>
-�������ļ���ʽ��
+（其它文件格式：
 <a href="http://www.w3.org/TR/1999/REC-xpath-19991116.xml">XML</a>
-        [Ӣ��]
+        [英文]
     
 <a href="http://www.w3.org/TR/1999/REC-xpath-19991116.html">HTML</a>
-        [Ӣ��]
+        [英文]
     
 
-��
-</dd><dt>���°汾��</dt><dd>
+）
+</dd><dt>最新版本：</dt><dd>
 <a href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a>
-<a href="http://www.opendl.com/openxml/w3/TR/xpath/xpath-gb.html">���ķ���</a>
-        [��������]
+<a href="http://www.opendl.com/openxml/w3/TR/xpath/xpath-gb.html">中文翻译</a>
+        [简体中文]
     
-</dd><dt>��ǰ�汾��</dt><dd>
+</dd><dt>以前版本：</dt><dd>
 <a href="http://www.w3.org/TR/1999/PR-xpath-19991008">http://www.w3.org/TR/1999/PR-xpath-19991008</a>
 <br><a href="http://www.w3.org/1999/08/WD-xpath-19990813">http://www.w3.org/1999/08/WD-xpath-19990813</a>
 <br><a href="http://www.w3.org/1999/07/WD-xpath-19990709">http://www.w3.org/1999/07/WD-xpath-19990709</a>
 <br><a href="http://www.w3.org/TR/1999/WD-xslt-19990421">http://www.w3.org/TR/1999/WD-xslt-19990421</a>
-</dd><dt>���ߣ�</dt>
+</dd><dt>编者：</dt>
 <dd>James Clark <a href="mailto:jjc@jclark.com">&lt;jjc@jclark.com&gt;</a></dd>
 <dd>Steve DeRose, Inso Corp. and Brown University <a href="mailto:Steven_DeRose@Brown.edu">&lt;Steven_DeRose@Brown.edu&gt;</a></dd>
 </dl><p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice-20000612#Copyright">Copyright</a>&#160;&#169;&#160;1999&#160;<a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>&#174;</sup> (<a href="http://www.lcs.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.inria.fr/"><abbr lang="fr" title="Institut National de Recherche en Informatique et Automatique">INRIA</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice-20000612#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice-20000612#W3C_Trademarks">trademark</a>, <a href="http://www.w3.org/Consortium/Legal/copyright-documents-19990405">document use</a>, and <a href="http://www.w3.org/Consortium/Legal/copyright-software-19980720">software licensing</a> rules apply.</p></div><hr><div>
-<h2><a name="abstract">ժҪ</a></h2>
-<p>XPath ��һ�����ڶ� XML �ĵ���Ԫ��Ѱַ��һ���ԣ����Ϊ XSLT �� XPointer ʹ�á�</p></div><div>
-<h2><a name="status">���ĵ��ĵ�λ</a></h2>
-<p>���ĵ�������ά��Э�� (W3C) ��֯��Ա����������Ȥ�ĸ������ģ����ѱ���֯������׼Ϊ��ά��Э�� (W3C) <a href="http://www.w3.org/Consortium/Process/#RecsW3C">����</a>������һ���ȶ����ĵ������������ο����ϣ�Ҳ������Ϊ�����ĵ��ı�׼�ο����ס�W3C �ڽ����ƶ������е������������Ա��淶��ע�Ⲣ�ٽ����Ĺ㷺ʹ�á�������ǿ Web �Ĺ��ܺͻ������ԡ�</p>
-<p>�����˵����֪�Ĵ����б��� <a href="http://www.w3.org/1999/11/REC-xpath-19991116-errata">http://www.w3.org/1999/11/REC-xpath-19991116-errata</a>��</p>
-<p> �Ա�˵���Ľ���ɵ��ʵ� <a href="mailto:www-xpath-comments@w3.org">www-xpath-comments@w3.org</a>��<a href="http://lists.w3.org/Archives/Public/www-xpath-comments">�浵</a>�Ľ���ɹ����顣</p>
-<p>Ӣ�İ���Ψһ����ʽ�棬���ĵ��ķ�����μ� <a href="http://www.w3.org/Style/XSL/translations.html">http://www.w3.org/Style/XSL/translations.html</a>��</p>
-<p>���� W3C ��������������ĵ����б��� <a href="http://www.w3.org/TR">http://www.w3.org/TR</a>��</p>
-<p>������� XSL �����鼰 XML ���ӹ��������ϵĹ����ɹ������Ҳ�� <a href="http://www.w3.org/Style/Activity">XML ʽ���ƶ�������W3C Style activity��</a>�� <a href="http://www.w3.org/XML/Activity"> W3C XML �ƶ�������W3C XML Activity��</a>��һ���֡�</p>
+<h2><a name="abstract">摘要</a></h2>
+<p>XPath 是一种用于对 XML 文档的元件寻址的一语言，设计为 XSLT 和 XPointer 使用。</p></div><div>
+<h2><a name="status">本文档的地位</a></h2>
+<p>本文档已由万维网协会 (W3C) 组织成员和其他感兴趣的各方审阅，并已被组织理事批准为万维网协会 (W3C) <a href="http://www.w3.org/Consortium/Process/#RecsW3C">建议</a>。这是一个稳定的文档，可以用作参考材料，也可以作为其他文档的标准参考文献。W3C 在建议制定过程中的作用是吸引对本规范的注意并促进它的广泛使用。这能增强 Web 的功能和互操作性。</p>
+<p>本规格说明已知的错误列表在 <a href="http://www.w3.org/1999/11/REC-xpath-19991116-errata">http://www.w3.org/1999/11/REC-xpath-19991116-errata</a>。</p>
+<p> 对本说明的建议可电邮到 <a href="mailto:www-xpath-comments@w3.org">www-xpath-comments@w3.org</a>；<a href="http://lists.w3.org/Archives/Public/www-xpath-comments">存档</a>的建议可供备查。</p>
+<p>英文版是唯一的正式版，本文档的翻译请参见 <a href="http://www.w3.org/Style/XSL/translations.html">http://www.w3.org/Style/XSL/translations.html</a>。</p>
+<p>现有 W3C 建议和其他技术文档的列表在 <a href="http://www.w3.org/TR">http://www.w3.org/TR</a>。</p>
+<p>本规格是 XSL 工作组及 XML 链接工作组联合的工作成果，因此也是 <a href="http://www.w3.org/Style/Activity">XML 式样制定工作（W3C Style activity）</a>和 <a href="http://www.w3.org/XML/Activity"> W3C XML 制定工作（W3C XML Activity）</a>的一部分。</p>
 </div>
 <div class="toc">
-<h2><a name="contents">Ŀ¼</a></h2><p class="toc">1 <a href="#IDAKTWU">����</a><br>2 <a href="#location-paths">��ַ·��</a><br>&#160;&#160;&#160;&#160;2.1 <a href="#IDADEXU">�ص㲽��</a><br>&#160;&#160;&#160;&#160;2.2 <a href="#axes">��</a><br>&#160;&#160;&#160;&#160;2.3 <a href="#node-tests">�ڵ����</a><br>&#160;&#160;&#160;&#160;2.4 <a href="#predicates">�ж���</a><br>&#160;&#160;&#160;&#160;2.5 <a href="#path-abbrev">����䷨</a><br>3 <a href="#IDAE5XU">����ʽ</a><br>&#160;&#160;&#160;&#160;3.1 <a href="#IDAI5XU">����</a><br>&#160;&#160;&#160;&#160;3.2 <a href="#IDAMBYU">��������</a><br>&#160;&#160;&#160;&#160;3.3 <a href="#node-sets">�ڵ㼯��</a><br>&#160;&#160;&#160;&#160;3.4 <a href="#booleans">����</a><br>&#160;&#160;&#160;&#160;3.5 <a href="#numbers">����</a><br>&#160;&#160;&#160;&#160;3.6 <a href="#strings">�ַ���</a><br>&#160;&#160;&#160;&#160;3.7 <a href="#exprlex">�ʷ��ṹ</a><br>4 <a href="#corelib">���ĺ�����</a><br>&#160;&#160;&#160;&#160;4.1 <a href="#IDAIHZU">�ڵ㼯�Ϻ���</a><br>&#160;&#160;&#160;&#160;4.2 <a href="#IDAUNZU">�ַ�������</a><br>&#160;&#160;&#160;&#160;4.3 <a href="#IDACZZU">��������</a><br>&#160;&#160;&#160;&#160;4.4 <a href="#IDAA2ZU">���ֺ���</a><br>5 <a href="#data-model">����ģ��</a><br>&#160;&#160;&#160;&#160;5.1 <a href="#root-node">���ڵ�</a><br>&#160;&#160;&#160;&#160;5.2 <a href="#element-nodes">Ԫ�ؽڵ�</a><br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;5.2.1 <a href="#unique-id">Ψһ ID</a><br>&#160;&#160;&#160;&#160;5.3 <a href="#attribute-nodes">���Խڵ�</a><br>&#160;&#160;&#160;&#160;5.4 <a href="#namespace-nodes">�����ռ�ڵ�</a><br>&#160;&#160;&#160;&#160;5.5 <a href="#IDAPN2V">����ָ��ڵ�</a><br>&#160;&#160;&#160;&#160;5.6 <a href="#IDAIO2V">ע�ͽڵ�</a><br>&#160;&#160;&#160;&#160;5.7 <a href="#IDABP2V">���Ľڵ�</a><br>6 <a href="#IDA5Q2V">һ����</a><br></p>
-<h3>��¼</h3><p class="toc">A <a href="#IDAQR2V">�ο���Ŀ</a><br>&#160;&#160;&#160;&#160;A.1 <a href="#IDAUR2V">��׼�淶�ο���Ŀ</a><br>&#160;&#160;&#160;&#160;A.2 <a href="#IDAMT2V">�����ο���Ŀ</a><br>B <a href="#infoset">XML ��Ϣ��ӳ��</a>���Ǳ�׼��<br></p></div><hr><div class="body">
+<h2><a name="contents">目录</a></h2><p class="toc">1 <a href="#IDAKTWU">绪论</a><br>2 <a href="#location-paths">地址路径</a><br>&#160;&#160;&#160;&#160;2.1 <a href="#IDADEXU">地点步进</a><br>&#160;&#160;&#160;&#160;2.2 <a href="#axes">轴</a><br>&#160;&#160;&#160;&#160;2.3 <a href="#node-tests">节点测试</a><br>&#160;&#160;&#160;&#160;2.4 <a href="#predicates">判定词</a><br>&#160;&#160;&#160;&#160;2.5 <a href="#path-abbrev">缩简句法</a><br>3 <a href="#IDAE5XU">表达式</a><br>&#160;&#160;&#160;&#160;3.1 <a href="#IDAI5XU">基础</a><br>&#160;&#160;&#160;&#160;3.2 <a href="#IDAMBYU">函数调用</a><br>&#160;&#160;&#160;&#160;3.3 <a href="#node-sets">节点集合</a><br>&#160;&#160;&#160;&#160;3.4 <a href="#booleans">布尔</a><br>&#160;&#160;&#160;&#160;3.5 <a href="#numbers">数字</a><br>&#160;&#160;&#160;&#160;3.6 <a href="#strings">字符串</a><br>&#160;&#160;&#160;&#160;3.7 <a href="#exprlex">词法结构</a><br>4 <a href="#corelib">核心函数库</a><br>&#160;&#160;&#160;&#160;4.1 <a href="#IDAIHZU">节点集合函数</a><br>&#160;&#160;&#160;&#160;4.2 <a href="#IDAUNZU">字符串函数</a><br>&#160;&#160;&#160;&#160;4.3 <a href="#IDACZZU">布尔函数</a><br>&#160;&#160;&#160;&#160;4.4 <a href="#IDAA2ZU">数字函数</a><br>5 <a href="#data-model">数据模型</a><br>&#160;&#160;&#160;&#160;5.1 <a href="#root-node">根节点</a><br>&#160;&#160;&#160;&#160;5.2 <a href="#element-nodes">元素节点</a><br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;5.2.1 <a href="#unique-id">唯一 ID</a><br>&#160;&#160;&#160;&#160;5.3 <a href="#attribute-nodes">属性节点</a><br>&#160;&#160;&#160;&#160;5.4 <a href="#namespace-nodes">命名空间节点</a><br>&#160;&#160;&#160;&#160;5.5 <a href="#IDAPN2V">处理指令节点</a><br>&#160;&#160;&#160;&#160;5.6 <a href="#IDAIO2V">注释节点</a><br>&#160;&#160;&#160;&#160;5.7 <a href="#IDABP2V">正文节点</a><br>6 <a href="#IDA5Q2V">一致性</a><br></p>
+<h3>附录</h3><p class="toc">A <a href="#IDAQR2V">参考书目</a><br>&#160;&#160;&#160;&#160;A.1 <a href="#IDAUR2V">标准规范参考书目</a><br>&#160;&#160;&#160;&#160;A.2 <a href="#IDAMT2V">其他参考书目</a><br>B <a href="#infoset">XML 信息集映射</a>（非标准）<br></p></div><hr><div class="body">
 <div class="div1">
 
-<h2><a name="IDAKTWU"></a>1 ����</h2>
+<h2><a name="IDAKTWU"></a>1 绪论</h2>
 
-<p>XPath ��Ŭ���� XSL ת����<a href="#XSLT">XSLT</a>�ݺ� XPointer ��<a href="#XPTR">XPointer</a>�ݵĹ��������ṩһ�����õľ䷨������Ľ����XPath����Ҫ��Ŀ�����ڶ� XML ��<a href="#XML">XML</a>���ĵ�Ԫ��Ѱַ����֧�������ҪĿ�ĵ�ͬʱ����ҲΪ�ַ��������ֺͲ����Ĳ����ṩ�˻����ֶΡ�XPath ʹ�ü����ġ��� XML �䷨�Ա���� URIs �� XML ����ֵ����ʹ�� XPath��XPath �� XML �ĵ��ĳ���ġ��߼��Ľṹ�������ı���䷨���в�����XPath ������Դ������ URL �������� XML �ĵ��Ĳ�εĽṹ���е���һ��·����־��</p>
+<p>XPath 是努力给 XSL 转换［<a href="#XSLT">XSLT</a>］和 XPointer ［<a href="#XPTR">XPointer</a>］的共享功能提供一个共用的句法及语义的结果。XPath的主要的目是用于对 XML ［<a href="#XML">XML</a>］文档元件寻址。在支持这个主要目的的同时，它也为字符串，数字和布尔的操作提供了基本手段。XPath 使用简明的、非 XML 句法以便於在 URIs 和 XML 属性值以内使用 XPath，XPath 对 XML 文档的抽象的、逻辑的结构而非它的表面句法进行操作，XPath 的名字源于它在 URL 中用作对 XML 文档的层次的结构进行导航一个路径标志。</p>
 
-<p>��������Ѱַ�⣬XPath Ҳ����Ƴ��Ա������ܱ�����ƥ���һ����Ȼ���Ӽ�������һ���ڵ��Ƿ�ƥ��һ��ģʽ����<a href="http://www.w3.org/TR/WD-xslt#patterns">XSLT</a>�������� XPath ���ⷽ���ʹ�á�</p>
+<p>除了用做寻址外，XPath 也被设计成以便它有能被用于匹配的一个自然的子集（测试一个节点是否匹配一个模式）；<a href="http://www.w3.org/TR/WD-xslt#patterns">XSLT</a>中描述了 XPath 在这方面的使用。</p>
 
-<p>XPath ��һ�� XML �ĵ���ģ��Ϊһ�ýڵ������в�ͬ���͵Ľڵ㣬����Ԫ�ؽڵ㣬���Խڵ�����Ľڵ㡣XPath ������һ�ַ���������ÿ��Ľڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>��һЩ�ڵ������Ҳ�����֡�XPath ���֧�� XML �����ռ��<a href="#XMLNAMES">XML Names</a>�ݡ��������ڵ�����ֱ���ģ����һ���ֳǲ��ֺͿ���Ϊ�յ������ռ� URI ��ɵĶԣ��ⱻ��Ϊ<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>��<a href="#data-model"><b>5 ����ģ��</b></a>����������ģ����ϸϸ�ڡ�</p>
+<p>XPath 将一个 XML 文档建模成为一棵节点树，有不同类型的节点，包括元素节点，属性节点和正文节点。XPath 定义了一种方法来计算每类的节点的<a title="String Value" href="#dt-string-value">字串值</a>。一些节点的类型也有名字。XPath 充分支持 XML 命名空间［<a href="#XMLNAMES">XML Names</a>］。这样，节点的名字被建模成由一个局城部分和可能为空的命名空间 URI 组成的对；这被称为<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>。<a href="#data-model"><b>5 数据模型</b></a>描述了数据模型详细细节。</p>
 
-<p>XPath����Ҫ�﷨�����Ǳ���ʽ��һ������ʽƥ�����ʽ <a href="#NT-Expr">Expr</a>��һ������ʽ����ֵ��������һ�����󣬸ö��������� 4 �ֻ���������֮һ��</p>
+<p>XPath的主要语法构件是表达式，一个表达式匹配产生式 <a href="#NT-Expr">Expr</a>，一个表达式被求值评估产出一个对象，该对象有下列 4 种基本的类型之一：</p>
 
 <blockquote><p>
-�ڵ㼯�ϣ�����ġ����ظ��Ľڵ㼯�ϣ�
-<br>���������٣�
-<br>���֣�һ���������֣�
-<br>�ַ�����UCS �ַ���˳��
+节点集合（无序的、无重复的节点集合）
+<br>布尔（真或假）
+<br>数字（一个浮点数字）
+<br>字符串（UCS 字符的顺序）
 </p></blockquote>
  
-<p>����ʽ��ֵ�������������йء�XSLT �� XPointer �ֱ��ָ���������������� XSLT �� XPointer ʹ�� XPath ����ʽ����������ɰ�����</p>
+<p>表达式求值发生与上下文有关。XSLT 和 XPointer 分别地指定了上下文怎样在 XSLT 和 XPointer 使用 XPath 表达式。上下文组成包括：</p>
 
 <blockquote><p>
-һ���ڵ㣨��<a name="dt-context-node" title="Context Node">����</a>��<b>�����Ľڵ�</b>�ݣ�
-<br>һ�Է�������������<a name="dt-context-position" title="Context Position">����</a>��<b>������λ��</b>�ݺͣ�<a name="dt-context-size" title="Context Size">����</a>��<b>�����Ĵ�С</b>�ݣ�
-<br>һ�������󶨵ļ���
-<br>һ��������
-<br>����ʽ��Χ�ڵ������ռ������ļ���
+一个节点（［<a name="dt-context-node" title="Context Node">定义</a>：<b>上下文节点</b>］）
+<br>一对非零正整数（［<a name="dt-context-position" title="Context Position">定义</a>：<b>上下文位置</b>］和［<a name="dt-context-size" title="Context Size">定义</a>：<b>上下文大小</b>］）
+<br>一个变量绑定的集合
+<br>一个函数库
+<br>表达式范围内的命名空间声明的集合
 </p></blockquote>
-<p>������λ������С춻��������ĵĴ�С��</p>
+<p>上下文位置总是小於或等於上下文的大小。</p>
 
-<p>���ɴӱ�����������ֵӳ����ɣ�һ��������ֵ��һ�������������Ϳ������κα���ʽ��ֵ���ܵ����ͣ�����Ҳ����������ûָ������������͡�</p>
+<p>绑定由从变量名到变量值映射组成，一个变量的值是一个对象，它的类型可以是任何表达式的值可能的类型，并且也可以有这里没指定的另外的类型。</p>
 
-<p>�������ɴӺ�������������ӳ����ɣ�ÿ�������ɽ��������������ϵĲ������ҷ��ص����Ľ�������ĵ����������е� XPath ʵ�ֱ���֧�ֵ�һ�����ĺ����⣨�ο�<a href="#corelib"><b>4 ���ĺ�����</b></a>������춺��ĺ������е�ÿһ�������������ͽ����4�ֻ��������͡�XSLT �� XPointer ͨ����������ĺ�������չ XPath �ĺ�������Щ������Щ�� 4 �ֻ��������Ͳ�������������� XSLT �� XPointer �����������������Ͳ�����</p>
+<p>函数库由从函数名到函数的映射组成，每个函数可接受零个或零个以上的参数并且返回单个的结果。本文档定义了所有的 XPath 实现必须支持的一个核心函数库（参看<a href="#corelib"><b>4 核心函数库</b></a>）。对於核心函数库中的每一个函数，参数和结果有4种基本的类型。XSLT 和 XPointer 通过定义另外的函数来扩展 XPath 的函数；这些函数有些对 4 种基本的类型操作，其它的则对 XSLT 和 XPointer 定义的另外的数据类型操作。</p>
 
-<p>�����ռ������ɴ�ǰ׺�������ռ� URI ��ӳ����ɡ�</p>
+<p>命名空间声明由从前缀到命名空间 URI 的映射组成。</p>
 
-<p>�����󶨡������⼰�����ռ�������������ʽ�����ӱ���ʽ��ֵ����һ���ģ������Ľڵ㡢������λ�ü���С��������ʽ�����ӱ���ʽ��ֵ���ǲ�ͬ�ġ��ж��ֱ���ʽ�ɸı������Ľڵ㣬��ֻ���ж����ܸı�������λ�ú������Ĵ�С���ο�<a href="#predicates"><b>2.4 �ж���</b></a>����������һ�ֱ���ʽ����ֵʱ������������ȷ��˵���������Ľڵ㡢������λ�á����������ĵĴ�С���ӱ���ʽ����ֵ�����仯�����û�й��������Ľڵ㡢������λ�á������ĵĴ�С��˵������ô�����ֱ���ʽ���ӱ���ʽ����ֵ�ͱ��ֲ��䡣</p>
+<p>变量绑定、函数库及命名空间声明对於求表达式或其子表达式的值总是一样的；上下文节点、上下文位置及大小对於求表达式或其子表达式的值则是不同的。有多种表达式可改变上下文节点，而只有判定词能改变上下文位置和上下文大小（参看<a href="#predicates"><b>2.4 判定词</b></a>）。在描述一种表达式的求值时，必须总是明确地说明是上下文节点、上下文位置、还是上下文的大小对子表达式的求值产生变化，如果没有关于上下文节点、上下文位置、上下文的大小的说明，那么对那种表达式的子表达式的求值就保持不变。</p>
 
-<p>XPath ����ʽ���������� XML ������ڱ�����˵�����﷨�������� XML 1.0 �淶���Ժ������ֵ����ˣ�����﷨Ҫʹ���ַ� <code>&lt;</code>�������ַ�ȴ���Բ����� <code>&lt;</code> �������κε� XML �����У�����������ѭ XML 1.0 �Ĺ���Ҳ����Ӧ����� <code>&amp;lt;</code>���ڱ���ʽ���ڣ����ֵ��ַ����ɵ����Ż�˫�������綨����Ҳ���ڽ綨 XML ���ԡ�Ϊ�˱��� XML ������������ʽ�е����Ž��ͳ����Խ綨�������ſ��Լ�����ַ��ο��� <code>&amp;quot;</code> �� <code>&amp;apos;</code> ������Ϊѡ����� XML ����ʹ��˫���ţ�����ʽ�����ʹ�õ����ţ���֮��Ȼ��</p>
+<p>XPath 表达式经常出现在 XML 属性里，在本节中说明的语法适用于在 XML 1.0 规范化以后的属性值。因此，如果语法要使用字符 <code>&lt;</code>，而该字符却绝对不能以 <code>&lt;</code> 出现在任何的 XML 资料中，这样必须遵循 XML 1.0 的规则，也就是应键入成 <code>&amp;lt;</code>。在表达式以内，文字的字符串由单引号或双引号来界定，它也用于界定 XML 属性。为了避免 XML 处理器将表达式中的引号解释成属性界定符，引号可以键入成字符参考（ <code>&amp;quot;</code> 或 <code>&amp;apos;</code> ）。做为选择，如果 XML 属性使用双引号，表达式则可以使用单引号，反之亦然。</p>
 
-<p>һ����Ҫ�ı���ʽ�����ǵص�·������ַ·��ѡ���������Ľڵ���صĽڵ㼯�ϡ����ǵ�ַ·���ı���ʽ��ֵ�Ľ���ǽڵ㼯�ϣ��ýڵ㼯�ϰ����ص�·��ѡ��Ľڵ㡣��ַ·���ܵݹ�ذ�������ʽ����Щ����ʽ�������˽ڵ㼯�ϡ���ַ·�����ͬʱ<a href="#NT-LocationPath">LocationPath</a> ��ƥ�䡣</p>
+<p>一种重要的表达式类型是地点路径，地址路径选择与上下文节点相关的节点集合。对是地址路径的表达式求值的结果是节点集合，该节点集合包含地点路径选择的节点。地址路径能递归地包含表达式，这些表达式用来过滤节点集合。地址路径与此同时<a href="#NT-LocationPath">LocationPath</a> 相匹配。</p>
 
-<p>�������﷨����ս�� <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> �� <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-NCName">NCName</a> �����ڣ�<a href="#XMLNAMES">XML Names</a>���У���<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>�����ڣ�<a href="#XML">XML</a>���С��﷨���<a href="#XML">XML</a>��һ��ʹ�� EBNF ���ű�ʾ�������������Դ�д��ĸ��ͷ���﷨���ţ���</p>
+<p>在下列语法里，非终结的 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> 和 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-NCName">NCName</a> 定义在［<a href="#XMLNAMES">XML Names</a>］中，而<a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>定义在［<a href="#XML">XML</a>］中。语法与［<a href="#XML">XML</a>］一样使用 EBNF 符号表示法（除了总是以大写字母起头的语法符号）。</p>
 
-<p>��������ʽʱ�����Ƚ��ַ��ַ����ֽ�ɷָ�Σ�token����Ȼ���ٷ������÷ָ�ν�������С��հ׷������ɵ��ڷָ��֮�䱻ʹ�á��ֶλ���tokenization��������<a href="#exprlex"><b>3.7 �ʷ��ṹ</b></a>��������</p>
+<p>分析表达式时，首先将字符字符串分解成分割段（token），然后再分析所得分割段结果的序列。空白符能自由地在分割段之间被使用。分段化（tokenization）过程在<a href="#exprlex"><b>3.7 词法结构</b></a>中描述。</p>
 
 </div>
 
 <div class="div1">
 
-<h2><a name="location-paths"></a>2 ��ַ·��</h2>
-<p>���ܵ�ַ·�����Ǳ����������������﷨�Ĺ�������ַ·�� <a href="#NT-LocationPath">LocationPath</a>
-�� <a href="#NT-Expr">Expr</a> ��һ����������ӣ�������ȴ������Ҫ�Ĺ�������ˣ������Ƚ���������</p>
+<h2><a name="location-paths"></a>2 地址路径</h2>
+<p>尽管地址路径不是本语言中最完整的语法的构件（地址路径 <a href="#NT-LocationPath">LocationPath</a>
+是 <a href="#NT-Expr">Expr</a> 的一个特殊的例子），他们却是最重要的构件，因此，将首先进行描述。</p>
 
-<p>ÿһ����ַ·������ʹ��ֱ�۵����൱�߳��ľ䷨��ʾ��ͬʱҲ�кܶ�����䷨�����Լ����ر�ʾ����·������ڽ�����ʹ��δ����д�ľ䷨�ĵ�ַ·�������塣Ȼ��ͨ����ʾ����ľ䷨����չ��δ����д�ľ䷨����������䷨����<a href="#path-abbrev"><b>2.5 ����䷨</b></a>����</p>
+<p>每一条地址路径都能使用直观但是相当冗长的句法表示，同时也有很多缩简句法可用以简明地表示常见路径。这节将解释使用未经缩写的句法的地址路径的语义。然后将通过显示缩简的句法怎扩展成未经缩写的句法来解释缩简句法（看<a href="#path-abbrev"><b>2.5 缩简句法</b></a>）。</p>
 
-<p>����ʹ��δ����д�ľ䷨�ĵ�ַ·����һЩ���ӣ�</p>
+<p>这是使用未经缩写的句法的地址路径的一些例子：</p>
 
 <ul>
 
-<li><p><code>child::para</code> ѡ�������Ľڵ�� <code>para</code> Ԫ�غ���</p></li>
+<li><p><code>child::para</code> 选择上下文节点的 <code>para</code> 元素孩子</p></li>
 
-<li><p><code>child::*</code> ѡ�������Ľڵ������Ԫ�غ���</p></li>
+<li><p><code>child::*</code> 选择上下文节点的所有元素孩子</p></li>
 
-<li><p><code>child::text()</code> ѡ�������Ľڵ�����е����Ľڵ�</p></li>
+<li><p><code>child::text()</code> 选择上下文节点的所有的正文节点</p></li>
 
-<li><p><code>child::node()</code> ѡ�������Ľڵ�����еĺ��ӣ�������������ʲô�ڵ�����</p></li>
+<li><p><code>child::node()</code> 选择上下文节点的所有的孩子，而不论它们是什么节点类型</p></li>
 
-<li><p><code>attribute::name</code> ѡ�������Ľڵ�� <code>name</code> ����</p></li>
+<li><p><code>attribute::name</code> 选择上下文节点的 <code>name</code> 属性</p></li>
 
-<li><p><code>attribute::*</code> ѡ�������Ľڵ�����е�����</p></li>
+<li><p><code>attribute::*</code> 选择上下文节点的所有的属性</p></li>
 
-<li><p><code>descendant::para</code> ѡ�������Ľڵ�� <code>para</code> Ԫ������</p></li>
+<li><p><code>descendant::para</code> 选择上下文节点的 <code>para</code> 元素子孙</p></li>
 
-<li><p><code>ancestor::div</code> ѡ�������Ľڵ�� <code>div</code> ����</p></li>
+<li><p><code>ancestor::div</code> 选择上下文节点的 <code>div</code> 祖先</p></li>
 
-<li><p><code>ancestor-or-self::div</code> ѡ�������Ľڵ�� <code>div</code> ���ȣ����ң���������Ľڵ�Ϊ <code>div</code> Ԫ�أ���������Ľڵ�Ҳ��ѡ��</p></li>
+<li><p><code>ancestor-or-self::div</code> 选择上下文节点的 <code>div</code> 祖先，并且，如果上下文节点为 <code>div</code> 元素，则该上下文节点也被选择</p></li>
 
-<li><p><code>descendant-or-self::para</code> ѡ�������Ľڵ������е� <code>div</code> Ԫ��������ң���������Ľڵ���һ�� <code>div</code> Ԫ�أ���������Ľڵ�Ҳ��ѡ��</p></li>
+<li><p><code>descendant-or-self::para</code> 选择上下文节点中所有的 <code>div</code> 元素子孙，而且，如果上下文节点是一个 <code>div</code> 元素，则该上下文节点也被选择</p></li>
 
-<li><p><code>self::para</code> ��������Ľڵ���һ�� <code>para</code> Ԫ�أ�ѡ��������Ľڵ㣬����ѡ���κζ���</p></li>
+<li><p><code>self::para</code> 如果上下文节点是一个 <code>para</code> 元素，选择该上下文节点，否则不选择任何东西</p></li>
 
-<li><p><code>child::chapter/descendant::para</code> ѡ�������Ľڵ�� <code>chapter</code> Ԫ�غ��ӵ����е� <code>para</code> Ԫ������</p></li>
+<li><p><code>child::chapter/descendant::para</code> 选择上下文节点的 <code>chapter</code> 元素孩子的所有的 <code>para</code> 元素子孙</p></li>
 
-<li><p><code>child::*/child::para</code> ѡ�������Ľڵ�����е� <code>para</code> ����</p></li>
+<li><p><code>child::*/child::para</code> 选择上下文节点的所有的 <code>para</code> 孙子</p></li>
 
-<li><p><code>/</code> ѡ���ĵ��������������ĵ�Ԫ�صĸ���</p></li>
+<li><p><code>/</code> 选择文档根（它总是是文档元素的父）</p></li>
 
-<li><p><code>/descendant::para</code> ѡ����ͬһ�ĵ������е� <code>para</code> Ԫ����Ϊ�����Ľڵ� </p></li>
+<li><p><code>/descendant::para</code> 选择在同一文档中所有的 <code>para</code> 元素作为上下文节点 </p></li>
 
-<li><p><code>/descendant::olist/child::item</code> ѡ����ͬһ�ĵ������е��� <code>olist</code> Ϊ���� <code>item</code> Ԫ����Ϊ�����Ľڵ�</p></li>
+<li><p><code>/descendant::olist/child::item</code> 选择在同一文档中所有的以 <code>olist</code> 为父的 <code>item</code> 元素作为上下文节点</p></li>
 
-<li><p><code>child::para[position()=1]</code> ѡ�������Ľڵ�ĵ�һ�� <code>para</code> ����</p></li>
+<li><p><code>child::para[position()=1]</code> 选择上下文节点的第一个 <code>para</code> 孩子</p></li>
 
-<li><p><code>child::para[position()=last()]</code> ѡ�������Ľڵ�����һ�� <code>para</code> ����</p></li>
+<li><p><code>child::para[position()=last()]</code> 选择上下文节点的最后一个 <code>para</code> 孩子</p></li>
 
-<li><p><code>child::para[position()=last()-1]</code> ѡ�������Ľڵ�ĵ����ڶ��� <code>para</code> ����</p></li>
+<li><p><code>child::para[position()=last()-1]</code> 选择上下文节点的倒数第二个 <code>para</code> 孩子</p></li>
 
-<li><p><code>child::para[position()&gt;1]</code> ѡ�������Ľڵ��г���һ���������е� <code>para</code> ����</p></li>
+<li><p><code>child::para[position()&gt;1]</code> 选择上下文节点中除第一个以外所有的 <code>para</code> 孩子</p></li>
 
-<li><p><code>following-sibling::chapter[position()=1]</code> ѡ�������Ľڵ����һ�� <code>chapter</code> �ֵ�</p></li>
+<li><p><code>following-sibling::chapter[position()=1]</code> 选择上下文节点的下一个 <code>chapter</code> 兄弟</p></li>
 
-<li><p><code>preceding-sibling::chapter[position()=1]</code> ѡ�������Ľڵ��ǰһ�� <code>chapter</code> �ֵ�</p></li>
+<li><p><code>preceding-sibling::chapter[position()=1]</code> 选择上下文节点的前一个 <code>chapter</code> 兄弟</p></li>
 
-<li><p><code>/descendant::figure[position()=42]</code> ѡ���ĵ��е���ʮ���� <code>figure</code> Ԫ��</p></li>
+<li><p><code>/descendant::figure[position()=42]</code> 选择文档中第四十二个 <code>figure</code> 元素</p></li>
 
-<li><p><code>/child::doc/child::chapter[position()=5]/child::section[position()=2]</code> ѡ���ĵ�Ԫ�� <code>doc</code> �ĵ���� <code>chapter</code> �ĵڶ��� <code>section</code></p></li>
+<li><p><code>/child::doc/child::chapter[position()=5]/child::section[position()=2]</code> 选择文档元素 <code>doc</code> 的第五个 <code>chapter</code> 的第二个 <code>section</code></p></li>
 
-<li><p><code>child::para[attribute::type='warning"]</code> ѡ��������Ľڵ��������� <code>type</code> ��ֵΪ <code>warning</code> �� <code>para</code> ����</p></li>
+<li><p><code>child::para[attribute::type='warning"]</code> 选择的上下文节点中有属性 <code>type</code> 且值为 <code>warning</code> 的 <code>para</code> 孩子</p></li>
 
-<li><p><code>child::para[attribute::type='warning'][position()=5]</code> ѡ��������Ľڵ������е������� <code>type</code> ��ֵΪ <code>warning</code> �� <code>para</code> �����е��������</p></li>
+<li><p><code>child::para[attribute::type='warning'][position()=5]</code> 选择的上下文节点中所有的有属性 <code>type</code> 且值为 <code>warning</code> 的 <code>para</code> 孩子中第五个孩子</p></li>
 
-<li><p><code>child::para[position()=5][attribute::type="warning"]</code> ѡ��������Ľڵ��е���� <code>para</code> ���ӣ�����ú����� <code>type</code> ������ֵΪ <code>warning</code> �Ļ�</p></li>
+<li><p><code>child::para[position()=5][attribute::type="warning"]</code> 选择的上下文节点中第五个 <code>para</code> 孩子，如果该孩子有 <code>type</code> 属性且值为 <code>warning</code> 的话</p></li>
 
-<li><p><code>child::chapter[child::title='Introduction']</code> ѡ��������Ľڵ�� <code>chapter</code> ���ӣ���Щ������һ����һ������<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>��� <code>Introduction</code> �� <code>title</code> ����</p></li>
+<li><p><code>child::chapter[child::title='Introduction']</code> 选择的上下文节点的 <code>chapter</code> 孩子，这些孩子有一个或一个以上<a title="String Value" href="#dt-string-value">字串值</a>等於 <code>Introduction</code> 的 <code>title</code> 孩子</p></li>
 
-<li><p><code>child::chapter[child::title]</code> ѡ��������Ľڵ�����һ����һ������ <code>title</code> ���ӵ� chapter ����</p></li>
+<li><p><code>child::chapter[child::title]</code> 选择的上下文节点中有一个或一个以上 <code>title</code> 孩子的 chapter 孩子</p></li>
 
-<li><p><code>child::*[self::chapter or self::appendix]</code> ѡ�������Ľڵ�� <code>chapter</code> �� <code>appendix</code> ����</p></li>
+<li><p><code>child::*[self::chapter or self::appendix]</code> 选择上下文节点的 <code>chapter</code> 和 <code>appendix</code> 孩子</p></li>
 
-<li><p><code>child::*[self::chapter or self::appendix][position()=last()]</code> ѡ�������Ľڵ�����һ�� <code>chapter</code> �� <code>appendix</code> ����</p></li>
-</ul><p>��ַ·�������֣���Եĵ�ַ·���;��Եĵ�ַ·����</p>
+<li><p><code>child::*[self::chapter or self::appendix][position()=last()]</code> 选择上下文节点的最后一个 <code>chapter</code> 或 <code>appendix</code> 孩子</p></li>
+</ul><p>地址路径有两种：相对的地址路径和绝对的地址路径。</p>
 
-<p>��Եĵ�ַ·������ <code>/</code> �ֿ���һ�������ص㲽��������ɡ�����Ե�ַ·���еĲ����Ǵ�������ɡ�ÿһ��������ѡ�����������Ľڵ�Ľڵ㼯�������ĳ�ʼ�����������������ķ�ʽ������Ĳ��������һ�𡣲����ĳ�ʼ������ѡ�����������Ľڵ�Ľڵ㼯���ü��ϵ�ÿһ�ڵ��Ϊ���������������Ľڵ㡣�ɲ���ȷ���Ľڵ�ļ�����������һ��ġ��ɺϳɵĲ���ȷ���Ľڵ�ļ���Ҳ�����������ϡ����磬<code>child::div/child::para</code> ѡ���������Ľڵ������ <code>div</code> Ԫ�غ��ӵ����� <code>para</code> Ԫ�غ��ӣ����߻��仰˵��ѡ���������Ľڵ����������� <code>div</code> Ϊ�� <code>para</code> Ԫ�����ӡ�</p>
+<p>相对的地址路径由以 <code>/</code> 分开的一个或多个地点步进序列组成。在相对地址路径中的步进是从左到右组成。每一步进依次选择相对於上下文节点的节点集。步进的初始的序列以如下所述的方式与后续的步进组成在一起。步进的初始的序列选择相对於上下文节点的节点集，该集合的每一节点成为后续步进的上下文节点。由步进确定的节点的集合是联合在一起的。由合成的步进确定的节点的集合也是这样的联合。例如，<code>child::div/child::para</code> 选择了上下文节点的所有 <code>div</code> 元素孩子的所有 <code>para</code> 元素孩子，或者换句话说，选择了上下文节点中所有有以 <code>div</code> 为父 <code>para</code> 元素孙子。</p>
 
-<p>���Եĵ�ַ·���� <code>/</code> ������������Ϊ��ѡ���һ����Ե�ַ·����ɡ� <code>/</code> ����ѡ���԰��������Ľڵ���ĵ��ĸ��ڵ㣬�����������Եĵ�ַ·�����õ�ַ·��ѡ��Ľڵ㼯���������춰��������Ľڵ���ĵ��ĸ��ڵ���Ե�ַ·����ȷ����</p>
+<p>绝对的地址路径由 <code>/</code> 及紧随其后的作为可选项的一条相对地址路径组成。 <code>/</code> 本身选择以包含上下文节点的文档的根节点，如果它带着相对的地址路径，该地址路径选择的节点集合则由相对於包含上下文节点的文档的根节点相对地址路径来确定。</p>
 
 
-<h5>��ַ·��</h5><table class="scrap" summary="Scrap"><tbody>
+<h5>地址路径</h5><table class="scrap" summary="Scrap"><tbody>
 <tr valign="baseline"><td><a name="NT-LocationPath"></a>[1]&#160;&#160;&#160;</td><td><code>LocationPath</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-RelativeLocationPath">RelativeLocationPath</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-AbsoluteLocationPath">AbsoluteLocationPath</a></code></td></tr>
 <tr valign="baseline"><td><a name="NT-AbsoluteLocationPath"></a>[2]&#160;&#160;&#160;</td><td><code>AbsoluteLocationPath</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code>'/' <a href="#NT-RelativeLocationPath">RelativeLocationPath</a>?</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-AbbreviatedAbsoluteLocationPath">AbbreviatedAbsoluteLocationPath</a></code></td></tr>
 <tr valign="baseline"><td><a name="NT-RelativeLocationPath"></a>[3]&#160;&#160;&#160;</td><td><code>RelativeLocationPath</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-Step">Step</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-RelativeLocationPath">RelativeLocationPath</a> '/' <a href="#NT-Step">Step</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-AbbreviatedRelativeLocationPath">AbbreviatedRelativeLocationPath</a></code></td></tr>
 </tbody></table>
 <div class="div2">
 
-<h3><a name="IDADEXU"></a>2.1 �ص㲽��</h3>
-<p>һ���ص㲽�����������֣�</p>
+<h3><a name="IDADEXU"></a>2.1 地点步进</h3>
+<p>一个地点步进有三个部分：</p>
 
 <ul>
-<li><p>һ���ᣬ��ָ���˵ص㲽��ѡ��Ľڵ��������Ľڵ�֮����״��ϵ��</p></li>
-<li><p>һ���ڵ���ԣ���ָ���ص㲽��ѡ��Ľڵ�Ľڵ������Լ��ڵ���չ��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>����</p></li>
-<li><p>�����������ϵ��ж��ʣ���ʹ��ר�еı���ʽ��һ��ϸ���ص㲽��ѡ��Ľڵ㼯�ϡ�</p></li>
+<li><p>一个轴，它指定了地点步进选择的节点与上下文节点之间树状关系，</p></li>
+<li><p>一个节点测试，它指定地点步进选择的节点的节点类型以及节点扩展名<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>，和</p></li>
+<li><p>零个或零个以上的判定词，它使用专有的表达式进一步细化地点步进选择的节点集合。</p></li>
 </ul>
-<p>�ص㲽���ľ䷨��������ð�ŷֿ��������ͽڵ���ԣ����ɸ����������������ڷ������ڵı���ʽ�����磬�� <code>child::para[position()=1]</code> �У�<code>child</code> ��������<code>para</code> �ǽڵ���Զ� <code>[position()=1]</code> �����ж��ʡ�</p>
+<p>地点步进的句法是由两个冒号分开的轴名和节点测试，其后可跟随零个或零个以上在方括符内的表达式。例如，在 <code>child::para[position()=1]</code> 中，<code>child</code> 是轴名，<code>para</code> 是节点测试而 <code>[position()=1]</code> 则是判定词。</p>
 
-<p>�ɵص㲽��ѡ��Ľڵ㼯����Դ�ڴ���ͽڵ���Բ�����ʼ�Ľڵ㼯�ϣ�Ȼ�����ɸ����ж��ʵ����ι��˺�Ľڵ㼯�ϡ�</p>
+<p>由地点步进选择的节点集合是源于从轴和节点测试产生初始的节点集合，然后再由各个判定词的依次过滤后的节点集合。</p>
 
-<p>��ʼ�Ľڵ㼯�ϵĽڵ���ɣ���Щ�ڵ��������Ľڵ��ϵ����ָ���ģ���ڵ����ͼ�<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�ɽڵ����ָ�������磬�ص㲽�� <code>descendant::para</code> ѡ�������Ľڵ�� <code>para</code> Ԫ����� <code>descendant</code> ָ���ڳ�ʼ�Ľڵ㼯���е���ÿһ���ڵ㶼�����Ǹ������ĵ�һ����� <code>para</code> ָ���ڳ�ʼ�Ľڵ㼯���е�ÿһ���ڵ㶼������ <code>para</code> Ԫ�ء�<a href="#axes"><b>2.2 ��</b></a>˵�������п��ܵ��ᡣ<a href="#node-tests"><b>2.3 �ڵ����</b></a>��˵�������п��ܵĽڵ���ԡ�һЩ�ڵ���Եĺ����������ᡣ</p>
+<p>初始的节点集合的节点组成，这些节点与上下文节点关系由轴指定的，其节点类型及<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>由节点测试指定。例如，地点步进 <code>descendant::para</code> 选择上下文节点的 <code>para</code> 元素子孙： <code>descendant</code> 指定在初始的节点集合中的那每一个节点都必须是该上下文的一个子孙； <code>para</code> 指定在初始的节点集合中的每一个节点都必须是 <code>para</code> 元素。<a href="#axes"><b>2.2 轴</b></a>说明了所有可能的轴。<a href="#node-tests"><b>2.3 节点测试</b></a>则说明了所有可能的节点测试。一些节点测试的含意依赖于轴。</p>
 
-<p>��ʼ�Ľڵ㼯���ɵ�һ���ж��ʹ��˺����һ�µĽڵ㼯�ϣ��µĽڵ㼯�����ɵڶ����ж��ʽ��й��ˣ����һֱ��ȥ�����Ľڵ㼯�����ɵص㲽��ѡ��Ľڵ㼯�ϡ���Ӱ����ÿ���ж����еı���ʽ��ô����ֵ����������ж��ʵ����嶨��������ڡ��ο�<a href="#predicates"><b>2.4 �ж���</b></a>��</p>
+<p>初始的节点集合由第一个判定词过滤后产生一新的节点集合，新的节点集合再由第二个判定词进行过滤，如此一直下去。最后的节点集合是由地点步进选择的节点集合。轴影响在每个判定词中的表达式怎么被求值，并且因此判定词的语义定义与轴关于。参看<a href="#predicates"><b>2.4 判定词</b></a>。</p>
 
 
-<h5>�ص㲽��</h5><table class="scrap" summary="Scrap"><tbody>
+<h5>地点步进</h5><table class="scrap" summary="Scrap"><tbody>
 <tr valign="baseline"><td><a name="NT-Step"></a>[4]&#160;&#160;&#160;</td><td><code>Step</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-AxisSpecifier">AxisSpecifier</a>
 <a href="#NT-NodeTest">NodeTest</a>
 <a href="#NT-Predicate">Predicate</a>*</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-AbbreviatedStep">AbbreviatedStep</a></code></td></tr>
@@ -242,159 +242,159 @@ li p           { margin-top: 0.3em;
 </div>
 <div class="div2">
 
-<h3><a name="axes"></a>2.2 ��</h3>
-<p>�����ǿ��õ����᣺</p>
+<h3><a name="axes"></a>2.2 轴</h3>
+<p>以下是可用到的轴：</p>
 
 <ul>
 
-<li><p><code>child</code> ����������Ľڵ�ĺ���</p></li>
+<li><p><code>child</code> 轴包含上下文节点的孩子</p></li>
 
-<li><p><code>descendant</code> ����������Ľڵ�����������һ�����ӻ�һ�����ӵ�һ�����ӣ��ȵȣ�������������������������Ի������ռ�ڵ�</p></li>
+<li><p><code>descendant</code> 轴包含上下文节点的子孙；子孙是一个孩子或一个孩子的一个孩子，等等，这样，子孙轴从来不包含属性或命名空间节点</p></li>
 
-<li><p><code>parent</code> ����������Ľڵ�ĸ�������еĻ�</p></li>
+<li><p><code>parent</code> 轴包含上下文节点的父，如果有的话</p></li>
 
-<li><p><code>ancestor</code> ����������Ľڵ�����ȣ������Ľڵ�������������Ľڵ�ĸ��Լ����ĸ��ȵ���ɣ������������Ὣ���ǰ������ڵ㣬���������Ľڵ��Ǹ��ڵ�</p></li>
+<li><p><code>ancestor</code> 轴包含上下文节点的祖先；上下文节点的祖先由上下文节点的父以及父的父等等组成；这样，祖先轴将总是包括根节点，除非上下文节点是根节点</p></li>
 
-<li><p><code>following-sibling</code> ����������Ľڵ�������������ֵܣ���������Ľڵ������Խڵ�������ռ�ڵ㣬<code>following-sibling</code> ����Ϊ��</p></li>
+<li><p><code>following-sibling</code> 轴包含上下文节点的所有在其后的兄弟，如果上下文节点是属性节点或命名空间节点，<code>following-sibling</code> 轴则为空</p></li>
 
-<li><p><code>preceding-sibling</code> ����������Ľڵ����������ǰ���ֵܣ���������Ľڵ������Խڵ�������ռ�ڵ㣬<code>preceding-sibling</code> ����Ϊ��</p></li>
+<li><p><code>preceding-sibling</code> 轴包含上下文节点的所有在其前的兄弟，如果上下文节点是属性节点或命名空间节点，<code>preceding-sibling</code> 轴则为空</p></li>
 
-<li><p><code>following</code> ������������Ľڵ����ڵ�ͬһ�ĵ��У����������ĵ�˳���������Ľڵ��Ľڵ㣬���ų����е����Ҳ�ų����Խڵ��Լ������ռ�ڵ�</p></li>
+<li><p><code>following</code> 轴包含在上下文节点所在的同一文档中，所有依照文档顺序在上下文节点后的节点，但排除所有的子孙，也排除属性节点以及命名空间节点</p></li>
 
-<li><p><code>preceding</code> ������������Ľڵ����ڵ�ͬһ�ĵ��У����������ĵ�˳���������Ľڵ�ǰ�Ľڵ㣬���ų����е����Ҳ�ų����Խڵ��Լ������ռ�ڵ�</p></li>
+<li><p><code>preceding</code> 轴包含在上下文节点所在的同一文档中，所有依照文档顺序在上下文节点前的节点，但排除所有的子孙，也排除属性节点以及命名空间节点</p></li>
 
-<li><p><code>attribute</code> ����������Ľڵ�����ԣ����������Ľڵ���Ԫ�أ����ὫΪ��</p></li>
+<li><p><code>attribute</code> 轴包含上下文节点的属性，除非上下文节点是元素，该轴将为空</p></li>
 
-<li><p><code>namespace</code> ����������Ľڵ�������ռ�ڵ㣬���������Ľڵ���Ԫ�أ����ὫΪ��</p></li>
+<li><p><code>namespace</code> 轴包含上下文节点的命名空间节点，除非上下文节点是元素，该轴将为空</p></li>
 
-<li><p><code>self</code> ��ֻ�ǰ��������Ľڵ��Լ�</p></li>
+<li><p><code>self</code> 轴只是包含上下文节点自己</p></li>
 
-<li><p><code>descendant-or-self</code> ����������Ľڵ�������Ľڵ������</p></li>
+<li><p><code>descendant-or-self</code> 轴包含上下文节点和上下文节点的子孙</p></li>
 
-<li><p><code>ancestor-or-self</code> ����������Ľڵ�������Ľڵ�����ȣ����������Ὣ���ǰ������ڵ�</p></li>
+<li><p><code>ancestor-or-self</code> 轴包含上下文节点和上下文节点的祖先；这样，该轴将总是包括根节点</p></li>
 </ul>
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
-<p> <code>ancestor</code>��<code>descendant</code>��<code>following</code>��<code>preceding</code> �Լ� <code>self</code> �Ữ����һ���ĵ����������Ժ������ռ�ڵ㣩�������໥���ص���������������һ����������ĵ����еĽڵ㡣</p></div>
+<div class="note"><p class="prefix"><b>注意：</b></p>
+<p> <code>ancestor</code>，<code>descendant</code>，<code>following</code>，<code>preceding</code> 以及 <code>self</code> 轴划分了一个文档（忽略属性和命名空间节点）：他们相互不重叠，而且他们组在一起则包含了文档所有的节点。</p></div>
 
-<h5>��</h5><table class="scrap" summary="Scrap"><tbody><tr valign="baseline"><td><a name="NT-AxisName"></a>[6]&#160;&#160;&#160;</td><td><code>AxisName</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code>'ancestor'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'ancestor-or-self'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'attribute'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'child'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'descendant'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'descendant-or-self'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'following'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'following-sibling'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'namespace'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'parent'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'preceding'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'preceding-sibling'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'self'</code></td></tr></tbody></table>
+<h5>轴</h5><table class="scrap" summary="Scrap"><tbody><tr valign="baseline"><td><a name="NT-AxisName"></a>[6]&#160;&#160;&#160;</td><td><code>AxisName</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code>'ancestor'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'ancestor-or-self'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'attribute'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'child'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'descendant'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'descendant-or-self'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'following'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'following-sibling'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'namespace'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'parent'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'preceding'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'preceding-sibling'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'self'</code></td></tr></tbody></table>
 </div>
 
 <div class="div2">
 
-<h3><a name="node-tests"></a>2.3 �ڵ����</h3>
+<h3><a name="node-tests"></a>2.3 节点测试</h3>
 
-<p>��<a name="dt-principal-node-type" title="Principal Node Type">����</a>��ÿ���ᶼ��һ��<b>�����ڵ�����</b>��������ܰ���Ԫ�أ������Ľڵ���������Ԫ�أ������������������ܰ����Ľڵ�����͡�����ˣ�</p>
+<p>［<a name="dt-principal-node-type" title="Principal Node Type">定义</a>：每个轴都有一个<b>基本节点类型</b>。如果轴能包含元素，基本的节点类型则是元素；否则，它的类型是轴能包含的节点的类型。］因此，</p>
 
 <blockquote><p>
 
-�����������˵�������Ľڵ����������ԡ�
+对於属性轴来说，基本的节点类型是属性。
 
-<br>��������ռ��ᣬ�����Ľڵ������������ռ䡣
+<br>对於命名空间轴，基本的节点类型是命名空间。
 
-<br>����������ᣬ�����Ľڵ�������Ԫ�ء�
+<br>对於其它的轴，基本的节点类型是元素。
 
 </p></blockquote>
 
-<p>���ҽ����ڵ�����ͣ��ο�<a href="#data-model"><b>5 ����ģ��</b></a>���ǻ���������<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>���
-�� <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> ָ����<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>ʱ��Ϊ <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> �ڵ���Բ�Ϊ�档���磬<code>child::para</code> ѡ���������Ľڵ�� <code>para</code> Ԫ�غ��ӣ���������Ľڵ�û�� <code>para</code> ���ӣ�����ѡ��ڵ��һ���ռ��ϣ�<code>attribute::href</code> ѡ���������Ľڵ�� <code>href</code> ���ԣ���������Ľڵ�û�� <code>href</code> ���ԣ�����ѡ��ڵ��һ���ռ��ϡ�</p>
+<p>当且仅当节点的类型（参看<a href="#data-model"><b>5 数据模型</b></a>）是基本类型且<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>等於
+由 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> 指定的<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>时，为 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> 节点测试才为真。例如，<code>child::para</code> 选择了上下文节点的 <code>para</code> 元素孩子，如果上下文节点没有 <code>para</code> 孩子，它将选择节点的一个空集合；<code>attribute::href</code> 选择了上下文节点的 <code>href</code> 属性，如果上下文节点没有 <code>href</code> 属性，它将选择节点的一个空集合。</p>
 
-<p>ʹ�����Ա���ʽ�������ĵ������ռ��������ڽڵ������� <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> ����չ��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>����������ʼ��������ǩ��Ԫ���������Ƶ���չ����һ��������ȱʡ�� xmlns �����ռ���������ʹ���⣺��� <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> û��ǰ׺���������ռ� URI Ϊ�� ����������������չ�ķ���һ��������� <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> ��ǰ׺��������ʽ��������ȴû�������ռ�����������һ������</p>
+<p>使用来自表达式的上下文的命名空间声明，在节点测试里的 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> 可扩展成<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>。这与在起始及结束标签中元素类型名称的扩展方法一样，除了缺省的 xmlns 命名空间申明无须使用外：如果 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> 没有前缀，则命名空间 URI 为空 （这与属性名字扩展的方法一样）。如果 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> 有前缀，而表达式上下文中却没有命名空间声明，则是一个错误。</p>
 
-<p>��춻����ڵ����͵��κνڵ㣬�ڵ���� * ��Ϊ�档���磬<code>child::*</code> ��ѡ�������ĵ����е�Ԫ�غ����ӣ��� <code>attribute::*</code> ��ѡ�������Ľڵ�����е����ԡ�</p>
+<p>对於基本节点类型的任何节点，节点测试 * 都为真。例如，<code>child::*</code> 将选择上下文的所有的元素孩孩子，而 <code>attribute::*</code> 将选择上下文节点的所有的属性。</p>
 
-<p>�ڵ���Կ����ø�ʽ <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-NCName">NCName</a><code>:*</code>������������£�ǰ׺������ <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> һ���ķ�������չ����ʹ�������������ռ��������ڱ���ʽ�����ĵ�ǰ׺���û�������ռ�����������һ�����󡣲������ֵľ��򲿷֣���춻������͵��κνڵ㣬�����<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�������ռ� URI ����ǰ׺��չ���ڵ������Ϊ�档</p>
+<p>节点测试可以用格式 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-NCName">NCName</a><code>:*</code>。在这种情况下，前缀就以与 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> 一样的方法被扩展，即使用上下文命名空间声明。在表达式上下文的前缀如果没有命名空间声明，则是一个错误。不论名字的局域部分，对於基本类型的任何节点，如果其<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>有命名空间 URI 将其前缀扩展，节点测试永为真。</p>
 
-<p>����κ����Ľڵ㣬�ڵ���� <code>text()</code> Ϊ�档���磬<code>child::text()</code> ��ѡ�������Ľڵ�����Ľڵ㺢�ӡ�ͬ�������ע�ͽڵ㣬�ڵ���� <code>comment()</code> Ϊ�棻��춴���ָ��ڵ���� <code>processing-instruction()</code> Ϊ�棻 <code>processing-instruction()</code> ���Կ�����һ�������� <a href="#NT-Literal">Literal</a> �Ĳ���������������£�������еĴ���ָ���ָ������������ֵ <a href="#NT-Literal">Literal</a> ��ȣ���ֵΪ�档</p>
+<p>对於任何正文节点，节点测试 <code>text()</code> 为真。例如，<code>child::text()</code> 将选择上下文节点的正文节点孩子。同样，对於注释节点，节点测试 <code>comment()</code> 为真；对於处理指令，节点测试 <code>processing-instruction()</code> 为真； <code>processing-instruction()</code> 测试可以有一个字面量 <a href="#NT-Literal">Literal</a> 的参数，在这种情况下，对於所有的处理指令，如指令名与字面量值 <a href="#NT-Literal">Literal</a> 相等，其值为真。</p>
 
-<p>����κνڵ㣬���������ͣ��ڵ���� <code>node()</code> Ϊ�档</p>
+<p>对於任何节点，无论其类型，节点测试 <code>node()</code> 为真。</p>
 
 
 <h5></h5><table class="scrap" summary="Scrap"><tbody><tr valign="baseline"><td><a name="NT-NodeTest"></a>[7]&#160;&#160;&#160;</td><td><code>NodeTest</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-NameTest">NameTest</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-NodeType">NodeType</a> '(' ')'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| 'processing-instruction' '(' <a href="#NT-Literal">Literal</a> ')'</code></td></tr></tbody></table>
 </div>
 <div class="div2">
 
-<h3><a name="predicates"></a>2.4 �ж���</h3>
+<h3><a name="predicates"></a>2.4 判定词</h3>
 
-<p>һ���᲻��ǰ������ǵ�ת�ᡣǰ��������<a title="Document Order" href="#dt-document-order">�ı�˳��</a>���κ�ʱ�򶼽������������Ľڵ���������Ľڵ��Ժ�Ľڵ���ᡣ��ת������<a title="Document Order" href="#dt-document-order">�ı�˳��</a>���κ�ʱ�򶼽������������Ľڵ�����ĵ�˳���������Ľڵ�ǰ�Ľڵ���ᡣ��ˣ�<code>ancestor</code>��<code>ancestor-or-self</code>��<code>preceding</code> �� <code>preceding-sibling</code> ���ǵ�ת�᣻���е�������ᶼ��ǰ���ᡣ��� self �������������һ���ڵ㣬����ǰ������ǵ�ת�ᶼ������κβ����Ľڵ㼯�ϵĳ�Ա�ģ�<a name="dt-proximity-position" title="Proximity Position">����</a>��<b>�ڽ�λ��</b>��ǰ�����ǰ��ĵ�˳��Ľڵ㼯���ǽڵ��λ�ã��Ե�ת���ǰ��ĵ�����Ľڵ㼯���ǽڵ��λ�á���һ����λ����1����</p>
+<p>一个轴不是前进轴就是倒转轴。前进轴是依<a title="Document Order" href="#dt-document-order">文本顺序</a>在任何时候都仅仅包含上下文节点或在上下文节点以后的节点的轴。倒转轴是依<a title="Document Order" href="#dt-document-order">文本顺序</a>在任何时候都仅仅包含上下文节点或在文档顺序在上下文节点前的节点的轴。因此，<code>ancestor</code>、<code>ancestor-or-self</code>、<code>preceding</code> 及 <code>preceding-sibling</code> 轴是倒转轴；所有的其余的轴都是前进轴。由於 self 轴总是至多包含一个节点，它是前进轴或是倒转轴都不造成任何差别。轴的节点集合的成员的［<a name="dt-proximity-position" title="Proximity Position">定义</a>：<b>邻近位置</b>对前进轴是按文档顺序的节点集合是节点的位置，对倒转轴是按文档反序的节点集合是节点的位置。第一个的位置是1。］</p>
 
-<p>�ж�����������˽ڵ㼯���������µĽڵ㼯�ϡ���춱����˵Ľڵ㼯�����ÿ�ڵ㣬<a href="#NT-PredicateExpr">PredicateExpr</a> ���ýڵ���Ϊ�����Ľڵ�����ֵ���Խڵ㼯�ϵĽڵ���Ϊ�����Ĵ�С���������ڽڵ㼯���нڵ��<a title="Proximity Position" href="#dt-proximity-position">�ڽ�λ��</a>Ϊ������λ�ã�����Խڵ� <a href="#NT-PredicateExpr">PredicateExpr</a> ����ֵΪ�棬�µĽڵ㼯�ϾͰ����ýڵ㣻����Ͳ�������</p>
+<p>判定词依照轴过滤节点集合来生成新的节点集合。对於被过滤的节点集合里的每节点，<a href="#NT-PredicateExpr">PredicateExpr</a> 将该节点作为上下文节点来求值，以节点集合的节点数为上下文大小，以依照在节点集合中节点的<a title="Proximity Position" href="#dt-proximity-position">邻近位置</a>为上下文位置，如果对节点 <a href="#NT-PredicateExpr">PredicateExpr</a> 的求值为真，新的节点集合就包括该节点；否则就不包括。</p>
 
-<p>�� <a href="#NT-PredicateExpr">PredicateExpr</a> ��ֵ��ͨ������ <a href="#NT-Expr">Expr</a> ��ֵ���ѽ��ת���ɲ���ֵ�����ġ���������һ�����Ҹ�������������λ����ȣ��������ת��Ϊ�棻����Ϊ�١�����������һ�����֣�Ȼ���������任�ɺ�����ù����� <code>boolean</code> ��Ľ����������ַ·�� <code>para[3]</code> �ȼ� <code>para[position()=3]</code>��</p>
+<p>对 <a href="#NT-PredicateExpr">PredicateExpr</a> 求值是通过先求 <a href="#NT-Expr">Expr</a> 的值并把结果转换成布尔值而来的。如果结果是一数字且该数字与上下文位置相等，结果将被转变为真；否则为假。如果结果不是一个数字，然后结果将被变换成好像调用过函数 <code>boolean</code> 后的结果。这样地址路径 <code>para[3]</code> 等价 <code>para[position()=3]</code>。</p>
 
 
-<h5>�ж��ʣ�Predicates��</h5><table class="scrap" summary="Scrap"><tbody><tr valign="baseline"><td><a name="NT-Predicate"></a>[8]&#160;&#160;&#160;</td><td><code>Predicate</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code>'[' <a href="#NT-PredicateExpr">PredicateExpr</a> ']'</code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-PredicateExpr"></a>[9]&#160;&#160;&#160;</td><td><code>PredicateExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-Expr">Expr</a></code></td></tr></tbody></table>
+<h5>判定词（Predicates）</h5><table class="scrap" summary="Scrap"><tbody><tr valign="baseline"><td><a name="NT-Predicate"></a>[8]&#160;&#160;&#160;</td><td><code>Predicate</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code>'[' <a href="#NT-PredicateExpr">PredicateExpr</a> ']'</code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-PredicateExpr"></a>[9]&#160;&#160;&#160;</td><td><code>PredicateExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-Expr">Expr</a></code></td></tr></tbody></table>
 </div>
 
 <div class="div2">
 
-<h3><a name="path-abbrev"></a>2.5 ����䷨</h3>
+<h3><a name="path-abbrev"></a>2.5 缩简句法</h3>
 
-<p>����һЩʹ������䷨�ĵ�ַ·�����ӣ�</p>
+<p>这是一些使用缩简句法的地址路径例子：</p>
 
 <ul>
 
-<li><p><code>para</code> ѡ�������Ľڵ�� <code>para</code> Ԫ�غ���</p></li>
+<li><p><code>para</code> 选择上下文节点的 <code>para</code> 元素孩子</p></li>
 
-<li><p><code>*</code> ѡ�������Ľڵ�����е�Ԫ�غ���</p></li>
+<li><p><code>*</code> 选择上下文节点的所有的元素孩子</p></li>
 
-<li><p><code>text()</code> ѡ�������Ľڵ�����е����Ľڵ㺢��</p></li>
+<li><p><code>text()</code> 选择上下文节点的所有的正文节点孩子</p></li>
 
-<li><p><code>@name</code> ѡ�������Ľڵ�� <code>name</code> ����</p></li>
+<li><p><code>@name</code> 选择上下文节点的 <code>name</code> 属性</p></li>
 
-<li><p><code>@*</code> ѡ�������Ľڵ�����е�����</p></li>
+<li><p><code>@*</code> 选择上下文节点的所有的属性</p></li>
 
-<li><p><code>para[1]</code> ѡ�������Ľڵ�ĵ�һ�� <code>para</code> ����</p></li>
+<li><p><code>para[1]</code> 选择上下文节点的第一个 <code>para</code> 孩子</p></li>
 
-<li><p><code>para[last()]</code> ѡ�������Ľڵ�����һ�� <code>para</code> ����</p></li>
+<li><p><code>para[last()]</code> 选择上下文节点的最后一个 <code>para</code> 孩子</p></li>
 
-<li><p><code>*/para</code> ѡ�������Ľڵ�����е� <code>para</code> ����</p></li>
+<li><p><code>*/para</code> 选择上下文节点的所有的 <code>para</code> 孙子</p></li>
 
-<li><p><code>/doc/chapter[5]/section[2]</code> ѡ��doc�ĵ���� <code>chapter</code> �ĵڶ��� <code>section</code> </p></li>
+<li><p><code>/doc/chapter[5]/section[2]</code> 选择doc的第五个 <code>chapter</code> 的第二个 <code>section</code> </p></li>
 
-<li><p><code>chapter//para</code> ѡ�������Ľڵ�� <code>chapter</code> Ԫ�غ��ӵ����� <code>para</code> Ԫ������</p></li>
+<li><p><code>chapter//para</code> 选择上下文节点的 <code>chapter</code> 元素孩子的所有 <code>para</code> 元素子孙</p></li>
 
-<li><p><code>//para</code> ѡ���ĵ��������е� <code>para</code> ���Ҳ����ѡ�������Ľڵ����ڵ��ĵ������е� <code>para</code> Ԫ��</p></li>
+<li><p><code>//para</code> 选择文档根的所有的 <code>para</code> 子孙，也就是选择上下文节点所在的文档中所有的 <code>para</code> 元素</p></li>
 
-<li><p><code>//olist/item</code> ѡ�������Ľڵ����ڵ��ĵ������е��� <code>olist</code> Ϊ���� <code>item</code> Ԫ��</p></li>
+<li><p><code>//olist/item</code> 选择上下文节点所在的文档中所有的以 <code>olist</code> 为父的 <code>item</code> 元素</p></li>
 
-<li><p><code>.</code> ѡ�������Ľڵ�</p></li>
+<li><p><code>.</code> 选择上下文节点</p></li>
 
-<li><p><code>.//para</code> ѡ�������Ľڵ�� <code>para</code> Ԫ������</p></li>
+<li><p><code>.//para</code> 选择上下文节点的 <code>para</code> 元素子孙</p></li>
 
-<li><p><code>..</code> ѡ�������Ľڵ�ĸ�</p></li>
+<li><p><code>..</code> 选择上下文节点的父</p></li>
 
-<li><p><code>../@lang</code> ѡ�������Ľڵ�ĸ��� <code>lang</code> ����</p></li>
+<li><p><code>../@lang</code> 选择上下文节点的父的 <code>lang</code> 属性</p></li>
 
-<li><p><code>para[@type="warning"]</code> ѡ��������Ľڵ�����е������� <code>type</code> ��ֵΪ <code>warning</code> �� <code>para</code> ����</p></li>
+<li><p><code>para[@type="warning"]</code> 选择的上下文节点的所有的有属性 <code>type</code> 且值为 <code>warning</code> 的 <code>para</code> 孩子</p></li>
 
-<li><p><code>para[@type="warning"][5]</code> ѡ��������Ľڵ�����е������� <code>type</code> ��ֵΪ <code>warning</code> �� <code>para</code> �����еĵ����</p></li>
+<li><p><code>para[@type="warning"][5]</code> 选择的上下文节点的所有的有属性 <code>type</code> 且值为 <code>warning</code> 的 <code>para</code> 孩子中的第五个</p></li>
 
-<li><p><code>para[5][@type="warning"]</code> ѡ��������Ľڵ�ĵ���� <code>para</code> ��������ýڵ������� <code>type</code> ��ֵΪ <code>warning</code> �Ļ�</p></li>
+<li><p><code>para[5][@type="warning"]</code> 选择的上下文节点的第五个 <code>para</code> 孩子如果该节点有属性 <code>type</code> 且值为 <code>warning</code> 的话</p></li>
 
-<li><p><code>chapter[title="Introduction"]</code> ѡ�������Ľڵ�� <code>chapter</code> �����������һ������ <code>title</code> ������<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>Ϊ <code>Introduction</code></p></li>
+<li><p><code>chapter[title="Introduction"]</code> 选择上下文节点的 <code>chapter</code> 孩子如果它有一个或多个 <code>title</code> 孩子且<a title="String Value" href="#dt-string-value">字串值</a>为 <code>Introduction</code></p></li>
 
-<li><p><code>chpater[title]</code> ѡ��������Ľڵ�����һ����һ������ <code>title</code> ���ӵ� <code>chpater</code> ����</p></li>
+<li><p><code>chpater[title]</code> 选择的上下文节点中有一个或一个以上 <code>title</code> 孩子的 <code>chpater</code> 孩子</p></li>
 
-<li><p><code>employee[@secretary and @assistant]</code> ѡ�������Ľڵ�����м��� <code>secretary</code> �������� <code>assistant</code> ���Ե� <code>employee</code> ����</p></li>
+<li><p><code>employee[@secretary and @assistant]</code> 选择上下文节点的所有既有 <code>secretary</code> 属性又有 <code>assistant</code> 属性的 <code>employee</code> 孩子</p></li>
 
 </ul>
 
-<p>����Ҫ����д�� <code>child::</code> �ܴӵص㲽��ʡ�Ե���ʵ��Ч���ϣ�<code>child</code> ��ȱʡ�ᡣ���磬��ַ·�� <code>div/para</code> �� <code>child::div/child::para</code> ����д��</p>
+<p>最重要的缩写是 <code>child::</code> 能从地点步进省略掉。实际效果上，<code>child</code> 是缺省轴。例如，地址路径 <code>div/para</code> 是 <code>child::div/child::para</code> 的缩写。</p>
 
-<p>����Ҳ����д��ʽ�� <code>attribute::</code> �ܱ���д�� <code>@</code>�����磬��ַ·�� <code>para[@type="warning"]</code> Ϊ <code>child::para[attribute::type="warning"]</code> ����д��Ҳ����ѡ���� <code>type</code> ����������ֵΪ <code>warning</code> �� <code>para</code> ���ӡ�</p>
+<p>属性也有缩写形式： <code>attribute::</code> 能被缩写成 <code>@</code>。例如，地址路径 <code>para[@type="warning"]</code> 为 <code>child::para[attribute::type="warning"]</code> 的缩写，也就是选择有 <code>type</code> 属性且属性值为 <code>warning</code> 的 <code>para</code> 孩子。</p>
 
-<p> <code>//</code> �� <code>/descendant-or-self::node()/</code> ����д�����磬<code>//para</code> �� <code>/descendant-or-self::node()/child::para</code> ����д�����ѡ���ĵ������е� <code>para</code> Ԫ�أ���ʹ <code>para</code> Ԫ�����ĵ�Ԫ�أ�Ҳ�ᱻ <code>//para</code> ��ѡ����Ϊ�ĵ�Ԫ���Ǹ��ڵ�ĺ��ӣ��� <code>div//para</code> �� <code>div/descendant-or-self::node()/child::para</code> ����д����˽�ѡ�� <code>div</code> ���ӵ����� <code>para</code> ���</p>
+<p> <code>//</code> 是 <code>/descendant-or-self::node()/</code> 的缩写。例如，<code>//para</code> 是 <code>/descendant-or-self::node()/child::para</code> 的缩写，因此选择文档中所有的 <code>para</code> 元素（即使 <code>para</code> 元素是文档元素，也会被 <code>//para</code> 所选择，因为文档元素是根节点的孩子）； <code>div//para</code> 是 <code>div/descendant-or-self::node()/child::para</code> 的缩写，因此将选择 <code>div</code> 孩子的所有 <code>para</code> 子孙。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>��ַ·�� <code>//para[1]</code> ���ַ·�� <code>/descendant::para[1]</code> �ĺ��ⲻһ��������ѡ���һ�� <code>para</code> Ԫ�����ǰ��ѡ�������ǵĸ��ĵ�һ <code>para</code> ���ӵ����е����� <code>para</code> Ԫ�ء�</p></div>
+<p>地址路径 <code>//para[1]</code> 与地址路径 <code>/descendant::para[1]</code> 的含意不一样，后者选择第一个 <code>para</code> 元素子孙，前者选择是他们的父的第一 <code>para</code> 孩子的所有的子孙 <code>para</code> 元素。</p></div>
 
-<p>�ص�·�� <code>.</code> �� <code>self::node()</code> ����д������ <code>//</code> һ��ʹ���ر����á����磬��ַ·�� <code>.//para</code> �� <code>self::node()/descendant-or-self::node()/child::para</code> ����д����˽�ѡ�������Ľڵ�����е� <code>para</code> ����Ԫ�ء�</p>
+<p>地点路进 <code>.</code> 是 <code>self::node()</code> 的缩写。这与 <code>//</code> 一起使用特别有用。例如，地址路径 <code>.//para</code> 是 <code>self::node()/descendant-or-self::node()/child::para</code> 的缩写，因此将选择上下文节点的所有的 <code>para</code> 子孙元素。</p>
 
-<p>ͬ������ַ·�� <code>..</code> �� <code>parent::node()</code> ����д�����磬<code>../title</code> �� <code>parent::node()/child::title</code> ����д����⽫ѡ�������Ľڵ�ĸ��� <code>title</code> ���ӡ�</p>
+<p>同样，地址路径 <code>..</code> 是 <code>parent::node()</code> 的缩写。例如，<code>../title</code> 是 <code>parent::node()/child::title</code> 的缩写因此这将选择上下文节点的父的 <code>title</code> 孩子。</p>
 
 
-<h5>��д</h5><table class="scrap" summary="Scrap"><tbody>
+<h5>缩写</h5><table class="scrap" summary="Scrap"><tbody>
 <tr valign="baseline"><td><a name="NT-AbbreviatedAbsoluteLocationPath"></a>[10]&#160;&#160;&#160;</td><td><code>AbbreviatedAbsoluteLocationPath</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code>'//' <a href="#NT-RelativeLocationPath">RelativeLocationPath</a></code></td></tr>
 <tr valign="baseline"><td><a name="NT-AbbreviatedRelativeLocationPath"></a>[11]&#160;&#160;&#160;</td><td><code>AbbreviatedRelativeLocationPath</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-RelativeLocationPath">RelativeLocationPath</a> '//' <a href="#NT-Step">Step</a></code></td></tr>
 <tr valign="baseline"><td><a name="NT-AbbreviatedStep"></a>[12]&#160;&#160;&#160;</td><td><code>AbbreviatedStep</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code>'.'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| '..'</code></td></tr>
@@ -404,94 +404,94 @@ li p           { margin-top: 0.3em;
 </div>
 <div class="div1">
 
-<h2><a name="IDAE5XU"></a>3 ����ʽ</h2>
+<h2><a name="IDAE5XU"></a>3 表达式</h2>
 <div class="div2">
 
-<h3><a name="IDAI5XU"></a>3.1 ����</h3>
+<h3><a name="IDAI5XU"></a>3.1 基础</h3>
 
-<p><a href="#NT-VariableReference">VariableReference</a> ��ֵ�ɱ������ǰ󶨵����������б����󶨵ļ��ϡ����������û�������������б����󶨵ļ����еı�������һ������һ������</p>
+<p><a href="#NT-VariableReference">VariableReference</a> 求值成变量名是绑定到在上下文中变量绑定的集合。如果变量名没有与在上下文中变量绑定的集合中的变量绑定在一起，则是一个错误。</p>
 
-<p>���ſ������ڷ��顣</p>
+<p>括号可以用于分组。</p>
 
 
 <h5></h5><table class="scrap" summary="Scrap"><tbody><tr valign="baseline"><td><a name="NT-Expr"></a>[14]&#160;&#160;&#160;</td><td><code>Expr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-OrExpr">OrExpr</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-PrimaryExpr"></a>[15]&#160;&#160;&#160;</td><td><code>PrimaryExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-VariableReference">VariableReference</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| '(' <a href="#NT-Expr">Expr</a> ')'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-Literal">Literal</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-Number">Number</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-FunctionCall">FunctionCall</a></code></td></tr></tbody></table>
 </div>
 <div class="div2">
 
-<h3><a name="IDAMBYU"></a>3.2 ��������</h3>
+<h3><a name="IDAMBYU"></a>3.2 函数调用</h3>
 
-<p>�������� <a href="#NT-FunctionCall">FunctionCall</a> ����ʽ����ֵ��ͨ��ʹ�ú����� <a href="#NT-FunctionName">FunctionName</a> �ڱ���ʽ��ֵ�����ĺ�������ȷ��Ӧ�ĺ�������������� <a href="#NT-Argument">Argument</a> ��ֵ����ÿ������ת���ɸú�����������ͣ���󣬵��ú�����������ת����Ĳ����������������Ŀ���ԵĻ�������ܱ��任��Ҫ������ͣ�����һ������
+<p>函数调用 <a href="#NT-FunctionCall">FunctionCall</a> 表达式的求值是通过使用函数名 <a href="#NT-FunctionName">FunctionName</a> 在表达式求值上下文函数库中确相应的函数，求各个参数 <a href="#NT-Argument">Argument</a> 的值，将每个参数转换成该函数所需的类型，最后，调用函数，并传递转换后的参数。如果参数的数目不对的或参数不能被变换到要求的类型，则是一个错误。
 </p>
 
-<p>����ʽ <a href="#NT-FunctionCall">FunctionCall</a> �Ľ�����ɺ������صĽ����</p>
+<p>表达式 <a href="#NT-FunctionCall">FunctionCall</a> 的结果是由函数返回的结果。</p>
 
-<p>�������任���ַ�������ʱ���·�������ַ������� <code>string</code>���������任����������ʱ��������������ֺ��� <code>number</code>���������任�ɲ���������ʱ����������˲������� <code>boolean</code>���������ͽڵ㼯�� node-set �Ĳ������ܱ��任�ɽڵ㼯�� node-set��</p>
+<p>参数被变换成字符串类型时，仿佛调用了字符串函数 <code>string</code>；参数被变换成数字类型时，好像调用了数字函数 <code>number</code>；参数被变换成布尔的类型时，好像调用了布尔函数 <code>boolean</code>。不是类型节点集合 node-set 的参数不能被变换成节点集合 node-set。</p>
 
 
 <h5></h5><table class="scrap" summary="Scrap"><tbody><tr valign="baseline"><td><a name="NT-FunctionCall"></a>[16]&#160;&#160;&#160;</td><td><code>FunctionCall</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-FunctionName">FunctionName</a> '(' ( <a href="#NT-Argument">Argument</a> ( ',' <a href="#NT-Argument">Argument</a> )* )? ')'</code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-Argument"></a>[17]&#160;&#160;&#160;</td><td><code>Argument</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-Expr">Expr</a></code></td></tr></tbody></table>
 </div>
 <div class="div2">
 
-<h3><a name="node-sets"></a>3.3 �ڵ㼯��</h3>
+<h3><a name="node-sets"></a>3.3 节点集合</h3>
 
-<p>��ַ·������Ϊ����ʽʹ�á�����ʽ����·����ѡ��Ľڵ�ļ��ϡ�</p>
+<p>地址路径能作为表达式使用。表达式返回路径所选择的节点的集合。</p>
 
-<p><code>|</code> �������������Ĳ������Ĳ������ò��������ǽڵ㼯�ϡ�</p>
+<p><code>|</code> 操作符计算它的操作数的并集，该并集必须是节点集合。</p>
 
-<p><a href="#NT-Predicate">�ж���</a>�ù��˵�ַ·����ͬ���ķ��������˱���ʽ����������˵ı���ʽ��ֵ�����ڵ㼯�ϣ�����һ������<a href="#NT-Predicate">�ж���</a>�����ں����������˽ڵ㼯�ϡ�</p>
+<p><a href="#NT-Predicate">判定词</a>用过滤地址路径的同样的方法来过滤表达式。如果被过滤的表达式求值不到节点集合，则是一个错误。<a href="#NT-Predicate">判定词</a>依赖于孩子轴来过滤节点集合。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>�ж��ʵ���˼�ؼ���ȡ����Ӧ�����ĸ��ᡣ���磬<code>preceding::foo[1]</code> ������<em>�ߵ��ĵ�˳��</em>�µ�һ�� <code>foo</code> Ԫ�أ���ΪӦ�����ж��� <code>[1]</code> ������ preceding �᣻����෴��<code>(preceding::foo)[1]</code> ��<em>�ļ�˳��</em>�·��ص�һ�� <code>foo</code>����ΪӦ�����ж��� <code>[1]</code> �����Ǻ����ᡣ</p></div>
+<p>判定词的意思关键地取决于应用于哪个轴。例如，<code>preceding::foo[1]</code> 返回在<em>颠倒文档顺序</em>下第一个 <code>foo</code> 元素，因为应用于判定词 <code>[1]</code> 的轴是 preceding 轴；与此相反，<code>(preceding::foo)[1]</code> 在<em>文件顺序</em>下返回第一个 <code>foo</code>，因为应用于判定词 <code>[1]</code> 的轴是孩子轴。</p></div>
 
-<p><code>/</code> �� <code>//</code> ��������ɱ���ʽ����Ե�·�����������ʽ��ֵ�����ڵ㼯�ϣ�����һ������<code>/</code> ���������ڵ�ַ·������ <code>/</code> ��ͬ����ʽ����ɡ����ڵ�ַ·���У�<code>//</code> �� <code>/descendant-or-self::node()/</code> �ļ�����</p>
+<p><code>/</code> 及 <code>//</code> 操作符组成表达式及相对点路径。如果表达式求值不到节点集合，则是一个错误。<code>/</code> 操作符以在地址路径中用 <code>/</code> 的同样方式来组成。如在地址路径中，<code>//</code> 是 <code>/descendant-or-self::node()/</code> 的简缩。</p>
 
-<p>û�ж���������ܱ��任�ɽڵ㼯�ϡ�</p>
+<p>没有对象的类型能被变换成节点集合。</p>
 
 
-<h5></h5><table class="scrap" summary="Scrap"><tbody><tr valign="baseline"><td><a name="NT-UnionExpr"></a>[18]&#160;&#160;&#160;</td><td><code>UnionExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-PathExpr">PathExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-UnionExpr">UnionExpr</a> '|' <a href="#NT-PathExpr">PathExpr</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-PathExpr"></a>[19]&#160;&#160;&#160;</td><td><code>PathExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-LocationPath">LocationPath</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-FilterExpr">FilterExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-FilterExpr">FilterExpr</a> '/' <a href="#NT-RelativeLocationPath">RelativeLocationPath</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-FilterExpr">FilterExpr</a> '//' <a href="#NT-RelativeLocationPath">RelativeLocationPath</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-FilterExpr"></a>[20]&#160;&#160;&#160;</td><td><code>FilterExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-PrimaryExpr">PrimaryExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-FilterExpr">FilterExpr</a> <a href="#NT-Predicate">�ж���</a></code></td></tr></tbody></table>
+<h5></h5><table class="scrap" summary="Scrap"><tbody><tr valign="baseline"><td><a name="NT-UnionExpr"></a>[18]&#160;&#160;&#160;</td><td><code>UnionExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-PathExpr">PathExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-UnionExpr">UnionExpr</a> '|' <a href="#NT-PathExpr">PathExpr</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-PathExpr"></a>[19]&#160;&#160;&#160;</td><td><code>PathExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-LocationPath">LocationPath</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-FilterExpr">FilterExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-FilterExpr">FilterExpr</a> '/' <a href="#NT-RelativeLocationPath">RelativeLocationPath</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-FilterExpr">FilterExpr</a> '//' <a href="#NT-RelativeLocationPath">RelativeLocationPath</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-FilterExpr"></a>[20]&#160;&#160;&#160;</td><td><code>FilterExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-PrimaryExpr">PrimaryExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-FilterExpr">FilterExpr</a> <a href="#NT-Predicate">判定词</a></code></td></tr></tbody></table>
 </div>
 <div class="div2">
 
-<h3><a name="booleans"></a>3.4 ����</h3>
+<h3><a name="booleans"></a>3.4 布尔</h3>
 
-<p>�������͵Ķ�����������ֵ֮һ����ͼ١�</p>
+<p>布尔类型的对象能有两个值之一：真和假。</p>
 
-<p><code>or</code> ����ʽ����ֵ�Ƕ�ÿ����������ֵ�����ң�������ֵ�任������ֵ����������˲������� <code>boolean</code>�����ֵΪ�棬����Ϊ�棬����Ϊ�١������ߵĲ�������ֵΪ�棬�ұߵĲ�����������û����ֵ��</p>
+<p><code>or</code> 表达式的求值是对每个操作数求值，并且，把它的值变换到布尔值，好像调用了布尔函数 <code>boolean</code>。如果值为真，其结果为真，否则，为假。如果左边的操作数求值为真，右边的操作数将不再没被求值。</p>
 
-<p><code>and</code> ����ʽ����ֵ�Ƕ�ÿ����������ֵ�����ң�������ֵ�任������ֵ����������˲������� <code>boolean</code>�����ֵΪ�棬����Ϊ�棬����Ϊ�١������ߵĲ�������ֵΪ�٣��ұߵĲ�����������û����ֵ��</p>
+<p><code>and</code> 表达式的求值是对每个操作数求值，并且，把它的值变换到布尔值，好像调用了布尔函数 <code>boolean</code>。如果值为真，其结果为真，否则，为假。如果左边的操作数求值为假，右边的操作数将不再没被求值。</p>
 
-<p><a href="#NT-EqualityExpr">EqualityExpr</a>����ֻ�� <a href="#NT-RelationalExpr">RelationalExpr</a>���� <a href="#NT-RelationalExpr">RelationalExpr</a>����ֻ��<a href="#NT-AdditiveExpr">AdditiveExpr</a>����ͨ���Ƚ������ڶ���������������Ķ�������ֵ�ġ��������λ������˽������ıȽϡ�һ���漰���ڵ㼯�ϵıȽϱ����尴�ղ��漰���ڵ㼯�ϵıȽϣ��� <code>=</code>��<code>!=</code>��<code>&lt;=</code>�� <code>&lt;</code>��<code>&gt;=</code> �� <code>&gt;</code>һ����ˡ�����û���漰���ڵ㼯�ϵıȽϱ������ <code>=</code> �� <code>!=</code>������û���漰���ڵ㼯�ϵıȽϱ������ <code>&lt;=</code>�� <code>&lt;</code>�� <code>&gt;=</code> �� <code>&gt;</code>��</p>
+<p><a href="#NT-EqualityExpr">EqualityExpr</a>（不只是 <a href="#NT-RelationalExpr">RelationalExpr</a>）或 <a href="#NT-RelationalExpr">RelationalExpr</a>（不只是<a href="#NT-AdditiveExpr">AdditiveExpr</a>）是通过比较来自于对两个操作数结果的对象来求值的。以下三段话定义了结果对象的比较。一、涉及到节点集合的比较被定义按照不涉及到节点集合的比较，对 <code>=</code>、<code>!=</code>、<code>&lt;=</code>、 <code>&lt;</code>、<code>&gt;=</code> 和 <code>&gt;</code>一律如此。二、没有涉及到节点集合的比较被定义成 <code>=</code> 和 <code>!=</code>。三、没有涉及到节点集合的比较被定义成 <code>&lt;=</code>、 <code>&lt;</code>、 <code>&gt;=</code> 和 <code>&gt;</code>。</p>
 
-<p>������Ƚϵ����������ǽڵ㼯�ϣ���ô����ȽϽ��Ϊ�浱�ҽ����������ڵ㼯���и���һ���ڵ㣬���ң��Ƚ��������ڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>�Ľ��Ϊ�档������Ƚϵ�һ�������ǽڵ㼯�϶���һ�������֣���ȽϽ��Ϊ�浱�ҽ����ڽڵ㼯������һ�ڵ㣬���ң��Ƚ��ú���  <code>number</code>  ���ýڵ�ת���ɵ�<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>�������뱻�Ƚϵ�����Ϊ�档������Ƚϵ�һ�������ǽڵ㼯�϶���һ�����ַ�������ȽϽ��Ϊ�浱�ҽ����ڽڵ㼯������һ�ڵ㣬���ң��ȽϽڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>����һ�����ַ���Ϊ�档������Ƚϵ�һ�������ǽڵ㼯�϶���һ���ǲ������ͣ���ȽϽ��Ϊ�浱�ҽ����ڽڵ㼯������һ�ڵ㣬���ң��Ƚ��ú���  <code>boolean</code>  ���ýڵ�ת���ɵĲ��������뱻�ȽϵĲ�������Ϊ�档</p>
+<p>如果被比较的两个对象是节点集合，那么，其比较结果为真当且仅当在两个节点集合中各有一个节点，并且，比较这两个节点的<a title="String Value" href="#dt-string-value">字串值</a>的结果为真。如果被比较的一个对象是节点集合而另一个是数字，其比较结果为真当且仅当在节点集合中有一节点，并且，比较用函数  <code>number</code>  将该节点转换成的<a title="String Value" href="#dt-string-value">字串值</a>的数字与被比较的数字为真。如果被比较的一个对象是节点集合而另一个是字符串，其比较结果为真当且仅当在节点集合中有一节点，并且，比较节点的<a title="String Value" href="#dt-string-value">字串值</a>与另一个的字符串为真。如果被比较的一个对象是节点集合而另一个是布尔类型，其比较结果为真当且仅当在节点集合中有一节点，并且，比较用函数  <code>boolean</code>  将该节点转换成的布尔类型与被比较的布尔类型为真。</p>
 
-<p>���������ȽϵĶ��󶼲��ǽڵ㼯�ϣ����ң�������Ϊ <code>=</code> �� <code>!=</code>����ô���Ƚ��������ʱ�������·�ʽ������ת���ɳ�������Ȼ���ٱȽϡ�������ȽϵĶ�����������һ���ǲ������ͣ���ô��ÿһ�����ȽϵĶ���Ҫת���ɲ������ͣ����������<code>boolean</code> ��������Ȼ�Ļ������������һ�������֣���ô��ÿһ�����ȽϵĶ���Ҫת�������֣����������<code>number</code> �������ٲ�Ȼ�Ļ�����������ת�����ַ������������<code>string</code> ������ <code>=</code> �ıȽ�Ϊ�棬���ҽ����ڶ�������ȵģ�<code>!=</code> �ıȽ�Ϊ�棬���ҽ����ڶ����ǲ���ȵġ�������ȵıȽ����� IEEE 754 ��<a href="#IEEE754">IEEE 754</a>�ݡ���������������ȣ����ҽ������Ƕ�Ϊ���Ϊ�١������ַ�����ȣ����ҽ������Ƕ���ͬ�����е� UCS �ַ���ɡ�</p>
+<p>当两个被比较的对象都不是节点集合，而且，操作符为 <code>=</code> 或 <code>!=</code>，那么，比较这类对象时，按以下方式将它们转换成常见类型然后再比较。如果被比较的对象中至少有一个是布尔类型，那么，每一个被比较的对象都要转换成布尔类型，正如调用了<code>boolean</code> 函数。不然的话，如果至少有一个是数字，那么，每一个被比较的对象都要转换成数字，正如调用了<code>number</code> 函数。再不然的话，两个对象都转换成字符串正如调用了<code>string</code> 函数。 <code>=</code> 的比较为真，当且仅当在对象是相等的；<code>!=</code> 的比较为真，当且仅当在对象是不相等的。数字相等的比较依照 IEEE 754 ［<a href="#IEEE754">IEEE 754</a>］。两个布尔类型相等，当且仅当它们都为真或都为假。两个字符串相等，当且仅当它们都由同样序列的 UCS 字符组成。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>��� <code>$x</code> ����һ�ڵ㼯�ϣ���ô��<code>$x="foo"</code> �� <code>not($x!="foo")</code> �ĺ��岻ͬ��ǰ��Ϊ�棬���ҽ����� <code>$x</code> ��<em>��Щ</em>�ڵ����ִ�ֵΪ <code>foo</code> ������ǰ��Ϊ�棬���ҽ����� <code>$x</code> ��<em>����</em>�ڵ����ִ�ֵΪ <code>foo</code>��</p></div>
+<p>如果 <code>$x</code> 绑定于一节点集合，那么，<code>$x="foo"</code> 与 <code>not($x!="foo")</code> 的含义不同：前者为真，当且仅当在 <code>$x</code> 中<em>有些</em>节点有字串值为 <code>foo</code> ；后者前者为真，当且仅当在 <code>$x</code> 中<em>所有</em>节点有字串值为 <code>foo</code>。</p></div>
 
-<p>���������ȽϵĶ��󶼲��ǽڵ㼯�ϣ����ң�������Ϊ <code>=</code> �� <code>!=</code>����ô���Ƚ��������ʱ�������·�ʽ������ת���ɳ�������Ȼ���ٱȽϡ�������ȽϵĶ�����������һ���ǲ������ͣ���ô��ÿһ�����ȽϵĶ���Ҫת���ɲ������ͣ����������<code>boolean</code> ��������Ȼ�Ļ������������һ�������֣���ô��ÿһ�����ȽϵĶ���Ҫת�������֣����������<code>number</code> �������ٲ�Ȼ�Ļ�����������ת�����ַ������������<code>string</code> ������ <code>=</code> �ıȽ�Ϊ�棬���ҽ����ڶ�������ȵģ�<code>!=</code> �ıȽ�Ϊ�棬���ҽ����ڶ����ǲ���ȵġ�������ȵıȽ����� IEEE 754 ��<a href="#IEEE754">IEEE 754</a>�ݡ���������������ȣ����ҽ������Ƕ�Ϊ���Ϊ�١������ַ�����ȣ����ҽ������Ƕ���ͬ�����е� UCS �ַ���ɡ�</p>
+<p>当两个被比较的对象都不是节点集合，而且，操作符为 <code>=</code> 或 <code>!=</code>，那么，比较这类对象时，按以下方式将它们转换成常见类型然后再比较。如果被比较的对象中至少有一个是布尔类型，那么，每一个被比较的对象都要转换成布尔类型，正如调用了<code>boolean</code> 函数。不然的话，如果至少有一个是数字，那么，每一个被比较的对象都要转换成数字，正如调用了<code>number</code> 函数。再不然的话，两个对象都转换成字符串正如调用了<code>string</code> 函数。 <code>=</code> 的比较为真，当且仅当在对象是相等的；<code>!=</code> 的比较为真，当且仅当在对象是不相等的。数字相等的比较依照 IEEE 754 ［<a href="#IEEE754">IEEE 754</a>］。两个布尔类型相等，当且仅当它们都为真或都为假。两个字符串相等，当且仅当它们都由同样序列的 UCS 字符组成。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>��� <code>$x</code> ����һ�ڵ㼯�ϣ���ô��<code>$x="foo"</code> �� <code>not($x!="foo")</code> �ĺ��岻ͬ��ǰ��Ϊ�棬���ҽ����� <code>$x</code> ��<em>��Щ</em>�ڵ����ִ�ֵΪ <code>foo</code> ������ǰ��Ϊ�棬���ҽ����� <code>$x</code> ��<em>����</em>�ڵ����ִ�ֵΪ <code>foo</code>��</p></div>
+<p>如果 <code>$x</code> 绑定于一节点集合，那么，<code>$x="foo"</code> 与 <code>not($x!="foo")</code> 的含义不同：前者为真，当且仅当在 <code>$x</code> 中<em>有些</em>节点有字串值为 <code>foo</code> ；后者前者为真，当且仅当在 <code>$x</code> 中<em>所有</em>节点有字串值为 <code>foo</code>。</p></div>
 
-<p>���������ȽϵĶ��󶼲��ǽڵ㼯�ϣ����ң�������Ϊ
- <code>&lt;=</code>��<code>&lt;</code>��<code>&gt;=</code> ��
- <code>&gt;</code>����ô��Ҫ�ȽϵĶ���ת�������ֲ����� IEEE 754 ���бȽϡ�<code>&lt;</code> �ıȽ�Ϊ�棬���ҽ�����һ����С춵ڶ������� <code>&gt;</code> �ıȽ�Ϊ�棬���ҽ�����һ������춵ڶ������� <code>&gt;=</code> �ıȽ�Ϊ�棬���ҽ�����һ������춻��춵ڶ�����</p>
+<p>当两个被比较的对象都不是节点集合，而且，操作符为
+ <code>&lt;=</code>，<code>&lt;</code>，<code>&gt;=</code> 或
+ <code>&gt;</code>，那么，要比较的对象都转换成数字并依照 IEEE 754 进行比较。<code>&lt;</code> 的比较为真，当且仅当第一个数小於第二个数。 <code>&gt;</code> 的比较为真，当且仅当第一个数大於第二个数。 <code>&gt;=</code> 的比较为真，当且仅当第一个数大於或等於第二个数</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>�� XPath ����ʽ������ XML �ĵ��� ���е� <code>&lt;</code> �� <code>&lt;=</code> ���������밴�� XML 1.0 �Ĺ���������ţ����磬<code>&amp;lt;</code> �� <code>&amp;lt;=</code>�������������У�<code>test</code>  ���Ե�ֵ�Ǹ� XPath ����ʽ��</p>
+<p>当 XPath 表达式出现在 XML 文档， 所有的 <code>&lt;</code> 及 <code>&lt;=</code> 操作符必须按照 XML 1.0 的规则加上引号，例如，<code>&amp;lt;</code> 及 <code>&amp;lt;=</code>。在下列例子中，<code>test</code>  属性的值是个 XPath 表达式：</p>
 
 <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example"><tr><td><pre>&lt;xsl:if test="@value &amp;lt; 10"&gt;...&lt;/xsl:if&gt;</pre></td></tr></table>
 </div>
 
 <h5></h5><table class="scrap" summary="Scrap"><tbody><tr valign="baseline"><td><a name="NT-OrExpr"></a>[21]&#160;&#160;&#160;</td><td><code>OrExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-AndExpr">AndExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-OrExpr">OrExpr</a> 'or' <a href="#NT-AndExpr">AndExpr</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-AndExpr"></a>[22]&#160;&#160;&#160;</td><td><code>AndExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-EqualityExpr">EqualityExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-AndExpr">AndExpr</a> 'and' <a href="#NT-EqualityExpr">EqualityExpr</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-EqualityExpr"></a>[23]&#160;&#160;&#160;</td><td><code>EqualityExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-RelationalExpr">RelationalExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-EqualityExpr">EqualityExpr</a> '=' <a href="#NT-RelationalExpr">RelationalExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-EqualityExpr">EqualityExpr</a> '!=' <a href="#NT-RelationalExpr">RelationalExpr</a></code></td></tr></tbody><tbody><tr valign="baseline"><td><a name="NT-RelationalExpr"></a>[24]&#160;&#160;&#160;</td><td><code>RelationalExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-AdditiveExpr">AdditiveExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-RelationalExpr">RelationalExpr</a> '&lt;' <a href="#NT-AdditiveExpr">AdditiveExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-RelationalExpr">RelationalExpr</a> '&gt;' <a href="#NT-AdditiveExpr">AdditiveExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-RelationalExpr">RelationalExpr</a> '&lt;=' <a href="#NT-AdditiveExpr">AdditiveExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-RelationalExpr">RelationalExpr</a> '&gt;=' <a href="#NT-AdditiveExpr">AdditiveExpr</a></code></td></tr></tbody></table>
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>�����﷨�Ľ��������˳������ȼ���������ȼ����г�����</p>
+<p>以上语法的结果是如下顺序的优先级（最低优先级先列出）：</p>
 
 <ul>
 
@@ -505,52 +505,52 @@ li p           { margin-top: 0.3em;
  <code>&gt;</code> </p></li>
 </ul>
 
-<p>���Ҳ��������������ɡ�</p>
+<p>并且操作符都从左结合律。</p>
 
-<p>���磬<code>3 &gt; 2 &gt; 1</code> �� <code>(3 &gt; 2) &gt; 1</code> �ȼۣ�����ֵ���Ϊ�١�</p>
+<p>例如，<code>3 &gt; 2 &gt; 1</code> 与 <code>(3 &gt; 2) &gt; 1</code> 等价，其求值结果为假。</p>
 
 </div>
 </div>
 <div class="div2">
 
-<h3><a name="numbers"></a>3.5 ����</h3>
+<h3><a name="numbers"></a>3.5 数字</h3>
 
-<p>���ִ������Ǹ����������ֿ������κ� 64 λ˫���ȸ�ʽ�� IEEE 754 ֵ��<a href="#IEEE754">IEEE 754</a>�ݡ���Щ��������� �������֡���NaN��ֵ����������󣬺������㡣�ο���׼��<a href="#JLS">JLS</a>�ݵ�<a href="http://java.sun.com/docs/books/jls/html/4.doc.html#9208">4.2.3 ��</a>�ؼ�����ĸ�Ҫ��</p>
+<p>数字代表的是浮点数。数字可以有任何 64 位双精度格式的 IEEE 754 值［<a href="#IEEE754">IEEE 754</a>］。这些包括特殊的 “非数字”（NaN）值，正负无穷大，和正负零。参看标准［<a href="#JLS">JLS</a>］的<a href="http://java.sun.com/docs/books/jls/html/4.doc.html#9208">4.2.3 节</a>关键规则的概要。</p>
 
-<p>���ֲ�������������ת�������֣��·�����˺���<code>number</code>��</p>
+<p>数字操作符将操作数转换成数字，仿佛调用了函数<code>number</code>。</p>
 
-<p>������ <code>+</code> ִ�мӷ���</p>
+<p>操作符 <code>+</code> 执行加法。</p>
 
-<p>������ <code>-</code> ִ�м�����</p>
+<p>操作符 <code>-</code> 执行减法。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>��� XML ���� <code>-</code> �����������У����͵���Ҫ�пհ׷��� <code>-</code> ������֮ǰ�����磬<code>foo-bar</code> ��ֵ���Ϊһ��������Ϊ <code>foo-bar</code> �ĺ��ӵĽڵ㼯�ϣ�<code>foo - bar</code> ��ֵ����ǰѵ�һ����Ԫ�� <code>foo</code> <a title="String Value" href="#dt-string-value">�ִ�ֵ</a>ת�������ֵĽ���Ͱѵ�һ��<code>bar</code> ���ӵ� <a title="String Value" href="#dt-string-value">�ִ�ֵ</a>ת�������ֵĽ���Ĳ
+<p>由於 XML 允许 <code>-</code> 出现在名字中，典型地需要有空白符在 <code>-</code> 操作符之前。例如，<code>foo-bar</code> 求值结果为一个包含名为 <code>foo-bar</code> 的孩子的节点集合；<code>foo - bar</code> 求值结果是把第一个子元素 <code>foo</code> <a title="String Value" href="#dt-string-value">字串值</a>转换成数字的结果和把第一个<code>bar</code> 孩子的 <a title="String Value" href="#dt-string-value">字串值</a>转换成数字的结果的差。
 </p></div>
  
 
-<p><code>div</code> ���������� IEEE 754 ִ�и������ĳ�����</p>
+<p><code>div</code> 操作符按照 IEEE 754 执行浮点数的除法。</p>
 
-<p><code>mod</code> ����������ȥβ�������ࡣ���磺</p>
+<p><code>mod</code> 操作符返回去尾除法的余。例如：</p>
 
 <ul>
 
-<li><p><code>5 mod 2</code> ���� <code>1</code> </p></li>
+<li><p><code>5 mod 2</code> 返回 <code>1</code> </p></li>
 
-<li><p><code>5 mod -2</code> ���� <code>1</code> </p></li>
+<li><p><code>5 mod -2</code> 返回 <code>1</code> </p></li>
 
-<li><p><code>-5 mod 2</code> ���� <code>-1</code> </p></li>
+<li><p><code>-5 mod 2</code> 返回 <code>-1</code> </p></li>
 
-<li><p><code>-5 mod -2</code> ���� <code>-1</code> </p></li>
+<li><p><code>-5 mod -2</code> 返回 <code>-1</code> </p></li>
 </ul>
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>���� Java ��ECMAScript �е� <code>%</code> ������һ����</p></div>
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<p>这与 Java 和ECMAScript 中的 <code>%</code> 操作符一样。</p></div>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>���� IEEE 754 �з���ȡ�� �����������һ����</p></div>
+<p>这与 IEEE 754 中返回取整 除的余操作不一样。</p></div>
 
-<h5>���ֱ���ʽ</h5><table class="scrap" summary="Scrap"><tbody>
+<h5>数字表达式</h5><table class="scrap" summary="Scrap"><tbody>
 <tr valign="baseline"><td><a name="NT-AdditiveExpr"></a>[25]&#160;&#160;&#160;</td><td><code>AdditiveExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-MultiplicativeExpr">MultiplicativeExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-AdditiveExpr">AdditiveExpr</a> '+' <a href="#NT-MultiplicativeExpr">MultiplicativeExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-AdditiveExpr">AdditiveExpr</a> '-' <a href="#NT-MultiplicativeExpr">MultiplicativeExpr</a></code></td></tr>
 <tr valign="baseline"><td><a name="NT-MultiplicativeExpr"></a>[26]&#160;&#160;&#160;</td><td><code>MultiplicativeExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-UnaryExpr">UnaryExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-MultiplicativeExpr">MultiplicativeExpr</a> <a href="#NT-MultiplyOperator">MultiplyOperator</a> <a href="#NT-UnaryExpr">UnaryExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-MultiplicativeExpr">MultiplicativeExpr</a> 'div' <a href="#NT-UnaryExpr">UnaryExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-MultiplicativeExpr">MultiplicativeExpr</a> 'mod' <a href="#NT-UnaryExpr">UnaryExpr</a></code></td></tr>
 <tr valign="baseline"><td><a name="NT-UnaryExpr"></a>[27]&#160;&#160;&#160;</td><td><code>UnaryExpr</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-UnionExpr">UnionExpr</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| '-' <a href="#NT-UnaryExpr">UnaryExpr</a></code></td></tr>
@@ -558,35 +558,35 @@ li p           { margin-top: 0.3em;
 </div>
 <div class="div2">
 
-<h3><a name="strings"></a>3.6 �ַ���</h3>
+<h3><a name="strings"></a>3.6 字符串</h3>
 
-<p>�ַ�����һ����������� XML �������<a href="#XML">XML</a>�ݶ�����ַ���������ɡ���ˣ��� XPath ��һ�����ַ���Ӧ��һ��������Ӧ Unicode ��ֵ�� Unicode �����ַ����ο���<a href="#UNICODE">Unicode</a>�ݣ������� 16-λ�� Unicode ����ֵ����ͬһ���£�Unicode �����ַ����� Unicode ��ֵ��� U+FFFF �ĳ����ַ���һ�� 16-λ Unicode ����ֵ �������surrogate pair����������ı�����ԣ��ַ�����һ���� Unicode ����ֵ����ʾ���������������� XPath ��ʵ�ֱ��뿼��ȷ������Ա���ȷ�ش�����һ����һ�� XPath �ַ���</p>
+<p>字符串由一个有零或多个在 XML 建议书［<a href="#XML">XML</a>］定义的字符的序列组成。因此，在 XPath 中一个单字符对应于一单个有相应 Unicode 数值的 Unicode 抽象字符（参看［<a href="#UNICODE">Unicode</a>］）；这与 16-位的 Unicode 编码值不是同一件事：Unicode 编码字符代表 Unicode 数值大於 U+FFFF 的抽象字符是一对 16-位 Unicode 编码值 （替代对surrogate pair）。在许多的编程语言，字符串由一序列 Unicode 编码值来表示；在这样的语言中 XPath 的实现必须考虑确保替代对被正确地处理成一个单一的 XPath 字符。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
 <p>
-�� Unicode ���ܻ���������ַ���������ͬ���ģ� ��ʹ�����ɲ�ͬ��Unicode �����ַ�������ɡ����磬��Щ�����ַ�������Ԥ�ƵĻ�ֽ����ʽ����ʾ����ˣ�XPath ���ܻ᷵��Ԥ�벻���Ľ����������Щ�� XPath ����ʽ�� XML �ĵ����ַ����淶���ɹ淶����ʽ���μ���<a href="#CHARMOD">Character Model</a>�ݡ�</p></div>
+在 Unicode 可能会出现两个字符串被当作同样的， 即使它们由不同的Unicode 抽象字符序列组成。例如，有些重音字符可以由预制的或分解的形式来表示。因此，XPath 可能会返回预想不到的结果，除非这些在 XPath 表达式及 XML 文档的字符被规范化成规范的形式。参见［<a href="#CHARMOD">Character Model</a>］。</p></div>
 </div>
 <div class="div2">
 
-<h3><a name="exprlex"></a>3.7 �ʷ��ṹ</h3>
+<h3><a name="exprlex"></a>3.7 词法结构</h3>
 
-<p>�����зָtokenizing��ʱ�� ���Ƿ�����ķָ�Σ�token����</p>
+<p>当进行分割（tokenizing）时， 总是返回最长的分割段（token）。</p>
 
-<p>�����﷨��û����ȷ��������Ϊ�˿ɶ��Ա���ʽ����ʹ�ÿհ׷���<a href="#NT-ExprWhitespace">ExprWhitespace</a> ���������� <a href="#NT-ExprToken">ExprToken</a> ʽ����pattern��ǰ�����ɵ����ӡ�</p>
+<p>尽管语法中没有明确的允许，为了可读性表达式可以使用空白符：<a href="#NT-ExprWhitespace">ExprWhitespace</a> 可以在所有 <a href="#NT-ExprToken">ExprToken</a> 式样（pattern）前后自由地添加。</p>
 
-<p>�����ر�ķָ�����ʹ�ñ��밴��˵����˳����Ӧ�������� <a href="#NT-ExprToken">ExprToken</a> �����壺</p>
+<p>以下特别的分割规则的使用必须按照说明的顺序来应用以消除 <a href="#NT-ExprToken">ExprToken</a> 的歧义：</p>
 
 <ul>
-<li><p>�������ǰ�ķָ�β��Ҹ÷ָ�β��� <code>@</code> , <code>::</code> , <code>(</code> ,
- <code>[</code> , <code>,</code> �� <a href="#NT-Operator">Operator</a> �е�һ������ô��<code>*</code> ���赱�� <a href="#NT-MultiplyOperator">MultiplyOperator</a> ���ң�<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-NCName">NCName</a>  ���赱�� <a href="#NT-OperatorName">OperatorName</a>��</p></li>
-<li><p>���һ���ַ������ <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-NCName">NCName</a>�������ڲ��� <a href="#NT-ExprWhitespace">ExprWhitespace</a>֮���� <code>(</code>����ô���÷ָ�α��赱�� <a href="#NT-NodeType">NodeType</a> �� <a href="#NT-FunctionName">FunctionName</a>��</p></li>
-<li><p>��������ַ������ <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-NCName">NCName</a> �������ڲ��� <a href="#NT-ExprWhitespace">ExprWhitespace</a>֮���� <code>::</code>����ô��
-�÷ָ�α��赱��  <a href="#NT-AxisName">AxisName</a>��</p></li>
-<li><p>���򣬸÷ָ�αز��ܵ��� <a href="#NT-MultiplyOperator">MultiplyOperator</a>��<a href="#NT-OperatorName">OperatorName</a>��<a href="#NT-NodeType">NodeType</a>��<a href="#NT-FunctionName">FunctionName</a>���� <a href="#NT-AxisName">AxisName</a>��</p></li>
+<li><p>如果有在前的分割段并且该分割段不是 <code>@</code> , <code>::</code> , <code>(</code> ,
+ <code>[</code> , <code>,</code> 或 <a href="#NT-Operator">Operator</a> 中的一个，那么，<code>*</code> 必需当做 <a href="#NT-MultiplyOperator">MultiplyOperator</a> 并且，<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-NCName">NCName</a>  必需当做 <a href="#NT-OperatorName">OperatorName</a>。</p></li>
+<li><p>如果一个字符后跟随 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-NCName">NCName</a>（可能在插入 <a href="#NT-ExprWhitespace">ExprWhitespace</a>之后）是 <code>(</code>，那么，该分割段必需当做 <a href="#NT-NodeType">NodeType</a> 或 <a href="#NT-FunctionName">FunctionName</a>。</p></li>
+<li><p>如果两个字符后跟随 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-NCName">NCName</a> （可能在插入 <a href="#NT-ExprWhitespace">ExprWhitespace</a>之后）是 <code>::</code>，那么，
+该分割段必需当做  <a href="#NT-AxisName">AxisName</a>。</p></li>
+<li><p>否则，该分割段必不能当做 <a href="#NT-MultiplyOperator">MultiplyOperator</a>，<a href="#NT-OperatorName">OperatorName</a>，<a href="#NT-NodeType">NodeType</a>，<a href="#NT-FunctionName">FunctionName</a>，或 <a href="#NT-AxisName">AxisName</a>。</p></li>
 </ul>
 
-<h5>����ʽ�Ĵʷ��ṹ</h5><table class="scrap" summary="Scrap"><tbody>
+<h5>表达式的词法结构</h5><table class="scrap" summary="Scrap"><tbody>
 <tr valign="baseline"><td><a name="NT-ExprToken"></a>[28]&#160;&#160;&#160;</td><td><code>ExprToken</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code>'(' | ')' | '[' | ']' | '.' | '..' | '@' | ',' | '::'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-NameTest">NameTest</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-NodeType">NodeType</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-Operator">Operator</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-FunctionName">FunctionName</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-AxisName">AxisName</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-Literal">Literal</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-Number">Number</a></code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| <a href="#NT-VariableReference">VariableReference</a></code></td></tr>
 <tr valign="baseline"><td><a name="NT-Literal"></a>[29]&#160;&#160;&#160;</td><td><code>Literal</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code>'"' [^"]* '"'</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| "'" [^']* "'"</code></td></tr>
 <tr valign="baseline"><td><a name="NT-Number"></a>[30]&#160;&#160;&#160;</td><td><code>Number</code></td><td>&#160;&#160;&#160;::=&#160;&#160;&#160;</td><td><code><a href="#NT-Digits">Digits</a> ('.' <a href="#NT-Digits">Digits</a>?)?</code></td></tr><tr valign="baseline"><td></td><td></td><td></td><td><code>| '.' <a href="#NT-Digits">Digits</a></code></td></tr>
@@ -607,110 +607,110 @@ li p           { margin-top: 0.3em;
 </div>
 <div class="div1">
 
-<h2><a name="corelib"></a>4 ���ĺ�����</h2>
+<h2><a name="corelib"></a>4 核心函数库</h2>
 
-<p>��������������ֵ����ʽ�ĺ����� XPath��ʵ�ֱ��������ں������а�����Щ������</p>
+<p>本节描述用来求值表达式的函数， XPath的实现必须总是在函数库中包括这些函数。</p>
 
-<p>�ں������е�ÿһ��������ʹ��һ������ԭ�ͣ���ԭ�͸����������ͣ����������ƣ��Լ����������͡�����������ͺ����һ���ʺţ���ô�����ǿ�ѡ�ģ����򣬲������Ǳ����еġ�</p>
+<p>在函数库中的每一个函数都使用一个函数原型，该原型给定返回类型，函数的名称，以及参数的类型。如果参数类型后跟随一个问号，那么参数是可选的；否则，参数则是必须有的。</p>
 
 <div class="div2">
 
-<h3><a name="IDAIHZU"></a>4.1 �ڵ㼯�Ϻ���</h3>
+<h3><a name="IDAIHZU"></a>4.1 节点集合函数</h3>
 <p><em>number</em> <b>last</b>()</p>
 
-<p><code>last</code> ��������һ�����֣������ֵ�춴ӱ���ʽ��ֵ�������е�<a title="Context Size" href="#dt-context-size">�����Ĵ�С</a> </p>
+<p><code>last</code> 函数返回一个数字，该数字等於从表达式求值上下文中的<a title="Context Size" href="#dt-context-size">上下文大小</a> </p>
 
 <p><em>number</em> <b>position</b>()</p>
 
-<p><code>position</code>��������һ�����֣������ֵ�춴ӱ���ʽ��ֵ�������е�<a title="Context Position" href="#dt-context-position">������λ��</a></p><p><em>number</em> <b>count</b>(<var>node-set</var>)</p>
+<p><code>position</code>函数返回一个数字，该数字等於从表达式求值上下文中的<a title="Context Position" href="#dt-context-position">上下文位置</a></p><p><em>number</em> <b>count</b>(<var>node-set</var>)</p>
 
-<p><code>count</code> ���������ڲ���node-set�нڵ�ĸ�����</p>
+<p><code>count</code> 函数返回在参数node-set中节点的个数。</p>
 
 <p><em>node-set</em> <b>id</b>(<var>object</var>)</p>
 
-<p><code>id</code> ����idͨ��Ԫ�ص�Ψһ��IDѡ�����ǣ��μ� <a href="#unique-id"><b>5.2.1 Ψһ ID</b></a>������<code>id</code>�Ĳ����ǽڵ㼯������ʱ������Ƕ��ڲ����ڵ㼯�����ÿһ���ڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>Ӧ��<code>id</code>�Ľ�������ϡ�
-����<code>id</code>�Ĳ������κ�����������ʱ��������ת����һ���ַ��������������<code>string</code> ����һ�����ַ������ָ���ɿհ׸�ֿ��ĵ���Ƭ���У��հ׸��������ʽ <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>ƥ����ַ����κ�˳�򣩣�������������Ľ����ڵ�ͬһ�ĵ�����Щ����Ψһ<code>id</code>����������κ�һ������Ƭ��Ԫ�صĽڵ㼯�ϡ�</p>
+<p><code>id</code> 函数id通过元素的唯一的ID选择他们（参见 <a href="#unique-id"><b>5.2.1 唯一 ID</b></a>）。当<code>id</code>的参数是节点集合类型时，结果是对在参数节点集合里的每一个节点的<a title="String Value" href="#dt-string-value">字串值</a>应用<code>id</code>的结果的联合。
+当到<code>id</code>的参数是任何其它的类型时，参数被转换成一个字符串，即如调用了<code>string</code> 函数一样；字符串被分割成由空白格分开的单字片序列（空白格是与产生式 <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a>匹配的字符的任何顺序）；结果是在上下文节所在的同一文档中那些具有唯一<code>id</code>等於序列中任何一个单字片的元素的节点集合。</p>
 
 <ul>
 
-<li><p><code>id("foo")</code> ѡ��ΨһIDΪ <code>foo</code> Ԫ��</p></li>
+<li><p><code>id("foo")</code> 选择唯一ID为 <code>foo</code> 元素</p></li>
 
-<li><p><code>id("foo")/child::para[position()=5]</code> ѡ��Ψһ���� ID Ϊ <code>foo</code> ��Ԫ�صĵ�5�� <code>para</code> ����</p></li>
+<li><p><code>id("foo")/child::para[position()=5]</code> 选择唯一带有 ID 为 <code>foo</code> 的元素的第5个 <code>para</code> 孩子</p></li>
 </ul>
 <p><em>string</em> <b>local-name</b>(<var>node-set</var>?)</p>
 
-<p>���� <code>local-name</code> ����һ���ڵ��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�ľ��򲿷֣��ýڵ�Ϊ����<a title="Document Order" href="#dt-document-order">�ĵ�˳��</a>�����ڵ㼯����ĵ�һ���ڵ㡣��������ڵ㼯���ǿջ��һ�ڵ�û��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>���򷵻�һ�����ַ��������������ʡ�ԣ�����ȱʡΪ����һ�������Ľڵ��Ա�Ľڵ㼯�ϡ�</p>
+<p>函数 <code>local-name</code> 返回一个节点的<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的局域部分，该节点为依照<a title="Document Order" href="#dt-document-order">文档顺序</a>参数节点集合里的第一个节点。如果参数节点集合是空或第一节点没有<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>，则返回一个空字符串。如果参数被省略，它则缺省为仅有一个上下文节点成员的节点集合。</p>
 
 <p><em>string</em> <b>namespace-uri</b>(<var>node-set</var>?)</p>
 
-<p>���� <code>namespace-uri</code> ���������ĵ�˳������ڵ㼯���еĵ�һ���ڵ��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�������ռ� URI����������ڵ㼯���ǿյģ���һ�ڵ�û��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>����<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�������ռ� URI Ϊ�գ��򷵻�һ�����ַ��������������ʡ�ԣ�����ȱʡΪ����һ�������Ľڵ��Ա�Ľڵ㼯�ϡ�</p>
+<p>函数 <code>namespace-uri</code> 返回依照文档顺序参数节点集合中的第一个节点的<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的命名空间 URI。如果参数节点集合是空的，第一节点没有<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>，或<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的命名空间 URI 为空，则返回一个空字符串。如果参数被省略，它则缺省为仅有一个上下文节点成员的节点集合。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>����Ԫ�ؽڵ�����Խڵ��⺯�� <code>namespace-uri</code> ���ص��ַ�����Ϊ�ա�</p></div>
+<p>除了元素节点和属性节点外函数 <code>namespace-uri</code> 返回的字符串将为空。</p></div>
 <p><em>string</em> <b>name</b>(<var>node-set</var>?)</p>
 
-<p>���� <code>name</code> ����һ���ַ������ַ�������һ��<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a>�������������ĵ�˳������ڵ㼯���еĵ�һ���ڵ��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>��<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a>������չ����ʱ������ע�⵽�����ռ�����ʵ�����ǶԱ���ʾ��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�Ľڵ�ġ����͵أ���XML��Դ�н��� <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> ���֡���������ռ�����ʵ�����Ƕ�����ͬ�������ռ�Ķ��ص�ǰ׺����ϵ�Ľڵ㣬�ⲻ����ʵ���ϵ������
-Ȼ����ʵ�ֿ��԰����йؽڵ�ı�ʾ��ԭ��ǰ׺����Ϣ��������������£�ʵ���ܱ�֤���ص��ַ����������� XML �ĵ�ʹ�õ�<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a>һ������������ڵ㼯���ǿյĻ��һ�ڵ�û��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>������һ���յ��ַ����������ʡ���˵Ĳ�������ȱʡΪ���������Ľڵ�һ����Ա�Ľڵ㼯�ϡ�</p>
+<p>函数 <code>name</code> 返回一个字符串，字符串包含一个<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a>，它代表依照文档顺序参数节点集合中的第一个节点的<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>。<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a>代表扩展名字时，必须注意到命名空间声明实际上是对被表示的<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的节点的。典型地，在XML资源中将是 <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a> 出现。如果命名空间声明实际上是对与有同样命名空间的多重的前缀相联系的节点，这不必是实际上的情况。
+然而，实现可以包括有关节点的表示的原来前缀的信息；在这样的情况下，实现能保证返回的字符串总是与在 XML 文档使用的<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a>一样。如果参数节点集合是空的或第一节点没有<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>，返回一个空的字符串。如果它省略了的参数，则缺省为仅有上下文节点一个成员的节点集合。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>����Ԫ�ؽڵ�����Խڵ��⣬�� <code>name</code> �������ص��ַ������� <code>local-name</code> �������ص��ַ���һ����</p></div>
+<p>除了元素节点和属性节点外，由 <code>name</code> 函数返回的字符串将与 <code>local-name</code> 函数返回的字符串一样。</p></div>
 </div>
 <div class="div2">
 
-<h3><a name="IDAUNZU"></a>4.2 �ַ�������</h3>
+<h3><a name="IDAUNZU"></a>4.2 字符串函数</h3>
 <p><em>string</em> <b>string</b>(<var>object</var>?)</p>
 
-<p><code>string</code> ���������������и���ת�����ַ���</p>
+<p><code>string</code> 函数将对象依下列各项转换成字符：</p>
 
 <ul>
-<li><p>�ڵ㼯��ͨ�������ڽڵ㼯����<a title="Document Order" href="#dt-document-order">�ĵ�˳��</a>�µ�һ���ڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>��ת�����ַ���������ڵ��ǿյ��򷵻ؿ��ַ�����</p></li>
-<li><p>���ְ����·�ʽת�����ַ�</p>
+<li><p>节点集合通过返回在节点集合中<a title="Document Order" href="#dt-document-order">文档顺序</a>下第一个节点的<a title="String Value" href="#dt-string-value">字串值</a>来转换成字符串。如果节点是空的则返回空字符串。</p></li>
+<li><p>数字按以下方式转换成字符</p>
 
 <ul>
-<li><p>NaN ת�����ַ��� <code>NaN</code> </p></li>
-<li><p>����ת�����ַ��� <code>0</code> </p></li>
-<li><p>����ת�����ַ��� <code>0</code> </p></li>
-<li><p>�������ת�����ַ��� <code>Infinity</code> </p></li>
-<li><p>�������ת�����ַ��� <code>-Infinity</code> </p></li>
-<li><p>��������������������ֱ�ʾ��һ������С���㼰��ͷ��� <a href="#NT-Number">Number</a>һ����ʮ���Ƶ���ʽ����������Ǹ�����������ǰ��һ�����ţ�<code>-</code>����</p></li>
-<li><p>���򣬸����ֱ�ʾ��һ�������С���㼰������С����ǰ����һ���ֲ���С�������һ���ֵ� <a href="#NT-Number">Number</a>һ����ʮ���Ƶ���ʽ����������Ǹ�����������ǰ��һ�����ţ�<code>-</code>����������С����ǰҪ��ֱ��Ҫ��һ��λ�����⣬��Ӧ������ͷ���㣻
-��С��������Ҫ���һλ���⣬Ӧ�в��಻�ٵ�λ�����ָ��������������� IEEE 754 ��ֵ��</p></li>
+<li><p>NaN 转换成字符串 <code>NaN</code> </p></li>
+<li><p>正零转换成字符串 <code>0</code> </p></li>
+<li><p>负零转换成字符串 <code>0</code> </p></li>
+<li><p>正无穷大转换成字符串 <code>Infinity</code> </p></li>
+<li><p>负无穷大转换成字符串 <code>-Infinity</code> </p></li>
+<li><p>如果数字是整数，该数字表示成一个与无小数点及领头零的 <a href="#NT-Number">Number</a>一样的十进制的形式，如果数字是负数，则在其前加一个负号（<code>-</code>）。</p></li>
+<li><p>否则，该数字表示成一个与包括小数点及至少在小数点前面有一数字并且小数点后有一数字的 <a href="#NT-Number">Number</a>一样的十进制的形式，如果数字是负数，则在其前加一个负号（<code>-</code>）；除了在小数点前要求直接要有一个位的零外，不应该有领头的零；
+在小数点后除了要求的一位数外，应有不多不少的位来区分该数与所有其它的 IEEE 754 数值。</p></li>
 </ul>
 </li>
-<li><p>�����ļ�ֵת�����ַ��� <code>false</code>����������ֵת�����ַ��� <code>true</code>��</p></li>
-<li><p>�������ֻ������͵Ķ��������������͵ķ�ʽת�����ַ�����</p></li>
+<li><p>布尔的假值转换成字符串 <code>false</code>。布尔的真值转换成字符串 <code>true</code>。</p></li>
+<li><p>不是四种基本类型的对象依照所属类型的方式转换成字符串。</p></li>
 </ul>
 
-<p>�������ʡ�ԣ���ȱʡΪ����һ�������Ľڵ�Ϊ��Ա�Ľڵ㼯�ϡ�</p>
+<p>如果参数省略，则缺省为仅有一个上下文节点为成员的节点集合。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p><code>string</code> ��������Ҫ����������ת�����ַ������ָ��û��ġ�
- <code>format-number</code> �����ͣ�<a href="#XSLT">XSLT</a>�� �е� <code>xsl:number</code> Ԫ���ṩ�������Ĺ��ܡ�</p></div>
+<p><code>string</code> 函数不是要用来将数字转换成字符串呈现给用户的。
+ <code>format-number</code> 函数和［<a href="#XSLT">XSLT</a>］ 中的 <code>xsl:number</code> 元素提供了这样的功能。</p></div>
 <p><em>string</em> <b>concat</b>(<var>string</var>, <var>string</var>, <var>string</var>*)</p>
 
-<p><code>concat</code> �����������Ĳ��������ᡣ</p>
+<p><code>concat</code> 函数返回它的参数的联结。</p>
 
 <p><em>boolean</em> <b>starts-with</b>(<var>string</var>, <var>string</var>)</p>
 
-<p>�����һ���ַ��������Եڶ����ַ���������ͷ��<code>starts-with</code> ���������棬���򣬷��ؼ١�</p>
+<p>如果第一个字符串参数以第二个字符串参数起头，<code>starts-with</code> 函数返回真，否则，返回假。</p>
 
 <p><em>boolean</em> <b>contains</b>(<var>string</var>, <var>string</var>)</p>
 
-<p>�����һ���ַ������������ڶ����ַ���������<code>contains</code> ���������棬���򣬷��ؼ١�</p>
+<p>如果第一个字符串参数包含第二个字符串参数，<code>contains</code> 函数返回真，否则，返回假。</p>
 
 <p><em>string</em> <b>substring-before</b>(<var>string</var>, <var>string</var>)</p>
 
-<p><code>substring-before</code> �������ص�һ���ַ��������ڵڶ��������״γ���֮ǰ�����ַ��������ߣ������һ���ַ��������������ڶ����ַ��������򷵻ؿ��ַ��������磬<code>substring-before("1999/04/01","/")</code> ���� <code>1999</code>��</p>
+<p><code>substring-before</code> 函数返回第一个字符串参数在第二个参数首次出现之前的子字符串，或者，如果第一个字符串参数不包含第二个字符串参数则返回空字符串。例如，<code>substring-before("1999/04/01","/")</code> 返回 <code>1999</code>。</p>
 
 <p><em>string</em> <b>substring-after</b>(<var>string</var>, <var>string</var>)</p>
 
-<p><code>substring-after</code> �������ص�һ���ַ��������ڵڶ��������״γ���֮������ַ��������ߣ������һ���ַ��������������ڶ����ַ��������򷵻ؿ��ַ��������磬
- <code>substring-after("1999/04/01","/")</code> ���� <code>04/01</code>����
- <code>substring-after("1999/04/01","19")</code> ����
- <code>99/04/01</code>��</p>
+<p><code>substring-after</code> 函数返回第一个字符串参数在第二个参数首次出现之后的子字符串，或者，如果第一个字符串参数不包含第二个字符串参数则返回空字符串。例如，
+ <code>substring-after("1999/04/01","/")</code> 返回 <code>04/01</code>，而
+ <code>substring-after("1999/04/01","19")</code> 返回
+ <code>99/04/01</code>。</p>
 
 <p><em>string</em> <b>substring</b>(
 <var>string</var>
@@ -718,45 +718,45 @@ li p           { margin-top: 0.3em;
 , <var>number</var>?
 )</p>
 
-<p><code>substring</code> �������ص�һ���ַ��������ӵڶ���������ָ����λ�ÿ�ʼ���Ե���������Ϊ���ȵ����ַ��������磬
-<code>substring("12345",2,3)</code> ���� <code>"234"</code>��
-���û�е������������򷵻شӵڶ���������ָ����λ�ÿ�ʼֱ�����������磬
- <code>substring("12345",2)</code> ����<code>"2345"</code>��</p>
+<p><code>substring</code> 函数返回第一个字符串参数从第二个参数所指定的位置开始，以第三个参数为长度的子字符串。例如，
+<code>substring("12345",2,3)</code> 返回 <code>"234"</code>。
+如果没有第三个参数，则返回从第二个参数所指定的位置开始直到结束。例如，
+ <code>substring("12345",2)</code> 返回<code>"2345"</code>。</p>
 
-<p>��ȷ�е�˵��ÿһ���ַ�������ַ����ο�<a href="#strings"><b>3.6 �ַ���</b></a>���Ǳ�������һ������λ�ã���һ���ַ��� 1 ���ڶ����ַ��� 2 ���������ơ�</p>
+<p>更确切地说，每一个字符串里的字符（参看<a href="#strings"><b>3.6 字符串</b></a>）是被看作有一个数字位置：第一个字符是 1 ，第二个字符是 2 ，依此类推。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>���� Java �� ECMAScript ��ͬ���� Java �� ECMAScript ��  <code>String.substring</code> ��������һ���ַ���λ�õ��� 0 ��</p>
+<p>这与 Java 和 ECMAScript 不同，在 Java 和 ECMAScript 中  <code>String.substring</code> 方法将第一个字符的位置当成 0 。</p>
 
 </div>
 
-<p>�÷��ص����ַ���������Щ�ַ�λ�ô�춻��춵ڶ�������ȡ��ֵ�����ָ���˵�������������С춵ڶ��͵�����������ȡ��ֵ֮�ͣ����ϵıȽϺͼӷ���ѭ IEEE 754 �Ĺ���ȡ�������·��ǵ�����<code>round</code> ���������µ�����˵���˸��ֲ������İ�����</p>
+<p>该返回的子字符串包含那些字符位置大於或等於第二参数的取整值，如果指定了第三个参数，则小於第二和第三个参数的取整值之和；以上的比较和加法遵循 IEEE 754 的规则；取整操作仿佛是调用了<code>round</code> 函数。以下的例子说明了各种不常见的案例：</p>
 
 <ul>
 <li> 
 
-<p> <code>substring("12345", 1.5, 2.6)</code> ���� <code>"234"</code> </p>
+<p> <code>substring("12345", 1.5, 2.6)</code> 返回 <code>"234"</code> </p>
 
 </li>
 
-<li><p><code>substring("12345", 0, 3)</code> ���� <code>"12"</code> </p>
+<li><p><code>substring("12345", 0, 3)</code> 返回 <code>"12"</code> </p>
 
 </li>
 
-<li><p><code>substring("12345", 0 div 0, 3)</code> ���� <code>""</code> </p>
+<li><p><code>substring("12345", 0 div 0, 3)</code> 返回 <code>""</code> </p>
 
 </li>
 
-<li><p><code>substring("12345", 1, 0 div 0)</code> ���� <code>""</code> </p>
+<li><p><code>substring("12345", 1, 0 div 0)</code> 返回 <code>""</code> </p>
 
 </li>
 
-<li><p><code>substring("12345", -42, 1 div 0)</code> ���� <code>"12345"</code> </p>
+<li><p><code>substring("12345", -42, 1 div 0)</code> 返回 <code>"12345"</code> </p>
 
 </li>
 
-<li><p><code>substring("12345", -1 div 0, 1 div 0)</code> ���� <code>""</code> </p>
+<li><p><code>substring("12345", -1 div 0, 1 div 0)</code> 返回 <code>""</code> </p>
 
 </li>
 </ul>
@@ -764,68 +764,68 @@ li p           { margin-top: 0.3em;
 <var>string</var>?
 )</p>
 
-<p><code>string-length</code> �����ַ������ο� <a href="#strings"><b>3.6 �ַ���</b></a>�����ַ��ĸ������������ʡ�ԣ���ȱʡΪһ�������Ľڵ���ת�����ַ�����Ҳ���������Ľڵ�� <a title="String Value" href="#dt-string-value">�ִ�ֵ</a>��</p>
+<p><code>string-length</code> 返回字符串（参看 <a href="#strings"><b>3.6 字符串</b></a>）中字符的个数。如果参数省略，则缺省为一个上下文节点再转换成字符串，也就是上下文节点的 <a title="String Value" href="#dt-string-value">字串值</a>。</p>
 
 <p><em>string</em> <b>normalize-space</b>(<var>string</var>?)</p>
 
-<p><code>normalize-space</code> �������ؿհ׷��淶�� ��Ĳ����ַ������ù淶���������ͷ����β�Ŀհ����Լ���һ���հ׷��滻�����Ŀհ׷���
-�հ׷��ַ��� XML �еĲ���ʽ <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a> ����������һ���ġ�
-�������ʡ�ԣ���ȱʡΪһ�������Ľڵ���ת�����ַ�����Ҳ���������Ľڵ�� <a title="String Value" href="#dt-string-value">�ִ�ֵ</a>��</p>
+<p><code>normalize-space</code> 函数返回空白符规范化 后的参数字符串，该规范化是清除领头及结尾的空白字以及用一个空白符替换连续的空白符。
+空白符字符与 XML 中的产生式 <a href="http://www.w3.org/TR/REC-xml#NT-S">S</a> 所允许的是一样的。
+如果参数省略，则缺省为一个上下文节点再转换成字符串，也就是上下文节点的 <a title="String Value" href="#dt-string-value">字串值</a>。</p>
 
 
 <p><em>string</em> <b>translate</b>(<var>string</var>, <var>string</var>, <var>string</var>)</p>
 
-<p><code>translate</code> �������ص�һ���������ַ������������ڵڶ��������г��ֵ��ַ������ڵ��������������Ӧλ�õ��ַ����滻�����磬<code>translate("bar","abc","ABC")</code> �����ַ���
- <code>BAr</code>��������ڶ�����������ַ��ڵ��������������Ӧλ��
-û���ַ�����Ϊ�ڶ�����������ַ����ȵ������������ַ�����������ô����һ����������Ǹ��ַ�������ȥ�����磬<code>translate("--aaa--","abc-","ABC")</code> ����
- <code>"AAA"</code>������ڵڶ�����������ַ����ֳ���һ�Σ���ô����һ�εĳ��־����滻���ַ��������������������ַ����ȵڶ����������ַ������� ��ô��������ַ��������ԡ�</p>
+<p><code>translate</code> 函数返回第一个参数的字符串，其中有在第二个参数中出现的字符都被在第三个参数中相对应位置的字符所替换。例如，<code>translate("bar","abc","ABC")</code> 返回字符串
+ <code>BAr</code>。如果，第二个参数里的字符在第三个参数的相对应位置
+没有字符（因为第二个参数里的字符串比第三个参数的字符串长），那么，第一个参数里的那个字符将被移去。例如，<code>translate("--aaa--","abc-","ABC")</code> 返回
+ <code>"AAA"</code>。如果在第二个参数里的字符出现超过一次，那么，第一次的出现决定替换的字符。如果第三个参数里的字符串比第二个参数的字符串长， 那么，多余的字符将被忽略。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p><code>translate</code> ��������һ�����������Դ�Сдת�����������������XPath �Ľ����İ汾���ܻ�Ϊ��Сдת���ṩ����ĺ�����</p>
+<p><code>translate</code> 函数不是一个对所有语言大小写转换的完整解决方案。XPath 的将来的版本可能会为大小写转换提供额外的函数。</p>
 
 </div>
 </div>
 <div class="div2">
 
-<h3><a name="IDACZZU"></a>4.3 ��������</h3>
+<h3><a name="IDACZZU"></a>4.3 布尔函数</h3>
 <p><em>boolean</em> <b>boolean</b>(<var>object</var>)</p>
 
-<p><code>boolean</code> ���������и���ת���������</p>
+<p><code>boolean</code> 函数依下列各项转换其参数：</p>
 
 <ul>
-<li><p>����Ϊ�浱�ҽ���������������� NaN</p>
+<li><p>数字为真当且仅当它不是正负零或 NaN</p>
 
 </li>
-<li><p>�ڵ㼯��Ϊ�浱�ҽ�������Ϊ��</p>
+<li><p>节点集合为真当且仅当它不为空</p>
 
 </li>
-<li><p>�ַ���Ϊ�浱�ҽ������ĳ��Ȳ�Ϊ��</p>
+<li><p>字符串为真当且仅当它的长度不为零</p>
 
 </li>
-<li><p>�������ֻ������͵Ķ��������������͵ķ�ʽת���ɲ������͡�</p>
+<li><p>不是四种基本类型的对象依照所属类型的方式转换成布尔类型。</p>
 
 </li>
 </ul>
 <p><em>boolean</em> <b>not</b>(<var>boolean</var>)</p>
 
-<p>�������Ϊ�� <code>not</code> ���������棬���򷵻ؼ١�</p>
+<p>如果参数为真 <code>not</code> 函数返回真，否则返回假。</p>
 
 
 <p><em>boolean</em> <b>true</b>()</p>
 
-<p><code>true</code> ���������档</p>
+<p><code>true</code> 函数返回真。</p>
 
 
 <p><em>boolean</em> <b>false</b>()</p>
 
-<p>The <code>false</code> �������ؼ١�</p>
+<p>The <code>false</code> 函数返回假。</p>
 
 
 <p><em>boolean</em> <b>lang</b>(<var>string</var>)</p>
 
-<p>������ <code>xml:lang</code> ����ָ���������Ľڵ�����������ָ�������Ե��������Ƿ�һ�»�һ���������ַ���<code>lang</code>�����������١������Ľڵ�������������Ľڵ��  <code>xml:lang</code> ���Ծ��������ߣ����û�� <code>xml:lang</code> ����������ӽ����� <code>xml:lang</code> �������Ƚڵ�� <code>xml:lang</code> ����ֵ���������û�������Ľڵ㣬��ô <code>lang</code> ���ؼ١�
-����������Ľڵ㣬��ô�ڲ����Ǵ�С������£�������ֵд�������Ȼ�����<code>-</code> ��ʼ�ĺ�׺����ֵ��춲������Ժ�׺��ֵ��<code>lang</code> �����档��������Ľڵ�Ϊ�������Ԫ���е��κ�һ����<code>lang("en")</code> Ϊ�棺</p>
+<p>依赖于 <code>xml:lang</code> 属性指定的上下文节点的语言与参数指定的语言的子语言是否一致或一样，参数字符串<code>lang</code>函数返回真或假。上下文节点的语言由上下文节点的  <code>xml:lang</code> 属性决定，或者，如果没有 <code>xml:lang</code> 属性则由最接近的有 <code>xml:lang</code> 属性祖先节点的 <code>xml:lang</code> 属性值决定。如果没有这样的节点，那么 <code>lang</code> 返回假。
+如果有这样的节点，那么在不考虑大小的情况下，当属性值写与参数相等或有以<code>-</code> 开始的后缀且其值等於参数忽略后缀的值，<code>lang</code> 返回真。如果上下文节点为以下五个元素中的任何一个，<code>lang("en")</code> 为真：</p>
 
 <table class="eg" cellpadding="5" border="1" bgcolor="#99ffff" width="100%" summary="Example"><tr><td><pre>&lt;para xml:lang="en"/&gt;
 &lt;div xml:lang="en"&gt;&lt;para/&gt;&lt;/div&gt;
@@ -834,59 +834,59 @@ li p           { margin-top: 0.3em;
 </div>
 <div class="div2">
 
-<h3><a name="IDAA2ZU"></a>4.4 ���ֺ���</h3>
+<h3><a name="IDAA2ZU"></a>4.4 数字函数</h3>
 <p><em>number</em> <b>number</b>(<var>object</var>?)</p>
 
-<p><code>number</code> �������������и���ת�������֣�</p>
+<p><code>number</code> 函数参数依下列各项转换成数字：</p>
 
 <ul>
-<li><p>��ѡ�Ŀհ׷������ѡ�ļ����ٸ��� <a href="#NT-Number">Number</a> �ٸ���հ׷����ַ���ת���� IEEE 754 ��ӽ��� ������ IEEE 754 �ͽ�ȡ������ ���ַ�����ʾ����ѧֵ�����֣������κε��ַ���ת���� NaN</p>
+<li><p>可选的空白符跟随可选的减号再跟随 <a href="#NT-Number">Number</a> 再跟随空白符的字符串转换成 IEEE 754 最接近的 （根据 IEEE 754 就近取整规则） 由字符串表示的数学值的数字；其它任何的字符串转换成 NaN</p>
 
 </li>
-<li><p>������ת���� 1 ��������ת���� 0</p>
+<li><p>布尔真转换成 1 ；布尔假转换成 0</p>
 
 </li>
-<li><p>�ڵ㼯������ת�����ַ������������
-<code>string</code> ������Ȼ���ٰ��ַ��������ķ�ʽת��</p>
+<li><p>节点集合首先转换成字符串好像调用了
+<code>string</code> 函数，然后再按字符串参数的方式转换</p>
 
 </li>
-<li><p>�������ֻ������͵Ķ��������������͵ķ�ʽת�������֡�</p>
+<li><p>不是四种基本类型的对象依照所属类型的方式转换成数字。</p>
 
 </li>
 </ul>
 
-<p>�������ʡ�ԣ���ȱʡΪ����һ�������Ľڵ�Ϊ��Ա�Ľڵ㼯�ϡ�</p>
+<p>如果参数省略，则缺省为仅有一个上下文节点为成员的节点集合。</p>
 
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>����Ԫ������������Ȼ��ʽ�����͵ر��ı�������ض��ĸ�ʽ���ָ��û����´����������ݵ����ͣ�<code>number</code> ������Ӧ���� XML �ĵ�Ԫ���е�����ת�������⣬����������Ȼ��ʽ�� XPath �䷨�� <a href="#NT-Number">Number</a>��<code>number</code> ��������ʹ�á�
+<p>除非元素是在语言自然格式（典型地被改变成语言特定的格式呈现给用户）下代表数字数据的类型，<code>number</code> 函数不应用于 XML 文档元素中的数字转换。另外，除非语言自然格式与 XPath 句法的 <a href="#NT-Number">Number</a>，<code>number</code> 函数不能使用。
 </p>
 
 </div>
 <p><em>number</em> <b>sum</b>(<var>node-set</var>)</p>
 
-<p>����ڲ����ڵ㼯�ϵ�ÿ���ڵ㣬<code>sum</code> �������ؽڵ�<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>ת�������ֺ�ĺ͡�</p>
+<p>对於在参数节点集合的每个节点，<code>sum</code> 函数返回节点<a title="String Value" href="#dt-string-value">字串值</a>转换成数字后的和。</p>
 
 
 <p><em>number</em> <b>floor</b>(<var>number</var>)</p>
 
-<p><code>floor</code> �������ز���춲���������������� ����ӽ���������� ��</p>
+<p><code>floor</code> 函数返回不大於参数的整数的最大数 （最接近于正无穷大） 。</p>
 
 
 <p><em>number</em> <b>ceiling</b>(<var>number</var>)</p>
 
-<p><code>ceiling</code>  �������ز�С춲�������������С�� ����ӽ��ڸ������ ��</p>
+<p><code>ceiling</code>  函数返回不小於参数的整数的最小数 （最接近于负无穷大） 。</p>
 
 
 <p><em>number</em> <b>round</b>(<var>number</var>)</p>
 
-<p><code>round</code> ����������ӽ��ڲ�����������������������������֣���ô��������ӽ������������Ǹ������������ NaN����ô���� NaN��������������������ô�������������������Ǹ��������ô���ظ������������������㣬��ô�������㡣��������Ǹ��㣬��ô���ظ��㡣�������С��㣬����춻��� -0.5 ����ô���ظ��㡣</p>
+<p><code>round</code> 函数返回最接近于参数的整数。如果有两个这样的数字，那么，返回最接近于正无穷大的那个。如果参数是 NaN，那么返回 NaN。如果参数是正无穷大，那么返回正无穷大。如果参数是负无穷大，那么返回负无穷大。如果参数是正零，那么返回正零。如果参数是负零，那么返回负零。如果参数小於零，但大於或等於 -0.5 ，那么返回负零。</p>
 
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>�������������������<code>round</code> ��������� 0.5 �󲢵��� <code>floor</code>�Ľ����ͬ��</p>
+<p>对於最后两种情况，调用<code>round</code> 函数与加上 0.5 后并调用 <code>floor</code>的结果不同。</p>
 
 </div>
 </div>
@@ -895,99 +895,99 @@ li p           { margin-top: 0.3em;
 <div class="div1">
 
 
-<h2><a name="data-model"></a>5 ����ģ��</h2>
+<h2><a name="data-model"></a>5 数据模型</h2>
 
-<p>XPath ��һ�� XML �ĵ���Ϊһ�������в������������� XPath ������һ�� XML �ĵ�����һ������ģ�͡���ģ�ͽ����Ǹ����ϵĲ��Ҳ�Ҫ���κ��ض�ʵ�֡���<a href="#infoset"><b>B XML ��Ϣ��ӳ��</b></a>�������˸�ģ���� XML ��Ϣ����<a href="#XINFO">XML Infoset</a>��</p>
+<p>XPath 将一个 XML 文档作为一棵树进行操作。本节描述 XPath 怎样将一个 XML 文档建成一棵树的模型。该模型仅仅是概念上的并且不要求任何特定实现。在<a href="#infoset"><b>B XML 信息集映射</b></a>中描述了该模型与 XML 信息集［<a href="#XINFO">XML Infoset</a>］</p>
 
-<p>�� XPath ������ XML �ĵ�������ѭXML �����ռ佨�����<a href="#XMLNAMES">XML Names</a>�ݡ�</p>
+<p>被 XPath 操作的 XML 文档必须遵循XML 命名空间建议书［<a href="#XMLNAMES">XML Names</a>］。</p>
 
-<p>�������ڵ㣬����7�ֽڵ����ͣ�</p>
+<p>树包含节点，共有7种节点类型：</p>
 
 <ul>
-<li><p>���ڵ�</p>
+<li><p>根节点</p>
 
 </li>
-<li><p>Ԫ�ؽڵ�</p>
+<li><p>元素节点</p>
 
 </li>
-<li><p>���Ľڵ�</p>
+<li><p>正文节点</p>
 
 </li>
-<li><p>���Խڵ�</p>
+<li><p>属性节点</p>
 
 </li>
-<li><p>�����ռ�ڵ�</p>
+<li><p>命名空间节点</p>
 
 </li>
-<li><p>����ָ��ڵ�</p>
+<li><p>处理指令节点</p>
 
 </li>
-<li><p>ע�ͽڵ�</p>
+<li><p>注释节点</p>
 
 </li>
 </ul>
 
-<p>��<a name="dt-string-value" title="String Value">����</a>�����ÿ�ֽڵ����ͣ�����һ�����������������͵Ľڵ��<b>�ִ�ֵ</b>����һЩ�ڵ㣬�ִ�ֵ�ǽڵ��һ����;��������ڵ㣬�ִ�ֵ�ļ�����������ڵ���ִ�ֵ���������</p>
+<p>［<a name="dt-string-value" title="String Value">定义</a>：对於每种节点类型，都有一个方法来决定该类型的节点的<b>字串值</b>。对一些节点，字串值是节点的一部分;对於其它节点，字串值的计算是由子孙节点的字串值来求出。］</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>���Ԫ�ؽڵ�͸��ڵ㣬�ڵ���ִ�ֵ���� DOM �� <code>nodeValue</code> ���������˵��ַ���һ�����ο���<a href="#DOM">DOM</a>�ݣ���</p>
+<p>对於元素节点和根节点，节点的字串值不与 DOM 的 <code>nodeValue</code> 方法返回了的字符串一样（参看［<a href="#DOM">DOM</a>］）。</p>
 
 </div>
 
-<p>��<a name="dt-expanded-name" title="Expanded Name">����</a>��һЩ�ڵ������Ҳ��<b>��չ��</b>�������ɾ��򲿷ֺ������ռ� URI ����ɡ����򲿷���һ���ַ����������ռ� URI ��Ϊ�ջ�Ϊһ�ַ������� XML �ĵ���˵���������ռ� URI ������һ���ڣ�<a href="#RFC2396">RFC2396</a>���ж���� URI ����;����ζ��������һ��Ƭ�α�ʶ������������Եġ��ڴ����������ռ�ʱ��һ����Ե� URI Ӧ�ñ�ת���ɾ��Ե� URI��������ģ���нڵ�<b>��չ��</b>�������ռ� URIs Ӧ���Ǿ��Եġ����������<b>��չ��</b>��һ���ľ��򲿷֣��Ҷ�����һ�յ������ռ� URI ��������ȵķǿյ������ռ� URI ����ô��������ȵġ�</p>
+<p>［<a name="dt-expanded-name" title="Expanded Name">定义</a>：一些节点的类型也有<b>扩展名</b>，它是由局域部分和命名空间 URI 对组成。局域部分是一个字符串。命名空间 URI 或为空或为一字符串。在 XML 文档中说明的命名空间 URI 可以是一个在［<a href="#RFC2396">RFC2396</a>］中定义的 URI 引用;这意味着它能有一个片段标识符并可以是相对的。在处理的命名空间时，一个相对的 URI 应该被转换成绝对的 URI：在数据模型中节点<b>扩展名</b>的命名空间 URIs 应该是绝对的。］如果两个<b>扩展名</b>有一样的局域部分，且都或有一空的命名空间 URI 或都有是相等的非空的命名空间 URI ，那么它们是相等的。</p>
 
-<p>��<a name="dt-document-order" title="Document Order">����</a>��<b>�ĵ�˳��</b>�Ƕ��ĵ������еĽڵ㶨���һ��˳�� ��˳���Ӧ����һ���ʵ�����չ�Ժ�ÿ���ڵ�� XML ��ʾ�����ַ��������ĵ� XML ��ʾ�е�˳�����������ڵ㽫�ǵ�һ���ڵ㡣Ԫ�ؽڵ���������ǵĺ���ǰ�档��ˣ��ĵ�˳���ƶ���Ԫ�ؽڵ����� XML ��ʵ����չ���п�ʼ��ǩ���ֵ�˳��Ϊ˳��Ԫ�ص����Խڵ�������ռ�ڵ������Ԫ�صĺ�����ǰ�档�����ռ�ڵ㶨����������Խڵ�ǰ�������ռ�ڵ�����˳����������ʵ�֡����Խڵ����Ե�˳����ʵ�������ġ��� ��<a name="dt-reverse-document-order" title="Reverse Document Order">����</a>��<b>�ĵ���˳</b>��<a title="Document Order" href="#dt-document-order">�ĵ�˳��</a>�ĵߵ�����</p>
+<p>［<a name="dt-document-order" title="Document Order">定义</a>：<b>文档顺序</b>是对文档中所有的节点定义的一个顺序， 该顺序对应于在一般的实体的扩展以后，每个节点的 XML 表示的首字符出现在文档 XML 表示中的顺序。这样，根节点将是第一个节点。元素节点出现在他们的孩子前面。因此，文档顺序制定了元素节点以在 XML （实体扩展后）中开始标签出现的顺序为顺序。元素的属性节点和命名空间节点出现在元素的孩子们前面。命名空间节点定义出现在属性节点前。命名空间节点的相对顺序是依赖于实现。属性节点的相对的顺序是实现依赖的。］ ［<a name="dt-reverse-document-order" title="Reverse Document Order">定义</a>：<b>文档倒顺</b>是<a title="Document Order" href="#dt-document-order">文档顺序</a>的颠倒。］</p>
 
-<p>���ڵ��Ԫ�ؽڵ����ӽڵ����������ڵ�������������ӣ����һ�ڵ�����һ�ڵ㲻��ͬ���Ľڵ㣬��ô��û��һ���ڵ�ĺ�������һ�ڵ���κ�һ�����ӻ���ͬһ�ڵ㡣��<a name="dt-parent" title="Parent">����</a>�������ڵ����⣬ÿ���ڵ��ϸ��ֻ��һ��<b>��</b>�ݣ�����һԪ�ؽڵ����ڵ㡣���ڵ��Ԫ�ؽڵ���ÿһ�����ĺ��ӽڵ�ĸ�����<a name="dt-descendants" title="Descendants">����</a>���ڵ��<b>����</b>�Ǹýڵ�ĺ����Ǻͽڵ�ĺ����ǵ������</p>
+<p>根节点和元素节点有子节点的有序表。节点从来不共享孩子：如果一节点与另一节点不是同样的节点，那么，没有一个节点的孩子与另一节点的任何一个孩子会是同一节点。［<a name="dt-parent" title="Parent">定义</a>：除根节点以外，每个节点严格地只有一个<b>父</b>］，它是一元素节点或根节点。根节点或元素节点是每一个它的孩子节点的父。［<a name="dt-descendants" title="Descendants">定义</a>：节点的<b>子孙</b>是该节点的孩子们和节点的孩子们的子孙。］</p>
 
 <div class="div2"> 
 
-<h3><a name="root-node"></a>5.1 ���ڵ�</h3> 
+<h3><a name="root-node"></a>5.1 根节点</h3> 
 
-<p>���ڵ�Ϊ���ĸ���������Ϊ���ĸ������ڵ㲢�����֡��ĵ�Ԫ�ص�Ԫ�ؽڵ��Ǹ��ڵ�ĺ��ӡ������������к��ĵ�Ԫ�غ�Ĵ���ָ�ע��ҲΪ���ڵ���Ӵ���ָ�ע�ͽڵ㡣</p>
-
- 
-
-<p>���ڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a> 
-�Ǹ��ڵ����ı�˳�����������ֽڵ�<a title="Descendants" href="#dt-descendants">����</a>��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>���ۼӡ�</p>
+<p>根节点为树的根。除了作为树的根，根节点并不出现。文档元素的元素节点是根节点的孩子。出现在序言中和文档元素后的处理指令及注释也为根节点的子处理指令及注释节点。</p>
 
  
 
-<p> ���ڵ�û��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>��</p>
+<p>根节点的<a title="String Value" href="#dt-string-value">字串值</a> 
+是根节点在文本顺序下所有文字节点<a title="Descendants" href="#dt-descendants">子孙</a>的<a title="String Value" href="#dt-string-value">字串值</a>的累加。</p>
+
+ 
+
+<p> 根节点没有<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>。</p>
 
  
 </div> 
 <div class="div2"> 
 
-<h3><a name="element-nodes"></a>5.2 Ԫ�ؽڵ�</h3> 
+<h3><a name="element-nodes"></a>5.2 元素节点</h3> 
 
-<p>���ĵ��е�ÿ��Ԫ�ض���һ��Ԫ�ؽڵ㡣Ԫ�ؽڵ���<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�� ����չ����ȷ����ͨ����չ���� XML  �����ռ佨�����<a href="#XMLNAMES">XML Names</a>���ڱ����ָ��Ԫ�ص�<a href="http://www.w3.org/TR/REC-xml-names#NT-QName">QName</a>�� ���<a href="http://www.w3.org/TR/REC-xml-names#NT-QName">QName</a>û��ǰ׺�����޿�Ӧ�õ�ȱʡ�������ռ䣬Ԫ��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�������ռ� URI Ϊ�ա�</p>
+<p>在文档中的每个元素都有一个元素节点。元素节点有<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>， 该扩展名的确定是通过扩展按照 XML  命名空间建议书［<a href="#XMLNAMES">XML Names</a>］在标记中指定元素的<a href="http://www.w3.org/TR/REC-xml-names#NT-QName">QName</a>。 如果<a href="http://www.w3.org/TR/REC-xml-names#NT-QName">QName</a>没有前缀并且无可应用的缺省的命名空间，元素<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的命名空间 URI 为空。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p> 
+<div class="note"><p class="prefix"><b>注意：</b></p> 
 
-<p>���գ�<a href="#XMLNAMES">XML Names</a>�ݸ�¼A.3�е�ע�ͣ���չ���ľֲ����ֶ�Ӧ�� <code>ExpEType</code> Ԫ�ص� <code>type</code> ���ԣ���չ���������ռ� URI ��Ӧ�� <code>ExpEType</code> Ԫ�ص� <code>ns</code> ���ԣ�������� <code>ExpEType</code> Ԫ�ص� <code>ns</code> ���Ա�ʡ�ԣ���չ���������ռ� URI Ϊ�ա�</p>
+<p>依照［<a href="#XMLNAMES">XML Names</a>］附录A.3中的注释，扩展名的局部部分对应于 <code>ExpEType</code> 元素的 <code>type</code> 属性；扩展名的命名空间 URI 对应于 <code>ExpEType</code> 元素的 <code>ns</code> 属性，并且如果 <code>ExpEType</code> 元素的 <code>ns</code> 属性被省略，扩展名的命名空间 URI 为空。</p>
 
  
 </div> 
 
-<p>Ԫ�ؽڵ�ĺ�����Ԫ�ؽڵ㣬ע�ͽڵ㣬�����ڵ㼰�����ݵ����ֽڵ㡣���ڲ����ⲿʵ���ʵ�����ý�����չ���ַ�����Ҳ�������</p>
+<p>元素节点的孩子是元素节点，注释节点，处理节点及其内容的文字节点。对内部及外部实体的实体引用将被扩展，字符引用也被解决。</p>
 
  
 
-<p>Ԫ�ؽڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>��Ԫ�ؽڵ����ı�˳�����������ֽڵ�<a title="Descendants" href="#dt-descendants">����</a>��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>���ۼӡ�</p>
+<p>元素节点的<a title="String Value" href="#dt-string-value">字串值</a>是元素节点在文本顺序下所有文字节点<a title="Descendants" href="#dt-descendants">子孙</a>的<a title="String Value" href="#dt-string-value">字串值</a>的累加。</p>
 
  
 <div class="div3"> 
 
-<h4><a name="unique-id"></a>5.2.1 Ψһ ID</h4> 
+<h4><a name="unique-id"></a>5.2.1 唯一 ID</h4> 
 
-<p>Ԫ�ؽڵ������ һ��Ψһ��ʶ����ID����������DTD������Ϊ���� <code>ID</code> �����Ե�ֵ����ͬһ�ĵ��У�û������Ԫ�ؿ�������ͬ��Ψһ��ʶ������� XML ��������ͬһ�ĵ��з�������Ԫ������ͬ��Ψһ��ʶ����������ĵ�����Ч�ģ����������ο��ܷ���������ô�����ı�˳���µĵڶ���Ԫ�ؽ�����Ϊû��Ψһ��ʶ����</p>
+<p>元素节点可以有 一个唯一标识符（ID），它是在DTD中声明为类型 <code>ID</code> 的属性的值。在同一文档中，没有两个元素可以有相同的唯一标识符。如果 XML 处理器在同一文档中发现两个元素有相同的唯一标识符（如果该文档是无效的，这样的情形可能发生），那么，在文本顺序下的第二个元素将被视为没有唯一标识符。</p>
 
  
-<div class="note"><p class="prefix"><b>ע�⣺</b></p> 
+<div class="note"><p class="prefix"><b>注意：</b></p> 
 
-<p>���һ���ĵ�û��DTD����ô���ڸ��ĵ���û��Ԫ�ؽ���Ψһ��ʶ����</p>
+<p>如果一个文档没有DTD，那么，在该文档中没有元素将有唯一标识符。</p>
 
  
 </div> 
@@ -995,141 +995,141 @@ li p           { margin-top: 0.3em;
 </div> 
 <div class="div2"> 
 
-<h3><a name="attribute-nodes"></a>5.3 ���Խڵ�</h3> 
+<h3><a name="attribute-nodes"></a>5.3 属性节点</h3> 
 
-<p>ÿһ��Ԫ�ؽڵ㶼������������Խڵ㼯��Ԫ����ÿһ����Щ���Խڵ��<a title="Parent" href="#dt-parent">��</a>�ڵ㣻Ȼ�������Խڵ㲻������Ԫ�صĺ��ӡ�</p>
+<p>每一个元素节点都有相关联的属性节点集；元素是每一个这些属性节点的<a title="Parent" href="#dt-parent">父</a>节点；然而，属性节点不是它父元素的孩子。</p>
 
  
  
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>���� DOM ��ͬ��DOM ����ΪԪ��ӵ�����Ե������Եĸ� ���ο���<a href="#DOM">DOM</a>�ݣ���</p>
-
-</div>
-
-<p>Ԫ�ش������������Խڵ㣺���һ�ڵ�����һ�ڵ㲻��ͬ���Ľڵ㣬��ô��û��һ��Ԫ�ؽڵ�����Խڵ������һ�ڵ�����Խڵ㡣</p>
-
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
-
-<p>������ <code>=</code> ���������ڵ��Ƿ���һ����ֵ��<em>����</em>�����Ƿ���ͬһ�ڵ㡣������������ͬ��Ԫ�ص����Կ���ʹ�� <code>=</code> �Ƚϣ��������ǲ���һ���Ľڵ㡣</p>
+<p>这与 DOM 不同，DOM 不认为元素拥有属性当做属性的父 （参看［<a href="#DOM">DOM</a>］）。</p>
 
 </div>
 
-<p>�Դ�ȱʡ������ָ��������һ�����������������DTD��Ԫ�����ͣ���ȱʡ����Ϊ <code>#IMPLIED</code>�����ң���Ԫ����û�и��������ԣ���ô��Ԫ�ص����Լ��ϲ����������Խڵ㡣</p>
+<p>元素从来不分享属性节点：如果一节点与另一节点不是同样的节点，那么，没有一个元素节点的属性节点会是另一节点的属性节点。</p>
 
-<p>һЩ���ԣ��� <code>xml:lang</code> �� <code>xml:space</code>�����Ǳ�����������Ԫ���е���ͬ�����滻��������������Ӧ���������и����Ե�Ԫ�ص�����Ԫ�ء�Ȼ�����ⲻӰ�����Խڵ���������ֵ�λ�ã���Ԫ�صĿ�ʼ��ǩ���Ԫ�صĿ�Ԫ�ر�ǩ����ȷ��ָ���ģ�����DTD����ȷ������ȱʡֵ����Щ���Բ��Ǹ�Ԫ��ӵ�е����Խڵ㡣</p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>���Խڵ���<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>��ȷ���Ǹ��� XML �����ռ佨�����<a href="#XMLNAMES">XML Names</a>�ݣ�ͨ����չ XML �ĵ���ǩ��ָ����<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a>���õ��ġ�������Ե�<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a>û��ǰ׺�����Ե����������ռ� URI ��Ϊ�ա�</p>
-
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
-
-<p>���գ�<a href="#XMLNAMES">XML Names</a>�ݸ�¼A.3�е�ע�ͣ���չ�� expanded-name �ľֲ����ֶ�Ӧ�� <code>ExpAName</code> Ԫ�ص� <code>name</code> ���ԣ���չ�� expanded-name �������ռ� URI ��Ӧ�� ExpEType Ԫ�ص� <code>ns</code> ���ԣ����ң����  <code>ExpAName</code> Ԫ�ص� ns ���Ա�ʡ�ԣ���չ���������ռ� URI Ϊ�ա�</p>
+<p>操作符 <code>=</code> 测试两个节点是否有一样的值，<em>不是</em>他们是否是同一节点。这样，两个不同的元素的属性可以使用 <code>=</code> 比较，尽管他们不是一样的节点。</p>
 
 </div>
 
-<p>���Խڵ���<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>���� XML �������<a href="#XML">XML</a>����ϸ˵���Ĺ淶����ֵ������淶��ֵ���㳤���ַ�������������ֱ���������<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>���㳤���ַ��������Խڵ�Ϊ�����</p>
+<p>对待缺省属性与指定的属性一样。如果属性申明在DTD中元素类型，而缺省申明为 <code>#IMPLIED</code>，并且，在元素中没有给出该属性，那么，元素的属性集合不包含该属性节点。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<p>一些属性，如 <code>xml:lang</code> 和 <code>xml:space</code>，除非被其他的子孙元素中的相同属性替换，从语义上它们应用于所有有该属性的元素的子孙元素。然而，这不影响属性节点在树里出现的位置：在元素的开始标签或该元素的空元素标签中明确地指定的，或在DTD中明确地声明缺省值的那些属性才是该元素拥有的属性节点。</p>
 
-<p>Ҳ�������ⲿ��DTD���ⲿ�Ĳ���ʵ��������ȱʡ���ԡ��������ڽ���У�飬XML �����鲻Ҫ�� XML ���������ⲿ��DTD���ⲿ�Ĳ�������ʽ������������ XPath �����������ⲿ��DTD���ⲿ�Ĳ���������ȱʡ����ֵ�Ĺ�������������һЩ��У�� XML ������һ������</p>
+<p>属性节点有<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>和<a title="String Value" href="#dt-string-value">字串值</a>。<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的确定是根据 XML 命名空间建议书［<a href="#XMLNAMES">XML Names</a>］，通过扩展 XML 文档标签中指定的<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a>而得到的。如果属性的<a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html#NT-QName">QName</a>没有前缀，属性的名的命名空间 URI 将为空。</p>
+
+<div class="note"><p class="prefix"><b>注意：</b></p>
+
+<p>依照［<a href="#XMLNAMES">XML Names</a>］附录A.3中的注释，扩展名 expanded-name 的局部部分对应于 <code>ExpAName</code> 元素的 <code>name</code> 属性；扩展名 expanded-name 的命名空间 URI 对应于 ExpEType 元素的 <code>ns</code> 属性，并且，如果  <code>ExpAName</code> 元素的 ns 属性被省略，扩展名的命名空间 URI 为空。</p>
 
 </div>
 
-<p>û�����Խڵ������������ռ���������Ӧ���ο���<a href="#XMLNAMES">XML Names</a>�ݣ���</p>
+<p>属性节点有<a title="String Value" href="#dt-string-value">字串值</a>。<a title="String Value" href="#dt-string-value">字串值</a>是在 XML 建议书［<a href="#XML">XML</a>］详细说明的规范化的值。对其规范化值是零长度字符串的属性无须分别处理：它以<a title="String Value" href="#dt-string-value">字串值</a>是零长度字符串的属性节点为结果。</p>
+
+<div class="note"><p class="prefix"><b>注意：</b></p>
+
+<p>也可能在外部的DTD或外部的参数实体中声明缺省属性。除非正在进行校验，XML 建议书不要求 XML 处理器读外部的DTD或外部的参数。样式表或其它假设 XPath 树包含有在外部的DTD或外部的参数中申明缺省属性值的功能软件不能与一些无校验 XML 处理器一起工作。</p>
+
+</div>
+
+<p>没有属性节点与声明命名空间的属性相对应（参看［<a href="#XMLNAMES">XML Names</a>］）。</p>
 
 </div>
 <div class="div2">
 
-<h3><a name="namespace-nodes"></a>5.4 �����ռ�ڵ�</h3>
+<h3><a name="namespace-nodes"></a>5.4 命名空间节点</h3>
 
-<p>ÿ��Ԫ�ض��������ռ�ڵ�Ĺ����ļ��ϣ�һ��Ϊ��Ԫ�صķ�Χ��ÿ����ͬ�����ռ�ǰ׺������ <code>xml</code> ǰ׺������ XML �����ռ佨�����<a href="#XMLNAMES">XML Names</a>����ʽ����������������ڶ�Ԫ�صķ�Χ����һ����Ϊȱʡ�����ռ䡣Ԫ������Щ�����ռ�ڵ��<a title="Parent" href="#dt-parent">��</a>��Ȼ����һ�������ռ�ڵ㲻�����ĸ�Ԫ�صĺ��ӡ�
-Ԫ�ش��������������ռ�ڵ㣺���һ��Ԫ�ؽڵ��������Ԫ�ز���һ���Ľڵ㣬��ô��û��һ��Ԫ�ؽڵ�������ռ�ڵ������һԪ�ؽڵ�������ռ�ڵ㡣����ζ��һ��Ԫ�ؽ���һ�������ռ�ڵ㣺</p>
+<p>每个元素都有命名空间节点的关联的集合，一个为在元素的范围的每个不同命名空间前缀（包括 <code>xml</code> 前缀，它由 XML 命名空间建议书［<a href="#XMLNAMES">XML Names</a>］隐式地声明）；而如果在对元素的范围，另一个是为缺省命名空间。元素是这些命名空间节点的<a title="Parent" href="#dt-parent">父</a>；然而，一个命名空间节点不是它的父元素的孩子。
+元素从来不分享命名空间节点：如果一个元素节点与另外的元素不是一样的节点，那么，没有一个元素节点的命名空间节点会是另一元素节点的命名空间节点。这意味着一个元素将有一个命名空间节点：</p>
 
 <ul>
-<li><p>��ÿ���� <code>xmlns:</code> ��ʼ��Ԫ�ص����ԣ�</p>
+<li><p>对每个以 <code>xmlns:</code> 开始的元素的属性；</p>
 
 </li>
-<li><p>��ÿ���� <code>xmlns:</code> ��ʼ������Ԫ�ص����ԣ�����Ԫ���Լ���һλ�������������������˸�ǰ׺��</p>
+<li><p>对每个以 <code>xmlns:</code> 开始的祖先元素的属性，除非元素自己或一位更近的祖先重新声明了该前缀；</p>
 
 </li>
-<li><p>�� <code>xmlns</code> ���ԣ������Ԫ�ػ�һЩ������ <code>xmlns</code>�� ���ң�����ӽ���������Ԫ�� <code>xmlns</code> ���Ե�ֵ�Ƿǿյġ�</p>
+<li><p>对 <code>xmlns</code> 属性，如果该元素或一些祖先有 <code>xmlns</code>， 并且，对最接近的这样的元素 <code>xmlns</code> 属性的值是非空的。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>���� <code>xmlns=""</code> ��δ������ȱʡ�����ռ䣨�ο���<a href="#XMLNAMES">XML Names</a>�ݣ���</p>
+<p>属性 <code>xmlns=""</code> “未申明”缺省命名空间（参看［<a href="#XMLNAMES">XML Names</a>］）。</p>
 
 </div>
 </li>
 </ul>
 
-<p>�����ռ�ڵ���<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>������򲿷��������ռ�ǰ׺�����
-�����ռ�ڵ�Ϊȱʡ�����ռ䣬��Ϊ�գ��������ռ� URI ��Ϊ�ա�</p>
+<p>命名空间节点有<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>：其局域部分是命名空间前缀（如果
+命名空间节点为缺省命名空间，则为空）；命名空间 URI 总为空。</p>
 
-<p>�����ռ�ڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>�Ǳ����������ռ�ǰ׺�������ռ� URI�����
-������Եģ������뱻������������<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�е������ռ� URI ��չ���֡�</p>
-
-</div>
-<div class="div2">
-
-<h3><a name="IDAPN2V"></a>5.5 ����ָ��ڵ�</h3>
-
-<p>�������ĵ����������г��ֵ����д���ָ���⣬ÿ������ָ��д���ָ��ڵ㡣</p>
-
-<p>ÿ������ָ���<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>: ����򲿷��Ǵ���ָ���Ŀ�ꣻ�������ռ� URI Ϊ�ա�
-����ָ��ڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>�Ǵ���ָ�������Ŀ�꼰�κοհ׵Ĳ��֣���������β�� <code>?&gt;</code>��</p>
-
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
-
-<p>XML ��������һ������ָ���ˣ�û�д���ָ��ڵ��� XML �������Ӧ��</p>
-
-</div>
-</div>
-<div class="div2">
-
-<h3><a name="IDAIO2V"></a>5.6 ע�ͽڵ�</h3>
-
-<p>�������ĵ����������г��ֵ�����ע���⣬ÿ��ע�Ͷ���ע�ͽڵ㡣</p>
-
-<p>ע�͵�<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>��ע�͵����ݶ������� ��ʼ�� <code>&lt;!--</code> �ǻ��β�� <code>--&gt;</code>��</p>
-
-<p>ע�ͽڵ�û��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>��</p>
+<p>命名空间节点的<a title="String Value" href="#dt-string-value">字串值</a>是被绑定在命名空间前缀的命名空间 URI；如果
+它是相对的，它必须被解析，就象在<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>中的命名空间 URI 扩展名字。</p>
 
 </div>
 <div class="div2">
 
-<h3><a name="IDABP2V"></a>5.7 ���Ľڵ�</h3>
+<h3><a name="IDAPN2V"></a>5.5 处理指令节点</h3>
 
-<p>�ַ�����������Ľڵ㡣�����ܶ���ַ����ݱ���֯�����Ľڵ㣺����û��һ�����Ľڵ�ĺ����ǰ��������ֵ��Ǹ����Ľڵ㡣���Ľڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>�������ַ����ݡ����Ľڵ�����������һ���ַ������ݡ�</p>
+<p>除了在文档类型声明中出现的所有处理指令外，每个处理指令都有处理指令节点。</p>
 
-<p>�� CDATA ���ڵ�ÿ���ַ����������ַ����ݣ���������Դ�ĵ��� <code>&lt;![CDATA[&lt;]]&gt;</code> �� <code>&amp;lt;</code> ��������һ���ģ��������������Ľڵ��һ�����ַ� <code>&lt;</code>��������CDATA �ڱ����ɺ���� <code>&lt;![CDATA[</code> �� <code>]]&gt;</code> �õ������ң�ÿ�γ��ֵ� <code>&lt;</code> �� <code>&amp;</code> �����ֱ���滻�� <code>&amp;lt;</code> �� <code>&amp;amp;</code>��</p>
+<p>每条处理指令都有<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>: 其局域部分是处理指令的目标；其命名空间 URI 为空。
+处理指令节点的<a title="String Value" href="#dt-string-value">字串值</a>是处理指令后跟随的目标及任何空白的部分，不包括结尾的 <code>?&gt;</code>。</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>�����Ľڵ����<code>&lt;</code> �ַ���Ϊ XML �����<code>&lt;</code> �ַ�����ת�룬����ʹ�� <code>&amp;lt;</code>��������� CDATA ���С�</p>
+<p>XML 声明不是一条处理指令，因此，没有处理指令节点与 XML 声明相对应。</p>
+
+</div>
+</div>
+<div class="div2">
+
+<h3><a name="IDAIO2V"></a>5.6 注释节点</h3>
+
+<p>除了在文档类型声明中出现的所有注释外，每条注释都有注释节点。</p>
+
+<p>注释的<a title="String Value" href="#dt-string-value">字串值</a>是注释的内容而不包括 起始的 <code>&lt;!--</code> 是或结尾的 <code>--&gt;</code>。</p>
+
+<p>注释节点没有<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>。</p>
+
+</div>
+<div class="div2">
+
+<h3><a name="IDABP2V"></a>5.7 正文节点</h3>
+
+<p>字符数据组成正文节点。尽可能多的字符数据被组织进正文节点：从来没有一个正文节点的后面或前面紧连的兄弟是个正文节点。正文节点的<a title="String Value" href="#dt-string-value">字串值</a>是它的字符数据。正文节点总是至少有一个字符的数据。</p>
+
+<p>在 CDATA 节内的每个字符都被当作字符数据，这样，在源文档的 <code>&lt;![CDATA[&lt;]]&gt;</code> 与 <code>&amp;lt;</code> 都看成是一样的，都是在树中正文节点的一个单字符 <code>&lt;</code>。这样，CDATA 节被看成好像把 <code>&lt;![CDATA[</code> 和 <code>]]&gt;</code> 拿掉，而且，每次出现的 <code>&lt;</code> 和 <code>&amp;</code> 都被分别地替换成 <code>&amp;lt;</code> 和 <code>&amp;amp;</code>。</p>
+
+<div class="note"><p class="prefix"><b>注意：</b></p>
+
+<p>当正文节点包含<code>&lt;</code> 字符作为 XML 输出，<code>&lt;</code> 字符必须转码，例如使用 <code>&amp;lt;</code>，或包含在 CDATA 节中。</p>
 
 </div>
 
-<p>ע�͡�����ָ�������ֵ�е��ַ����������Ľڵ㡣�ⲿʵ���е��н��������� XML �������<a href="#XML">XML</a>�ݹ淶���� #xA ��</p>
+<p>注释、处理指令和属性值中的字符不产生正文节点。外部实体中的行结束符都按 XML 建议书［<a href="#XML">XML</a>］规范化成 #xA 。</p>
 
-<p>���Ľڵ�û��<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>��</p>
+<p>正文节点没有<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>。</p>
 
 </div>
 </div>
 <div class="div1">
 
-<h2><a name="IDA5Q2V"></a>6 һ����</h2>
+<h2><a name="IDA5Q2V"></a>6 一致性</h2>
 
-<p>XPath�ĸ����ƻ�����Ϊһ�������Ϊ�����Ĺ������ʹ�á���ˣ�XPath������ʹ��XPath��˵���飨�����<a href="#XPTR">XPointer</a>�ݺͣ�<a href="#XSLT">XSLT</a>�ݣ���ָ��XPath��ʵ��һ���Ա�׼�����Ҳ�ΪXPath�Ķ�����ʵ�ֶ����κ�һ���Ա�׼��</p>
+<p>XPath的根本计划是作为一个组件，为其它的规格书所使用。因此，XPath依赖于使用XPath的说明书（例如［<a href="#XPTR">XPointer</a>］和［<a href="#XSLT">XSLT</a>］）来指定XPath的实现一致性标准，并且不为XPath的独立的实现定义任何一致性标准。</p>
 
 </div>
 </div>
 <div class="back">
 <div class="div1">
 
-<h2><a name="IDAQR2V"></a>A �ο���Ŀ</h2>
+<h2><a name="IDAQR2V"></a>A 参考书目</h2>
 <div class="div2">
 
-<h3><a name="IDAUR2V"></a>A.1 ��׼�淶�ο���Ŀ</h3>
+<h3><a name="IDAUR2V"></a>A.1 标准规范参考书目</h3>
 <dl>
 <dt class="label"><a name="IEEE754"></a>IEEE 754</dt><dd>Institute of Electrical and Electronics Engineers. <em>IEEE Standard for Binary Floating-Point Arithmetic</em>. ANSI/IEEE Std 754-1985.</dd>
 <dt class="label"><a name="RFC2396"></a>RFC2396</dt><dd>T. Berners-Lee, R. Fielding, and L. Masinter.  <em>Uniform Resource Identifiers (URI): Generic Syntax</em>. IETF RFC 2396. See <a href="http://www.ietf.org/rfc/rfc2396.txt">http://www.ietf.org/rfc/rfc2396.txt</a>.</dd>
@@ -1138,15 +1138,15 @@ Markup Language (XML) 1.0.</em> W3C Recommendation. See <a href="http://www.w3.o
 <dt class="label"><a name="XMLNAMES"></a>XML Names</dt><dd>World Wide Web
 Consortium. <em>Namespaces in XML.</em> W3C Recommendation. See
 <a href="http://www.w3.org/TR/REC-xml-names">http://www.w3.org/TR/REC-xml-names</a>
-Also see: <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html">���ķ���</a>
-        [��������]
+Also see: <a href="http://www.opendl.com/openxml/w3/TR/xml-names/xml-names-gb.html">中文翻译</a>
+        [简体中文]
     .
 </dd>
 </dl>
 </div>
 <div class="div2">
 
-<h3><a name="IDAMT2V"></a>A.2 �����ο���Ŀ</h3>
+<h3><a name="IDAMT2V"></a>A.2 其他参考书目</h3>
 <dl>
 <dt class="label"><a name="CHARMOD"></a>Character Model</dt><dd>World Wide Web Consortium.
 <em>Character Model for the World Wide Web.</em> W3C Working
@@ -1182,40 +1182,40 @@ Transformations (XSLT).</em> W3C Recommendation.  See <a href="http://www.w3.org
 </div>
 <div class="div1">
 
-<h2><a name="infoset"></a>B XML ��Ϣ��ӳ�䣨�Ǳ�׼��</h2>
+<h2><a name="infoset"></a>B XML 信息集映射（非标准）</h2>
 
-<p>�� XPath ����ģ���еĽڵ�ɰ����·�ʽ�� XML ��Ϣ�� ��<a href="#XINFO">XML Infoset</a>�� �ṩ����Ϣ����� ��<a href="#XINFO">XML Infoset</a>�� as follows:</p>
+<p>在 XPath 数据模型中的节点可按如下方式由 XML 信息集 ［<a href="#XINFO">XML Infoset</a>］ 提供的信息项导出： ［<a href="#XINFO">XML Infoset</a>］ as follows:</p>
 
-<div class="note"><p class="prefix"><b>ע�⣺</b></p>
+<div class="note"><p class="prefix"><b>注意：</b></p>
 
-<p>��XPath ���汾��׼����ɵ�ʱ�򣬼����滻����17�հ汾���°汾�� XML ��Ϣ�������ݸ��ѽӽ���ɣ����뱾��ı��淶ͬʱ�������Ժ󷢱���������������ӳ���ǰ����µ� XML ��Ϣ�������ݸ塣�����XML ��Ϣ�������ݸ廹û�з�����W3C ��Ա�ɲο��ڲ��Ĺ����ݸ�� <a href="http://www.w3.org/XML/Group/1999/09/WD-xml-infoset-19990915.html">
+<p>在XPath 本版本的准备完成的时候，即将替换五月17日版本的新版本的 XML 信息集工作草稿已接近完成，或将与本版的本规范同时发表或稍后发表。这里所给出的映射是按照新的 XML 信息集工作草稿。如果，XML 信息集工作草稿还没有发表，W3C 成员可参考内部的工作草稿版 <a href="http://www.w3.org/XML/Group/1999/09/WD-xml-infoset-19990915.html">
 http://www.w3.org/XML/Group/1999/09/WD-xml-infoset-19990915.html</a>
-��<a href="http://cgi.w3.org/MemberAccess/">ֻ�г�Ա�ɷ���</a>��.</p>
+（<a href="http://cgi.w3.org/MemberAccess/">只有成员可访问</a>）.</p>
 
 </div>
 <ul>
-<li><p>���ڵ������ĵ�����Ϣ����ڵ�ĺ������� <em>children</em> �� <em>children - comments</em>
-���ԡ�</p>
+<li><p>根节点来自文档的信息项。根节点的孩子来自 <em>children</em> 和 <em>children - comments</em>
+属性。</p>
 
 </li>
-<li><p>Ԫ�ؽڵ�����Ԫ����Ϣ�Ԫ�ؽڵ�ĺ������� <em>children</em> �� <em>children - comments</em> ���ԡ�Ԫ�ؽڵ���������� <em>attributes</em> ���ԡ�Ԫ�ؽڵ�������ռ����� <em>in-scope namespaces</em> ���ԡ�Ԫ�ؽڵ�<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�ľ��򲿷����� <em>local name</em> ���ԡ�Ԫ�ؽڵ�<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�������ռ� URI ���� <em>namespace URI</em> ���ԡ�Ԫ�ؽڵ��Ψһ ID ������ <em>attribute type</em> ���Ե��  <code>ID</code> ��<em>attributes</em> ���Ե�
-������Ϣ���<em>children</em> ����.</p>
+<li><p>元素节点来自元素信息项。元素节点的孩子来自 <em>children</em> 和 <em>children - comments</em> 属性。元素节点的属性来自 <em>attributes</em> 属性。元素节点的命名空间来自 <em>in-scope namespaces</em> 属性。元素节点<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的局域部分来自 <em>local name</em> 属性。元素节点<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的命名空间 URI 来自 <em>namespace URI</em> 属性。元素节点的唯一 ID 来自有 <em>attribute type</em> 属性等於  <code>ID</code> 的<em>attributes</em> 属性的
+属性信息项的<em>children</em> 属性.</p>
 
 </li>
-<li><p>���Խڵ�����������Ϣ����Խڵ�<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�ľ��򲿷�����<em>local name</em> ���ԡ����Խڵ�<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�������ռ� URI ���� <em>namespace URI</em> ���ԡ� �ڵ�� <a title="String Value" href="#dt-string-value">�ִ�ֵ</a> ���Խ� ÿһ��<em>children</em> ���Գ�Ա�� <em>character code</em> �������ۼӡ�</p>
+<li><p>属性节点来自属性信息项。属性节点<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的局域部分来自<em>local name</em> 属性。属性节点<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的命名空间 URI 来自 <em>namespace URI</em> 属性。 节点的 <a title="String Value" href="#dt-string-value">字串值</a> 来自将 每一个<em>children</em> 属性成员的 <em>character code</em> 属性相累加。</p>
 
 </li>
-<li><p>���Ľڵ�����һ���е���������Ϣ���ڵ��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>��������ÿһ���ַ���Ϣ�� <em>character code</em> ���ԡ�.</p>
+<li><p>正文节点来自一序列的连续的信息项。其节点的<a title="String Value" href="#dt-string-value">字串值</a>来自连接每一个字符信息项 <em>character code</em> 属性。.</p>
 
 </li>
-<li><p>����ָ��ڵ����Դ���ָ�����Ϣ���<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�ľ��򲿷����� <em>target</em> ���ԡ�����<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�������ռ� URI ����Ϊ�ա�����<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>����<em>content</em> ���ԡ��ĵ����Ͷ�����Ϣ��ĺ����Ǵ���ָ������޴���ָ��ڵ㡣</p>
+<li><p>处理指令节点来自处理指令的信息项。其<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的局域部分来自 <em>target</em> 属性。（其<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的命名空间 URI 部分为空。）其<a title="String Value" href="#dt-string-value">字串值</a>来自<em>content</em> 属性。文档类型定义信息项的孩子是处理指令项的无处理指令节点。</p>
 
 </li>
-<li><p>ע�ͽڵ�����ע����Ϣ���<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>����<em>content</em> ���ԡ��ĵ����Ͷ�����Ϣ��ĺ�����ע����Ϣ�����ע�ͽڵ㡣</p>
+<li><p>注释节点来自注释信息项。其<a title="String Value" href="#dt-string-value">字串值</a>来自<em>content</em> 属性。文档类型定义信息项的孩子是注释信息项的无注释节点。</p>
 
 </li>
-<li><p>�����ռ�ڵ����������ռ�������Ϣ���<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�ľ��򲿷�����<em>prefix</em> ���ԡ�����<a title="Expanded Name" href="#dt-expanded-name">��չ��</a>�������ռ� URI ����Ϊ�ա���
-��<a title="String Value" href="#dt-string-value">�ִ�ֵ</a>����<em>�����ռ� URI</em> ���ԡ�.</p>
+<li><p>命名空间节点来自命名空间声明信息项。其<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的局域部分来自<em>prefix</em> 属性。（其<a title="Expanded Name" href="#dt-expanded-name">扩展名</a>的命名空间 URI 部分为空。）
+其<a title="String Value" href="#dt-string-value">字串值</a>来自<em>命名空间 URI</em> 属性。.</p>
 
 </li>
 </ul>

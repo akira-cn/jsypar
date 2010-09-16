@@ -14,7 +14,7 @@
 %left   '*' div mod
 %left   RegOperator	#addin
 %left   NEG	'!'
-#'!' operator , not()µÄËõĞ´
+#'!' operator , not()çš„ç¼©å†™
 
 #Grammar rules
 %%
@@ -56,7 +56,7 @@ NormalStep:				AxisSpecifierNodeTest				{
 																var domainType = $_[0].domainType;
 
 																var rSet = [];
-																if(!$_[0].step && domainType != 'auto'){	//¾ø¶ÔÂ·¾¶
+																if(!$_[0].step && domainType != 'auto'){	//ç»å¯¹è·¯å¾„
 																	$_[0].domain = new XPathDomain([document.documentElement]);
 																}
 																var domain = $_[0].domain;
@@ -66,7 +66,7 @@ NormalStep:				AxisSpecifierNodeTest				{
 																var axis = selector[0];
 																var name = selector[1];
 																var filter = selector[2];
-																var arg = selector[3];	//×÷ÓÃÓÚfilterµÄ²ÎÊı
+																var arg = selector[3];	//ä½œç”¨äºfilterçš„å‚æ•°
 
 																try{
 																	//alert([$_[1].value,axis,name, filter]);
@@ -78,15 +78,15 @@ NormalStep:				AxisSpecifierNodeTest				{
 
 																$_[0].domain = new XPathDomain(rSet);
 
-															}    #Ô¤´¦Àíµ±Ç°µÄAxis
-						|	NormalStep Predicate			{}				#¹éÔ¼£¬Íê³É¹ıÂËPredicate
+															}    #é¢„å¤„ç†å½“å‰çš„Axis
+						|	NormalStep Predicate			{}				#å½’çº¦ï¼Œå®Œæˆè¿‡æ»¤Predicate
 ;
-AbbreviatedStep:		'.'									{}	#µ±Ç°ÉÏÏÂÎÄ
+AbbreviatedStep:		'.'									{}	#å½“å‰ä¸Šä¸‹æ–‡
 						|	ParentPath						{
 																var domain = $_[0].domain;
 
 																$_[0].domain = new XPathDomain(domain.axis("parent", '*', 'basical'));
-															}	#Ñ°ÕÒµ±Ç°ÉÏÏÂÎÄµÄ¸¸Ç×	
+															}	#å¯»æ‰¾å½“å‰ä¸Šä¸‹æ–‡çš„çˆ¶äº²	
 ;
 NameTest:				'*'									{return $_[1].value;}
 #not support yet		|	NCName	':'	'*'
@@ -126,14 +126,14 @@ FunctionCall:			FunctionName	'('	 ')'						{
 																			try{
 																				return $_[0].XPathFunc[$_[1].value].apply($_[0]);
 																			}catch(ex){
-																				$_[0].Error("'"+$_[1].value+"'Î´¶¨Òå»ò²»ÊÇºÏ·¨µÄº¯Êı£¬Ê¹ÓÃ[XPathObj].defun()¶¨Òå»òÊ¹ÓÃ[Scope]±êÊ¶¡£");
+																				$_[0].Error("'"+$_[1].value+"'æœªå®šä¹‰æˆ–ä¸æ˜¯åˆæ³•çš„å‡½æ•°ï¼Œä½¿ç”¨[XPathObj].defun()å®šä¹‰æˆ–ä½¿ç”¨[Scope]æ ‡è¯†ã€‚");
 																			}
 																		}	
 						|	FunctionName	'('	ArgumentList	')'		{
 																			try{
 																				return $_[0].XPathFunc[$_[1].value].apply($_[0], $_[3].value);
 																			}catch(ex){
-																				$_[0].Error("'"+$_[1].value+"'Î´¶¨Òå»ò²»ÊÇºÏ·¨µÄº¯Êı£¬Ê¹ÓÃ[XPathObj].defun()¶¨Òå»òÊ¹ÓÃ[Scope]±êÊ¶¡£");
+																				$_[0].Error("'"+$_[1].value+"'æœªå®šä¹‰æˆ–ä¸æ˜¯åˆæ³•çš„å‡½æ•°ï¼Œä½¿ç”¨[XPathObj].defun()å®šä¹‰æˆ–ä½¿ç”¨[Scope]æ ‡è¯†ã€‚");
 																			}
 																		}
 						|	Scope   FunctionName	'('	')'				{
@@ -148,7 +148,7 @@ FunctionCall:			FunctionName	'('	 ')'						{
 																				
 																				return func();
 																			}catch(ex){
-																				$_[0].Error("'"+$_[1].value+$_[2].value+"'Î´¶¨Òå»ò²»ÊÇºÏ·¨µÄº¯Êı¡£");
+																				$_[0].Error("'"+$_[1].value+$_[2].value+"'æœªå®šä¹‰æˆ–ä¸æ˜¯åˆæ³•çš„å‡½æ•°ã€‚");
 																			}
 
 																		}
@@ -167,7 +167,7 @@ FunctionCall:			FunctionName	'('	 ')'						{
 																					else 
 																						return func($_[4].value);
 																				}catch(ex){
-																					$_[0].Error("'"+$_[1].value+$_[2].value+"'Î´¶¨Òå»ò²»ÊÇºÏ·¨µÄº¯Êı¡£");
+																					$_[0].Error("'"+$_[1].value+$_[2].value+"'æœªå®šä¹‰æˆ–ä¸æ˜¯åˆæ³•çš„å‡½æ•°ã€‚");
 																				}
 																			}
 ;
@@ -192,7 +192,7 @@ VariableReference:		'$' QName							{
 																var v = $_[0].variables[$_[2].value];
 
 																if(typeof v == 'undefined'){
-																	$_[0].Error("ÒıÓÃÁËÎ´¸³ÖµµÄ±äÁ¿'$"+$_[2].value+"'");
+																	$_[0].Error("å¼•ç”¨äº†æœªèµ‹å€¼çš„å˜é‡'$"+$_[2].value+"'");
 																}
 																return v;
 															}
@@ -446,14 +446,14 @@ if(!Array.intersect){
 		return ret;
 	}	
 };
-//¹¹Ôì³õÊ¼»¯º¯Êı
+//æ„é€ åˆå§‹åŒ–å‡½æ•°
 XPath.prototype.initialize = function(){
 	this.domainType = 'auto';
 	this.step = 0;
 	XPath.prototype.variables = {};
 };
 
-XPath.prototype.XPathFunc = {		//FuncName¶¨Òå£¬¿ÉÀ©Õ¹£¬ÔÚfilterÖĞ±»µ÷ÓÃ
+XPath.prototype.XPathFunc = {		//FuncNameå®šä¹‰ï¼Œå¯æ‰©å±•ï¼Œåœ¨filterä¸­è¢«è°ƒç”¨
 	id : function(id){
 		id = id || '*';
 		return new XPathDomainFilterRule('id',id,function(a){return a && new RegExp("(^|\\s)"+a+"(?=\\s|$)",'g').test(id) || id=='*';});
@@ -472,7 +472,7 @@ XPath.prototype.XPathFunc = {		//FuncName¶¨Òå£¬¿ÉÀ©Õ¹£¬ÔÚfilterÖĞ±»µ÷ÓÃ
 		if(node_set instanceof XPathDomain){
 			return node_set.domain.length;
 		}
-		this.Error('²ÎÊıÀàĞÍ±ØĞëÊÇXPathDomain!', false);
+		this.Error('å‚æ•°ç±»å‹å¿…é¡»æ˜¯XPathDomain!', false);
 	},
 	string : function(obj){
 		return obj.toString();	
@@ -532,15 +532,15 @@ XPath.prototype.init = function(){
 	this.step = 0;
 };
 
-XPath.prototype.assign = function(name, value){		//VariableReferences¸³Öµ
+XPath.prototype.assign = function(name, value){		//VariableReferencesèµ‹å€¼
 	return this.variables[name] = value;
 };
-XPath.prototype.defun = function(name, func){		//Function¶¨Òå£¬¿ÉÀ©Õ¹
+XPath.prototype.defun = function(name, func){		//Functionå®šä¹‰ï¼Œå¯æ‰©å±•
 	return this.XPathFunc[name] = func;
 };
 
-XPath.prototype.domain = new XPathDomain([document.documentElement]);	//¼ÇÂ¼µ±Ç°µÄdomain
-XPath.prototype.domains = [];	//ÔİÊ±¼ÇÂ¼UnionExpr·µ»ØµÄËùÓĞdomain
+XPath.prototype.domain = new XPathDomain([document.documentElement]);	//è®°å½•å½“å‰çš„domain
+XPath.prototype.domains = [];	//æš‚æ—¶è®°å½•UnionExprè¿”å›çš„æ‰€æœ‰domain
 XPath.prototype.onError = function(){
 	this.init();
 }
@@ -586,7 +586,7 @@ XPathDomain.prototype.axis = function(axis, name, filter, arg){
 	return this.tests[axis].call(this, axis, name, filter, arg);
 };
 
-//»ù±¾µÄfilterÊÇelement
+//åŸºæœ¬çš„filteræ˜¯element
 XPathDomain.prototype.tests = {
 	child : function(axis, nodeName, filter, arg){
 		var domain = this.domain;
@@ -613,7 +613,7 @@ XPathDomain.prototype.tests = {
 		var tmp = [];
 
 		for(var i = 0; i < domain.length; i++){
-			var _set = domain[i].getElementsByTagName(nodeName);	//»ù±¾½ÚµãÀàĞÍelement
+			var _set = domain[i].getElementsByTagName(nodeName);	//åŸºæœ¬èŠ‚ç‚¹ç±»å‹element
 			if(filter != 'element' && filter != 'basical'){
 				for(var k = 0; k < _set.length; k++){
 					var childs = _set[k].childNodes;
@@ -657,7 +657,7 @@ XPathDomain.prototype.tests = {
 		}
 		return ret;
 	},
-	attribute : function(axis, name, filter, arg){	//×¢Òâ£ºÕâÀïÈ¡ÔªËØ½Úµã¶ø²»ÊÇÈ¡ÊôĞÔ
+	attribute : function(axis, name, filter, arg){	//æ³¨æ„ï¼šè¿™é‡Œå–å…ƒç´ èŠ‚ç‚¹è€Œä¸æ˜¯å–å±æ€§
 		var domain = this.domain;
 		var ret = [];
 
