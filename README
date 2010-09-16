@@ -1,3 +1,8 @@
+[安装和使用]
+将lib目录下的文件copy到perl安装路径下的lib目录
+运行命令 perl yaparse.pl examples/demo1/Demo1.ypj
+切换到 examples/demo1/ 目录, 打开Demo1.html试试看
+
 什么是YYParser？
 -------------------------------------
 YYParser是在Perl的Yapp基础上实现的基于JavaScript的LR(1)文法解析脚本生成器，这样说有一点点绕，但是实际上可以把它简单理解为yacc的Perl/JavaScript混合版，它生成的解释器代码是存JS的，但生成工具是一段Perl脚本。

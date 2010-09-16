@@ -7,7 +7,7 @@ my $ypFile = $module.".yp";
 my $pmFile = $module.".pm";
 
 print "perl parseYPJ.pl ".$module."\n";
-print "perl c:\perl\lib\yapp -v ".$ypFile." ".$pmFile."\n";
+print "perl yapp.pl -o ".$ypFile." ".$pmFile."\n";
 print "perl yp2js.pl ".$pmFile."\n";
 
 system "perl parseYPJ.pl ".$module;
