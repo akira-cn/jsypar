@@ -1,6 +1,8 @@
 #!/usr/bin/perl
 use strict;
 
+push(@INC,"lib/Parse");
+
 my $file = @ARGV[0] || die('arguments error');
 
 if($file){
